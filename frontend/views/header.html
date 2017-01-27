@@ -1,46 +1,61 @@
 <header>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <!--<a class="navbar-brand" ui-sref="home"><img src="frontend/img/logo.png" alt="logo" width="20"> </a>-->
-                <a class="navbar-brand" ui-sref="home">
-                    <div class="navbar-toggle">
-                        <div class="icon_float">
-                            <span class="icon-bar icon_bar1"></span>
-                            <span class="icon-bar icon_bar2"></span>
-                            <span class="icon-bar icon_bar3"></span>
-                        </div>
-                    </div>
-                    <i class="fa fa-camera" aria-hidden="true"></i>Clickmania
-                </a>
-            </div>
-            <!--<div class="collapse navbar-collapse" id="nav-collapse">
-                <div ng-include="template.menu" class="template menu"></div>
-            </div>-->
-            <div class="col-md-4 col-md-offset-2">
-                <!--search bar-->
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for photographer">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit">
-                           <i class="fa fa-search" aria-hidden="true"></i>
-                       </button>
+                        <!--<a class="navbar-brand" ui-sref="home"><img src="frontend/img/logo.png" alt="logo" width="20"> </a>-->
+                        <a class="navbar-brand" ui-sref="home">
+                            <div class="navbar-toggle">
+                                <div class="icon_float">
+                                    <span class="icon-bar icon_bar1"></span>
+                                    <span class="icon-bar icon_bar2"></span>
+                                    <span class="icon-bar icon_bar3"></span>
+                                </div>
+                            </div>
+                            <img src="frontend/img/cmlogo.png" class="cmlogo img-responsive" alt="ClickMania_Logo">
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <!--user name with img-->
-                <i class="fa fa-user-circle" aria-hidden="true"></i>
-                <span>Sign up as photographer</span>
+                <!--<div class="collapse navbar-collapse" id="nav-collapse">
+                <div ng-include="template.menu" class="template menu"></div>
+            </div>-->
+                <div class="col-md-4">
+                    <!--search bar-->
+                    <!--<form>
+                        <div class="form-group">
+                            <div class="input-group nav-search">
+                                <input type="text" class="form-control nav-search-input" placeholder="Search For Photographers" aria-describedby="basic-addon1">
+                                <span class="input-group-addon nav-search-icon" id="basic-addon1">@</span>
+                            </div>
+                        </div>
+                    </form>-->
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for photographer">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                           <i class="fa fa-search" aria-hidden="true"></i>
+                       </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!--user name with img-->
+                    <div class="photographer">
+                        <div class="photographer_img">
+                            <img src="frontend/img/user.png" alt="UserImage" class="img-responsive">
+                        </div>
+                        <span>Sign up as photographer</span>
+                    </div>
+                    <!--photographer-->
+                </div>
             </div>
         </div>
     </nav>
 </header>
-<div class="sample"></div>
-<div class="sample"></div>

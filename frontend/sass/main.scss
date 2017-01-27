@@ -127,6 +127,7 @@
     }
     
     // Header section which includes navbar design
+    $orangeColor: #f4511e;
     header>nav>div.navbar-header>button.navbar-toggle {
         display: none;
     }
@@ -135,9 +136,10 @@
         width: 44px;
         position: relative;
         left: 3px;
-        top: -12px;
+        top: -2px;
         display: block;
         float: left;
+        border: none;
     }
     
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float {
@@ -148,48 +150,55 @@
         float: right;
         width: 26px;
         height: 4px;
+        background-color: $orangeColor;
     }
     
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar2 {
         float: right;
         width: 23px;
         height: 4px;
+        background-color: $orangeColor;
     }
     
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar3 {
         float: right;
         width: 20px;
         height: 4px;
+        background-color: $orangeColor;
     }
     
-    // .navbar-brand {
-    //     .navbar-toggle {
-    //         width: 44px;
-    //         position: relative;
-    //         left: 3px;
-    //         top: -12px;
-    //         display: block;
-    //         float: left;
-    //         .icon_float {
-    //             float: right;
-    //             .icon_bar1 {
-    //                 float: right;
-    //                 width: 26px;
-    //                 height: 4px;
-    //                 .icon_bar2 {
-    //                     float: right;
-    //                     width: 23px;
-    //                     height: 4px;
-    //                     .icon_bar3 {
-    //                         float: right;
-    //                         width: 20px;
-    //                         height: 4px;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    // for clickmania logo adjustment which includes boot strap's class navbar-brand
+    a.navbar-brand {
+        height: auto;
+        .navbar-toggle {
+            margin-bottom: 0;
+            padding-right: 0px;
+            margin-bottom: 0px;
+        }
+        .cmlogo {
+            width: 230px;
+        }
+    }
+    
+    // end of clickmania logo adjustment
+    // To display photographer's image(user image)
+    .photographer {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        cursor: pointer;
+        .photographer_img {
+            width: 38px;
+            display: inline-block;
+            padding-right: 6px;
+        }
+        span {
+            display: inline-block;
+            vertical-align: super;
+            letter-spacing: 1px;
+            text-align: justify;
+        }
+    }
+    
     @import "fancybox-override";
     @import "rishabh";
     @import "mobile";
