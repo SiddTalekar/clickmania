@@ -1,11 +1,9 @@
 <!--<div class="container">
-
     <flex-slider flex-slide="s in mySlides" prev-text="" next-text="">
         <li>
             <img ng-src="{{s}}" class="img-full">
         </li>
     </flex-slider>
-
     <swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
         <slides>
             <slide ng-repeat="s in mySlides">
@@ -27,5 +25,41 @@
             <a class="various fancybox.iframe" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" fancybox><img ng-src="http://img.youtube.com/vi/L9szn1QQfas/maxresdefault.jpg" class="img-full"></a>
         </div>
     </div>
-
 </div>-->
+<!--<flex-slider flex-slide="s in mySlides" prev-text="" next-text="">
+    <li>
+        <img ng-src="{{s}}" class="img-full">
+    </li>
+</flex-slider>-->
+<swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
+    <slides>
+        <slide ng-repeat="s in mySlides track by $index">
+            <img ng-src="{{s}}" class="img-full" noloading="true">
+        </slide>
+    </slides>
+    <prev></prev>
+    <next></next>
+    <!--<pagination></pagination>-->
+    <div class="bg_main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-push-2">
+                    <div class="jumbotron">
+                        <h2>They froze time to let pictures<br>Give away stories</h2>
+                        <p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for photographer">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+</swiper>

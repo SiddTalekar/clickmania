@@ -128,8 +128,18 @@
     
     // Header section which includes navbar design
     $orangeColor: #f4511e;
+    $whiteColor: #ffffff;
+    header>nav.navbar {
+        margin-bottom: 0!important;
+    }
+    
     header>nav>div.navbar-header>button.navbar-toggle {
         display: none;
+    }
+    
+    .navbar-default {
+        background-color: transparent;
+        position: relative;
     }
     
     header>nav a.navbar-brand>div.navbar-toggle {
@@ -181,9 +191,31 @@
     }
     
     // end of clickmania logo adjustment
+    // search bar 
+    .Search_bar {
+        padding-top: 18px;
+        padding-bottom: 15px;
+        .input-group {
+            .form-control {
+                height: 36px;
+            }
+            .input-group-btn {
+                button {
+                    background-color: $orangeColor;
+                    border-color: $orangeColor;
+                    .fa-search:before {
+                        font-size: 20px;
+                        color: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+    
+    // end of search bar
     // To display photographer's image(user image)
     .photographer {
-        padding-top: 15px;
+        padding-top: 18px;
         padding-bottom: 15px;
         cursor: pointer;
         .photographer_img {
@@ -196,6 +228,28 @@
             vertical-align: super;
             letter-spacing: 1px;
             text-align: justify;
+        }
+    }
+    
+    //end display photographer's image(user image)
+    // This section contains main background image with hamberger menu
+    .swiper-container {
+        position: relative;
+        background: -ms-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        background: -moz-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        background: -webkit-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        .bg_main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            .jumbotron {
+                border: none;
+                border-radius: 0;
+                background-color: transparent;
+                color: $whiteColor;
+            }
         }
     }
     
