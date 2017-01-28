@@ -22,6 +22,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             url: "/form",
             templateUrl: "frontend/views/template.html",
             controller: 'FormCtrl'
+        })
+        .state('Login', {
+            url: "/login",
+            templateUrl: "frontend/views/template.html",
+            controller: 'LoginCtrl'
         });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);

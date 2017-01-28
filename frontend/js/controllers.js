@@ -29,7 +29,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.submitForm = function (data) {
         console.log(data);
         $scope.formSubmitted = true;
-    }
+    };
+})
+.controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    $scope.template = TemplateService.changecontent("login"); //Use same name of .html file
+    $scope.menutitle = NavigationService.makeactive("Login"); //This is the Title of the Website
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
 })
 
 .controller('headerctrl', function ($scope, TemplateService) {
