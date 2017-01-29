@@ -1,0 +1,86 @@
+.photographer-page {
+    padding-top: 76px;
+}
+.sm-logo {
+  width: 40px;
+  position: absolute;
+  right: -8px;
+  z-index: 9;
+  top: 40px;
+}
+.profile-holder {
+    display: inline-block;
+    border: 2px solid #f1592a;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  img {
+        border-radius: 50%;
+    }
+  .prof-img {
+        width: 220px;
+    }
+}
+
+.profile-block {
+    bottom: 96px;
+    left: 7%;
+    position: absolute;
+}
+.quarter-circle{
+  height: 130px;
+  top: 5px;
+  left: -30px;
+  width: 130px;
+  border-radius: 150px 0 0 0;
+  border-left: 15px solid #f1592a;
+  border-top: 15px solid #f1592a;
+  position: absolute;
+  top: -26px;
+}
+.upload-trans {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+      padding: 13px 71px;
+    background-color: rgba(0, 0, 0, 0.64);
+    color: #fff;
+}
+
+.select-box {
+    background-color: #f1592a;
+}
+.btn-1{
+  position: relative;
+  display: inline-block;
+  .btn-select{
+    background-color: transparent;
+    border: 0;
+      padding: 9px 40px;
+          padding: 16px 40px 10px;
+  }
+}
+.under-line{
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translate(-50%,-5%);
+// display: none;
+opacity: 0;
+
+}
+.under-down{
+  border-bottom: 5px solid #191919;
+  border-radius: 20px;
+  // display: none;
+  opacity: 0;
+}
+.btn-1:hover .under-down{
+  // display: block;
+  opacity: 1;
+}
+.btn-1:hover .under-line{
+  // display: block;
+  opacity: 1;
+}
