@@ -7,10 +7,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 
     $scope.mySlides = [
-        'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-        'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-        'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-        'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+        // 'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+        // 'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+        // 'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+        // 'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+        "frontend/img/bg1.jpg",
+        "frontend/img/bg1.jpg",
+        "frontend/img/bg1.jpg"
+
     ];
 })
 
@@ -43,7 +47,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.submitForm = function (data) {
         console.log(data);
         $scope.formSubmitted = true;
-    }
+    };
+})
+.controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    $scope.template = TemplateService.changecontent("login"); //Use same name of .html file
+    $scope.menutitle = NavigationService.makeactive("Login"); //This is the Title of the Website
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
 })
 
 .controller('headerctrl', function ($scope, TemplateService) {
