@@ -7,66 +7,115 @@
     @import "../../bower_components/fancyBox/source/jquery.fancybox";
     @import "../../bower_components/smart-app-banner/smart-app-banner";
     /* Bootstrap Variables Goes Here */
-
+    
     $brand-primary: #0d9dff !default;
     $brand-success: #84ce3c !default;
     $brand-warning: #ffec39 !default;
     $brand-danger: #fc483f !default;
     $brand-info: #000072 !default;
+    $orangeColor: #f4511e !default;
+    $whiteColor: #ffffff !default;
     @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
     @font-face {
         font-family: 'Glyphicons Halflings';
         src: url("../fonts/glyphicons-halflings-regular.eot");
         src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
     }
-
+    
     body {
         //padding-top: 70px;
         font-family: sans-serif;
         font-size: 16px; // default size is 16px
         overflow-x: hidden!important; // It is must to keep it as an imp
     }
-
+    
     img.loading {
         text-align: center;
         opacity: 1;
         width: 32px !important;
         height: auto;
     }
-
+    
     img {
         opacity: 0;
         @include transition(all 300ms ease);
     }
-
+    
     img.doneLoading {
         opacity: 1;
     }
-
+    
     nav li:hover .dropdown-menu {
         display: block;
     }
-
+    
     #map img {
         opacity: 1;
     }
-
+    
     a,
     .btn,
     [ui-sref] {
         cursor: pointer;
         @include transition(all ease 300ms);
     }
-
+    
+    // footer section 
     footer {
-        font-size: 12px;
-        background-color: #eee;
+        // font-size: 12px;
+        color: $whiteColor;
         padding: 10px 0;
-        p {
-            margin: 0;
+        a[target="_blank"] {
+            color: $whiteColor;
+            text-decoration: none;
+        }
+        .footer_bgup {
+            // footer background up which includes black background
+            background-color: rgba(55, 55, 55, 0.92);
+            .footer_padd {
+                display: inline-block;
+                padding-top: 35px;
+                padding-bottom: 35px;
+                .input-group {
+                    .form-control {
+                        height: 43px;
+                    }
+                    .input-group-btn {
+                        .btn {
+                            height: 43px;
+                            background-color: $orangeColor;
+                            color: $whiteColor;
+                            border-color: $orangeColor;
+                        }
+                    }
+                }
+                .list-group-item {
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+        .footer_bgdw {
+            // footer background down which includes orange background
+            font-size: 12px;
+            background-color: $orangeColor;
+            height: 50px;
+            @include display (flex); // this property used to align the elements vertically center
+            @include flex-direction(column); // this property used to align the elements vertically center
+            @include justify-content(center); // this property used to align the elements vertically center
+            p {
+                margin: 0;
+                a {
+                    color: $whiteColor;
+                }
+                a:hover {
+                    color: $whiteColor;
+                }
+            }
         }
     }
-
+    
+    // end of footer section
     //bootstrap forms
     .input-lg,
     .input-group-lg>.form-control,
@@ -77,17 +126,17 @@
         border-radius: 0;
         @include box-shadow(none);
     }
-
+    
     .form-control:focus {
         border-color: $brand-primary;
         outline: 0;
         @include box-shadow(none);
     }
-
+    
     .form-group {
         position: relative;
     }
-
+    
     .form-invalid {
         color: $brand-danger;
         .form-control {
@@ -98,11 +147,11 @@
             }
         }
     }
-
+    
     .form-submission {
         min-height: 300px;
     }
-
+    
     //FLEX SLIDER FIXES
     .flex-direction-nav {
         a {
@@ -116,32 +165,30 @@
         }
     }
     /* Start writing sass here */
-
+    
     .content {
         min-height: 450px;
     }
-
+    
     .img-full {
         width: 100%;
         display: block;
     }
-
+    
     // Header section which includes navbar design
-    $orangeColor: #f4511e;
-    $whiteColor: #ffffff;
     header>nav.navbar {
         margin-bottom: 0!important;
     }
-
+    
     header>nav>div.navbar-header>button.navbar-toggle {
         display: none;
     }
-
+    
     .navbar-default {
         background-color: transparent;
         position: relative;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle {
         width: 44px;
         position: relative;
@@ -151,32 +198,32 @@
         float: left;
         border: none;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float {
         float: right;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar1 {
         float: right;
         width: 26px;
         height: 4px;
         background-color: $orangeColor;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar2 {
         float: right;
         width: 23px;
         height: 4px;
         background-color: $orangeColor;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar3 {
         float: right;
         width: 20px;
         height: 4px;
         background-color: $orangeColor;
     }
-
+    
     // for clickmania logo adjustment which includes boot strap's class navbar-brand
     a.navbar-brand {
         height: auto;
@@ -189,7 +236,7 @@
             width: 230px;
         }
     }
-
+    
     // end of clickmania logo adjustment
     // search bar
     .Search_bar {
@@ -211,7 +258,7 @@
             }
         }
     }
-
+    
     // end of search bar
     // To display photographer's image(user image)
     .photographer {
@@ -230,7 +277,7 @@
             text-align: justify;
         }
     }
-
+    
     //end display photographer's image(user image)
     // This section contains main background image with hamberger menu
     .swiper-container {
@@ -249,10 +296,38 @@
                 border-radius: 0;
                 background-color: transparent;
                 color: $whiteColor;
+                .input-group {
+                    .form-control {
+                        height: 36px;
+                    }
+                    .input-group-btn {
+                        button {
+                            background-color: $orangeColor;
+                            border-color: $orangeColor;
+                            .fa-search:before {
+                                font-size: 20px;
+                                color: $whiteColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .scroll_img {
+            // Used to position scroll down image
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            top: -68px;
+            z-index: 99;
+            p {
+                text-transform: capitalize;
+                color: $whiteColor;
+                cursor: pointer;
             }
         }
     }
-
+    
     @import "fancybox-override";
     @import "rishabh";
     @import "featurePhoto";
