@@ -1,4 +1,6 @@
-
+.photographer-page{
+  background-color: #f1f1f1;
+}
 .sm-logo {
   width: 40px;
   position: absolute;
@@ -57,6 +59,7 @@
     border: 0;
       padding: 9px 40px;
           padding: 16px 40px 10px;
+          color: #fff;
   }
 }
 .under-line{
@@ -64,7 +67,7 @@
   bottom: -12px;
   left: 50%;
   transform: translate(-50%,-5%);
-// display: none;
+
 opacity: 0;
 
 }
@@ -81,4 +84,130 @@ opacity: 0;
 .btn-1:hover .under-line{
   // display: block;
   opacity: 1;
+}
+.display-inline{
+  display: inline-block;
+}
+.holder1{
+  position: relative;
+  vertical-align: middle;
+}
+.name-sec{
+  vertical-align: middle;
+  color: #fff;
+  padding: 0 20px;
+}
+
+//about desc
+.about-head{
+  background-color: #777;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+
+padding: 10px;
+}
+.about-desc{
+  background-color: #fff;
+  margin: 50px 150px;
+  border-radius: 5px;
+  .control-label{
+    text-align: left;
+  }
+}
+.abt-form{
+    padding: 10px 40px 1px;
+  .form-group{
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    label{
+      color: #f1592a;
+    }
+  }
+  input{
+    border: 0;
+  }
+img{
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+.form-group:last-child{
+    border-bottom: 0;
+    padding: 0;
+  }
+}
+.inline{
+  display: inline;
+}
+.display-block{
+  display: block;
+}
+.text-set{
+  max-width: 70%;
+  display: inline-block;
+}
+.vat{
+  vertical-align: top;
+}
+.abt-sec2{
+  background-color: #fff;
+  padding: 10px 40px 1px;
+}
+.red-sec{
+  background-color: #f1592a;
+      padding: 10px 30px 1px;
+}
+.upgrade-sec{
+  padding: 10px 30px 1px;
+    text-align: center;
+
+}
+.upgrade-pkg{
+  margin-left: -12px;
+// padding: 20px;
+background: #ccc;
+position: relative;
+}
+.upgrade-pkg:before{
+    content:"";
+  border-style: solid;
+      border-width: 14px 12px 0px 12px;
+      border-color: transparent #777 transparent transparent;
+      position: absolute;
+      left: -12px;
+      top: -14px;
+}
+.upgrade-pkg2{
+  margin-left: -12px;
+// padding: 20px;
+background: #f6ea74;
+position: relative;
+}
+.upgrade-pkg2:before{
+    content:"";
+  border-style: solid;
+      border-width: 14px 12px 0px 12px;
+      border-color: transparent #a5981c transparent transparent;
+      position: absolute;
+      left: -12px;
+      top: -14px;
+}
+.border-divider{
+  border-left: 1px solid #000;
+}
+.upgrade-pkg2,.upgrade-pkg{
+      padding: 20px 0 0px;
+  ul{
+    list-style: none;
+  }
+  li::before {
+    content: "• ";
+    color: #fff;
+    font-size: 18px;
+  }
+}
+
+.btn-full {
+    width: 100%;
+    background-color: #f1592a;
+    color: #fff;
 }
