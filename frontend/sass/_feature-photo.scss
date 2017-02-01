@@ -2,6 +2,7 @@
     font-family: 'Dosis-Regular';
     src: url("../fonts/Dosis-Regular_0.ttf");
 }
+
 .damionr {
     font-family: 'Damion-Regular';
 }
@@ -9,13 +10,15 @@
     font-family: 'hctl';
     src: url("../fonts/HELVETICALT-LIGHT.OTF");
 }
+
 .dosisl {
-    font-family: Dosis-Light;
+    font-family: dosis-Light;
 }
 
 .hctl {
     font-family: hctl;
 }
+
 .light-grey {
     background-color: #f6f6f6;
 }
@@ -23,8 +26,12 @@
 .orange-color {
     color: $orangeColor;
 }
-.forml{padding: 36px 0px;
-    margin: 0;}
+
+.forml {
+    padding: 36px 0;
+    margin: 0;
+}
+
 .mr15 {
     margin: 0 15px;
 }
@@ -36,7 +43,7 @@
         padding: 2px 40px;
         border-color: transparent;
         margin-right: 10px;
-        font-size: 35px;
+        font-size: 30px;
         cursor: pointer;
         color: #ffffff;
         background-color: lightgrey;
@@ -49,6 +56,12 @@
     }
 }
 
+.style17 {
+    border-top: 1px solid #bfbfbf;
+    margin-left: 32%;
+    margin-right: 32%;
+}
+
 hr.style17:after {
     content: 'Or';
     display: inline-block;
@@ -58,6 +71,7 @@ hr.style17:after {
     background: #f6f6f6;
     color: #8c8b8b;
     font-size: 18px;
+    font-family: helveticalt-narrow;
 }
 
 .head-name {
@@ -103,4 +117,80 @@ hr.style17:after {
 
 .pad60 {
     padding: 60px 0;
+}
+
+.reg-btn {
+    font-family: dosis-Light;
+    border-bottom: 2px solid rgba(241, 90, 41, 0.19);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff !important;
+    background: #f6f6f6;
+    margin-bottom: 15px;
+
+    &:active,
+    :focus,
+    :hover {
+        box-shadow: none;
+        border-color: #f15a29 !important;
+    }
+}
+
+.reg-btn:focus {
+    box-shadow: none;
+    border-color: #f15a29 !important;
+}
+
+.orange-btn {
+    font-family: dosis-Light;
+    color: #fff;
+    background-color: #f15a29;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 41px;
+}
+
+.orange-btn:focus,
+.orange-btn:hover {
+    color: #fff;
+    background-color: #f15a29;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.mr40 {
+    margin: 40px 0;
+}
+
+.min-h {
+    min-height: 416px;
+}
+
+.btn-social {
+    position: relative;
+    padding-left: 44px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,0.2);
+    margin-top: 5px;
+
+    span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 32px;
+        line-height: 34px;
+        font-size: 1.6em;
+        text-align: center;
+        border-right: 1px solid rgba(0,0,0,0.2);
+        background-color: #0d2558;
+    }
 }
