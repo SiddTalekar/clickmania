@@ -7,7 +7,7 @@
     @import "../../bower_components/fancyBox/source/jquery.fancybox";
     @import "../../bower_components/smart-app-banner/smart-app-banner";
     /* Bootstrap Variables Goes Here */
-    
+
     $brand-primary: #0d9dff !default;
     $brand-success: #84ce3c !default;
     $brand-warning: #ffec39 !default;
@@ -21,100 +21,175 @@
         src: url("../fonts/glyphicons-halflings-regular.eot");
         src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
     }
-    
+
     @font-face {
-        font-family: 'Damion-Regular';
+        font-family: 'damion-regular';
         src: url("../fonts/Damion-Regular.ttf");
     }
-    
+
     @font-face {
-        font-family: 'Dosis-Bold';
+        font-family: 'dosis-bold';
         src: url("../fonts/Dosis-Bold_0.ttf");
     }
-    
+
     @font-face {
-        font-family: 'Dosis-ExtraBold';
+        font-family: 'dosis-extraBold';
         src: url("../fonts/Dosis-ExtraBold_0.ttf");
     }
-    
+
     @font-face {
-        font-family: 'Dosis-ExtraLight';
+        font-family: 'dosis-extraLight';
         src: url("../fonts/Dosis-ExtraLight_0.ttf");
     }
-    
+
     @font-face {
-        font-family: 'Dosis-Light';
+        font-family: 'dosis-light';
         src: url("../fonts/Dosis-Light_1.ttf");
     }
-    
+
     @font-face {
-        font-family: 'Dosis-Light';
+        font-family: 'dosis-light';
         src: url("../fonts/Dosis-Light_1.ttf");
     }
-    
+
     @font-face {
-        font-family: 'Dosis-Light';
+        font-family: 'dosis-light';
         src: url("../fonts/Dosis-Light_1.ttf");
     }
-    
+
     @font-face {
-        font-family: 'Dosis-Medium';
+        font-family: 'dosis-medium';
         src: url("../fonts/Dosis-Medium_0.ttf");
     }
-    
+
     @font-face {
-        font-family: 'Dosis-Regular';
+        font-family: 'dosis-regular';
         src: url("../fonts/Dosis-Regular_0.ttf");
     }
-    
+
     @font-face {
-        font-family: 'HELVETICALT';
+        font-family: 'helveticalt';
         src: url("../fonts/HELVETICALT.OTF");
     }
-    
+
     @font-face {
-        font-family: 'HELVETICALT-BLACK';
+        font-family: 'helveticalt-black';
         src: url("../fonts/HELVETICALT-BLACK.OTF");
     }
-    
+
+    @font-face {
+        font-family: 'helveticalt-bold';
+        src: url("../fonts/HELVETICALT-BOLD.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-boldoblique';
+        src: url("../fonts/HELVETICALT-BOLDOBLIQUE.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-compressed';
+        src: url("../fonts/HELVETICALT-COMPRESSED.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-condensed';
+        src: url("../fonts/HELVETICALT-CONDENSED.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-condensed-black';
+        src: url("../fonts/HELVETICALT-CONDENSED-BLACK.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-condensed-bold';
+        src: url("../fonts/HELVETICALT-CONDENSED-BOLD.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-condensed-light';
+        src: url("../fonts/HELVETICALT-CONDENSED-LIGHT.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-condensed-oblique';
+        src: url("../fonts/HELVETICALT-CONDENSED-OBLIQUE.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-light';
+        src: url("../fonts/HELVETICALT-LIGHT.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-lightOblique';
+        src: url("../fonts/HELVETICALT-LIGHTOBLIQUE.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-narrow';
+        src: url("../fonts/HELVETICALT-NARROW.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-narrow-boldOblique';
+        src: url("../fonts/HELVETICALT-NARROW-BOLDOBLIQUE.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-narrow-oblique';
+        src: url("../fonts/HELVETICALT-NARROW-OBLIQUE.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-oblique';
+        src: url("../fonts/HELVETICALT-OBLIQUE.OTF");
+    }
+
+    @font-face {
+        font-family: 'helveticalt-ultraCompressed';
+        src: url("../fonts/HELVETICALT-ULTRACOMPRESSED.OTF");
+    }
+
     body {
         //padding-top: 70px;
         font-family: sans-serif;
         font-size: 16px; // default size is 16px
         overflow-x: hidden!important; // It is must to keep it as an imp
     }
-    
+
     img.loading {
         text-align: center;
         opacity: 1;
         width: 32px !important;
         height: auto;
     }
-    
+
     img {
         opacity: 0;
         @include transition(all 300ms ease);
     }
-    
+
     img.doneLoading {
         opacity: 1;
     }
-    
+
     nav li:hover .dropdown-menu {
         display: block;
     }
-    
+
     #map img {
         opacity: 1;
     }
-    
+
     a,
     .btn,
     [ui-sref] {
         cursor: pointer;
         @include transition(all ease 300ms);
     }
-    
+
     .flexslider {
         .flex-direction-nav {
             a {
@@ -140,16 +215,16 @@
             }
         }
     }
-    
+
     .flex-control-paging li a {
         background-color: rgba(255, 255, 255, 0.5);
     }
-    
+
     .flex-control-paging li a.flex-active {
         background-color: #fff;
     }
-    
-    // footer section 
+
+    // footer section
     footer {
         // font-size: 12px;
         color: $whiteColor;
@@ -203,7 +278,7 @@
             }
         }
     }
-    
+
     // end of footer section
     //bootstrap forms
     .input-lg,
@@ -215,17 +290,17 @@
         border-radius: 0;
         @include box-shadow(none);
     }
-    
+
     .form-control:focus {
         border-color: $brand-primary;
         outline: 0;
         @include box-shadow(none);
     }
-    
+
     .form-group {
         position: relative;
     }
-    
+
     .form-invalid {
         color: $brand-danger;
         .form-control {
@@ -236,11 +311,11 @@
             }
         }
     }
-    
+
     .form-submission {
         min-height: 300px;
     }
-    
+
     //FLEX SLIDER FIXES
     .flex-direction-nav {
         a {
@@ -254,30 +329,30 @@
         }
     }
     /* Start writing sass here */
-    
+
     .content {
         min-height: 450px;
     }
-    
+
     .img-full {
         width: 100%;
         display: block;
     }
-    
+
     // Header section which includes navbar design
     header>nav.navbar {
         margin-bottom: 0!important;
     }
-    
+
     header>nav>div.navbar-header>button.navbar-toggle {
         display: none;
     }
-    
+
     .navbar-default {
         background-color: transparent;
         position: relative;
     }
-    
+
     header>nav a.navbar-brand>div.navbar-toggle {
         width: 44px;
         position: relative;
@@ -287,32 +362,32 @@
         float: left;
         border: none;
     }
-    
+
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float {
         float: right;
     }
-    
+
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar1 {
         float: right;
         width: 26px;
         height: 4px;
         background-color: $orangeColor;
     }
-    
+
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar2 {
         float: right;
         width: 23px;
         height: 4px;
         background-color: $orangeColor;
     }
-    
+
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar3 {
         float: right;
         width: 20px;
         height: 4px;
         background-color: $orangeColor;
     }
-    
+
     // for clickmania logo adjustment which includes boot strap's class navbar-brand
     a.navbar-brand {
         height: auto;
@@ -325,7 +400,7 @@
             width: 230px;
         }
     }
-    
+
     // end of clickmania logo adjustment
     // search bar
     .Search_bar {
@@ -347,7 +422,7 @@
             }
         }
     }
-    
+
     // end of search bar
     // To display photographer's image(user image)
     .photographer {
@@ -366,7 +441,7 @@
             text-align: justify;
         }
     }
-    
+
     //end display photographer's image(user image)
     // This section contains main background image with hamberger menu
     .swiper-container {
@@ -416,8 +491,8 @@
             }
         }
     }
-    
+
     @import "fancybox-override";
     @import "rishabh";
-    @import "featurePhoto";
+    @import "feature-photo";
     @import "mobile";
