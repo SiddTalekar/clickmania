@@ -11,51 +11,65 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         // 'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
         // 'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
         // 'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+        // "frontend/img/bg1.jpg",
+        // "frontend/img/bg2.jpg",
+        "frontend/img/bg1.jpg",
+        "frontend/img/bg1.jpg",
+        "frontend/img/bg1.jpg",
         "frontend/img/bg1.jpg",
         "frontend/img/bg1.jpg",
         "frontend/img/bg1.jpg"
 
     ];
+    $scope.slides = [
+        'frontend/img/feature_photo1.png',
+        'frontend/img/feature_photo1.png',
+        'frontend/img/feature_photo1.png',
+        'frontend/img/feature_photo1.png',
+        'frontend/img/feature_photo1.png',
+        'frontend/img/feature_photo1.png'
+    ];
 })
 
-.controller('PhotographerCtrl', function($scope, TemplateService, NavigationService, $timeout,$uibModal,$http) {
+
+.controller('PhotographerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
     $scope.template = TemplateService.changecontent("photographer"); //Use same name of .html file
     $scope.menutitle = NavigationService.makeactive("Photographer"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.tab = 1;
-    $scope.enquiry = function() {
-     $uibModal.open({
-         animation: true,
-         templateUrl: "views/modal/profile-info.html",
-         scope: $scope,
-         windowClass: "mod-fix"
-     });
-   }
+    $scope.enquiry = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: "views/modal/profile-info.html",
+            scope: $scope,
+            windowClass: "mod-fix"
+        });
+    }
 
 })
 
 
 .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
-    $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
-    $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+        $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
-    $scope.formSubmitted = false;
+        $scope.formSubmitted = false;
 
-    $scope.submitForm = function (data) {
-        console.log(data);
-        $scope.formSubmitted = true;
-    };
-})
-.controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
-    $scope.template = TemplateService.changecontent("login"); //Use same name of .html file
-    $scope.menutitle = NavigationService.makeactive("Login"); //This is the Title of the Website
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+        $scope.submitForm = function (data) {
+            console.log(data);
+            $scope.formSubmitted = true;
+        };
+    })
+    .controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("login"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Login"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
-})
+    })
 
 .controller('headerctrl', function ($scope, TemplateService) {
     $scope.template = TemplateService;
