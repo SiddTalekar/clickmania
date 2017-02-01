@@ -31,7 +31,7 @@
         <img ng-src="{{s}}" class="img-full">
     </li>
 </flex-slider>-->
-<swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
+<swiper autoplay="5000" effect="slide" loop="true">
     <slides>
         <slide ng-repeat="s in mySlides track by $index">
             <img ng-src="{{s}}" class="img-full" noloading="true">
@@ -69,3 +69,34 @@
     </div>
     <!--main-->
 </swiper>
+<!--flex slider for featured photographer-->
+<!--<div class="container">
+    <div class="row">
+        <swiper autoplay="5000" effect="slide" loop="true">
+            <slides>
+                <slide ng-repeat="imgs in slides track by $index">
+                    <img ng-src="{{imgs}}" class="img-full" noloading="true">
+                </slide>
+            </slides>
+            <prev></prev>
+            <next></next>
+        </swiper>
+    </div>
+</div>-->
+<div class="container">
+    <!--<flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="" item-margin="2" item-width="3">
+            <li>
+                <img ng-src="{{s}}" class="img-full" class="img-responsive">
+            </li>
+        </flex-slider>-->
+    <swiper autoplay="5000" effect="slide" loop="true" slides-per-view="3" space-between="20">
+        <slides>
+            <slide ng-repeat="s in mySlides track by $index">
+                <img ng-src="{{s}}" class="img-full" noloading="true">
+            </slide>
+        </slides>
+        <prev></prev>
+        <next></next>
+    </swiper>
+    <!--<slides-per-view="3" space-between="20"-->
+</div>

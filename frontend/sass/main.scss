@@ -22,6 +22,61 @@
         src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
     }
     
+    @font-face {
+        font-family: 'Damion-Regular';
+        src: url("../fonts/Damion-Regular.ttf");
+    }
+    
+    @font-face {
+        font-family: 'Dosis-Bold';
+        src: url("../fonts/Dosis-Bold_0.ttf");
+    }
+    
+    @font-face {
+        font-family: 'Dosis-ExtraBold';
+        src: url("../fonts/Dosis-ExtraBold_0.ttf");
+    }
+    
+    @font-face {
+        font-family: 'Dosis-ExtraLight';
+        src: url("../fonts/Dosis-ExtraLight_0.ttf");
+    }
+    
+    @font-face {
+        font-family: 'Dosis-Light';
+        src: url("../fonts/Dosis-Light_1.ttf");
+    }
+    
+    @font-face {
+        font-family: 'Dosis-Light';
+        src: url("../fonts/Dosis-Light_1.ttf");
+    }
+    
+    @font-face {
+        font-family: 'Dosis-Light';
+        src: url("../fonts/Dosis-Light_1.ttf");
+    }
+    
+    @font-face {
+        font-family: 'Dosis-Medium';
+        src: url("../fonts/Dosis-Medium_0.ttf");
+    }
+    
+    @font-face {
+        font-family: 'Dosis-Regular';
+        src: url("../fonts/Dosis-Regular_0.ttf");
+    }
+    
+    @font-face {
+        font-family: 'HELVETICALT';
+        src: url("../fonts/HELVETICALT.OTF");
+    }
+    
+    @font-face {
+        font-family: 'HELVETICALT-BLACK';
+        src: url("../fonts/HELVETICALT-BLACK.OTF");
+    }
+    
     body {
         //padding-top: 70px;
         font-family: sans-serif;
@@ -58,6 +113,40 @@
     [ui-sref] {
         cursor: pointer;
         @include transition(all ease 300ms);
+    }
+    
+    .flexslider {
+        .flex-direction-nav {
+            a {
+                height: 100px;
+                width: 125px;
+                color: transparent;
+            }
+            .flex-prev {
+                &:before {
+                    content: url("../img/prev.png");
+                    display: block;
+                    height: 50%;
+                    @include transform(scale(.4));
+                }
+            }
+            .flex-next {
+                &:before {
+                    content: url("../img/next.png");
+                    display: block;
+                    height: 50%;
+                    @include transform(scale(.4));
+                }
+            }
+        }
+    }
+    
+    .flex-control-paging li a {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .flex-control-paging li a.flex-active {
+        background-color: #fff;
     }
     
     // footer section 

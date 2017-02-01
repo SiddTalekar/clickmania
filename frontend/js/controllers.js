@@ -54,10 +54,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Login"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    $scope.activeTab = 1;
-    $scope.toggleTab = function(val) {
-        $scope.activeTab = val;
-    };
+
 
 })
 
