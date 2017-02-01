@@ -1,37 +1,106 @@
+@font-face {
+    font-family: 'Dosis-Regular';
+    src: url("../fonts/Dosis-Regular_0.ttf");
+}
+.damionr {
+    font-family: 'Damion-Regular';
+}
+@font-face {
+    font-family: 'hctl';
+    src: url("../fonts/HELVETICALT-LIGHT.OTF");
+}
+.dosisl {
+    font-family: Dosis-Light;
+}
+
+.hctl {
+    font-family: hctl;
+}
+.light-grey {
+    background-color: #f6f6f6;
+}
+
+.orange-color {
+    color: $orangeColor;
+}
+.forml{padding: 36px 0px;
+    margin: 0;}
+.mr15 {
+    margin: 0 15px;
+}
+
 .full-tabs {
     margin: 0;
 
     li {
-        padding: 15px 25px 12px;
-        border-bottom: 3px solid;
+        padding: 2px 40px;
         border-color: transparent;
         margin-right: 10px;
-        font-size: 15px;
+        font-size: 35px;
         cursor: pointer;
-        color: #989898;
+        color: #ffffff;
+        background-color: lightgrey;
 
         &.active,
         :hover {
-            background-color: #fff;
-            color: $blue;
-            border-color: $blue;
-            font-weight: bold;
+            background-color: #f15a29;
+            color: white;
         }
     }
 }
+
 hr.style17:after {
-	content: 'Or';
-	display: inline-block;
-	position: relative;
-	top: -14px;
-	padding: 0 10px;
-	background: #f0f0f0;
-	color: #8c8b8b;
-	font-size: 18px;
+    content: 'Or';
+    display: inline-block;
+    position: relative;
+    top: -14px;
+    padding: 0 10px;
+    background: #f6f6f6;
+    color: #8c8b8b;
+    font-size: 18px;
 }
-.ht30{    height: 130px;}
-.imgwt{    width: 150px;
-    padding-bottom: 128px;}
-    .fith{  background-color: black; display: inline;
-    margin-left: -79px;}
-    .secndh{background-color: red;}
+
+.head-name {
+    text-align: center;
+
+    .ht30 {
+        display: inline-block;
+        height: 130px;
+
+        .imgwt {
+            position: absolute;
+            transform: rotate(59deg);
+            width: 150px;
+        }
+
+        .fith {
+            margin-top: 61px;
+            padding-left: 42px;
+            z-index: 9;
+            position: relative;
+            color: black;
+            display: inline-block;
+        }
+    }
+
+    p {
+        margin: 0;
+        padding: 38px 98px 0;
+        font-size: 22px;
+        text-align: justify;
+    }
+
+    .sech {
+        line-height: 70px;
+        margin: 0;
+        color: $orangeColor;
+    }
+}
+
+.ft100 {
+    font-size: 100px;
+}
+
+.pad60 {
+    padding: 60px 0;
+}
