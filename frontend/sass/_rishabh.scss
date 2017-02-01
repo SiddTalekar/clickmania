@@ -1,6 +1,16 @@
 .photographer-page{
   background-color: #f1f1f1;
 }
+
+  .change-cover{
+    position: absolute;
+    top: 15%;
+    right: 3%;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Dosis-Regular';
+  }
+
 .sm-logo {
   width: 40px;
   position: absolute;
@@ -23,7 +33,7 @@
 }
 
 .profile-block {
-    bottom: 96px;
+    bottom: 92px;
     left: 7%;
     position: absolute;
 }
@@ -39,13 +49,23 @@
   top: -26px;
 }
 .upload-trans {
-    position: absolute;
-    bottom: -24px;
-    left: 50%;
-    transform: translate(-50%,-50%);
-      padding: 13px 71px;
-    background-color: rgba(0, 0, 0, 0.64);
-    color: #fff;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  width: 87%;
+  transform: translate(-50%, -50%);
+  padding: 10px 30px 26px;
+  background-color: rgba(0, 0, 0, 0.54);
+  color: #fff;
+  span{
+    font-size: 16px;
+    font-family: 'Dosis-Regular';
+    img{
+      border-radius: 0;
+      width: 16px;
+margin-right: 4px;
+    }
+  }
 }
 
 .select-box {
@@ -54,12 +74,16 @@
 .btn-1{
   position: relative;
   display: inline-block;
+      padding: 0 20px;
+
   .btn-select{
     background-color: transparent;
     border: 0;
-      padding: 9px 40px;
-          padding: 16px 40px 10px;
+      // padding: 9px 40px;
+      //     padding: 16px 40px 10px;
           color: #fff;
+            font-family: 'Dosis-Regular';
+            font-size: 28px;
   }
 }
 .under-line{
@@ -69,6 +93,9 @@
   transform: translate(-50%,-5%);
 
 opacity: 0;
+img{
+  width: 22px;
+}
 
 }
 .under-down{
@@ -76,6 +103,8 @@ opacity: 0;
   border-radius: 20px;
   // display: none;
   opacity: 0;
+  position: relative;
+bottom: -2px;
 }
 .btn-1:hover .under-down{
   // display: block;
@@ -96,6 +125,10 @@ opacity: 0;
   vertical-align: middle;
   color: #fff;
   padding: 0 20px;
+  span{
+    font-family: 'Dosis-Light';
+    font-size: 34px;
+  }
 }
 
 //about desc
@@ -103,8 +136,9 @@ opacity: 0;
   background-color: #777;
   border-radius: 5px 5px 0 0;
   color: #fff;
-
-padding: 10px;
+font-family: 'Dosis-Regular';
+padding: 10px 30px;
+font-size: 22px;
 }
 .about-desc{
   background-color: #fff;
@@ -116,11 +150,23 @@ padding: 10px;
 }
 .abt-form{
     padding: 10px 40px 1px;
+      letter-spacing: 0.5px;
   .form-group{
     border-bottom: 1px solid #ccc;
     padding: 5px 0;
     label{
       color: #f1592a;
+      font-family: 'Dosis-Medium';
+
+    }
+    span{
+      font-family: 'Dosis-Regular';
+    }
+    .check-label{
+      font-family: 'Dosis-Regular';
+      font-weight: 400;
+      color: #000;
+font-size: 18px;
     }
   }
   input{
@@ -155,17 +201,42 @@ img{
 .red-sec{
   background-color: #f1592a;
       padding: 10px 30px 1px;
+      p{
+        font-family: 'Dosis-Medium';
+        font-size: 18px;
+      }
 }
 .upgrade-sec{
   padding: 10px 30px 1px;
     text-align: center;
-
+p{
+  font-family: 'Dosis-Medium';
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+}
+.package-name{
+  font-family: 'Dosis-Medium';
+  font-size: 26px;
+}
+.package-price{
+  font-family: 'Dosis-Light';
+  font-size: 26px;
+}
+.pkg-info{
+      vertical-align: -webkit-baseline-middle;
+      text-align: left;
+margin-left: 30px;
+width: 45%;
 }
 .upgrade-pkg{
   margin-left: -12px;
 // padding: 20px;
 background: #ccc;
 position: relative;
+button{
+  margin-top: 10px;
+}
 }
 .upgrade-pkg:before{
     content:"";
@@ -181,6 +252,9 @@ position: relative;
 // padding: 20px;
 background: #f6ea74;
 position: relative;
+button{
+  margin-top: 10px;
+}
 }
 .upgrade-pkg2:before{
     content:"";
@@ -193,8 +267,17 @@ position: relative;
 }
 .border-divider{
   border-left: 1px solid #000;
+  ul>li{
+    font-family: 'Dosis-Light';
+    font-size: 18px;
+line-height: 1.3;
+  }
 }
 .upgrade-pkg2,.upgrade-pkg{
+  button{
+    font-family: 'Dosis-Regular';
+    font-size: 18px;
+  }
       padding: 20px 0 0px;
   ul{
     list-style: none;
@@ -202,7 +285,9 @@ position: relative;
   li::before {
     content: "• ";
     color: #fff;
-    font-size: 18px;
+    font-size: 32px;
+    vertical-align: sub;
+    line-height: 0.4;
   }
 }
 
@@ -210,4 +295,91 @@ position: relative;
     width: 100%;
     background-color: #f1592a;
     color: #fff;
+}
+.sub-sec{
+      padding-bottom: 15px;
+
+      .btn-default{
+        background-color: #f1592a;
+        color: #fff;
+        border-radius: 5px;
+        font-family: 'dosis-regular';
+font-size: 18px;
+      }
+}
+
+//custom-check
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+      position: absolute;
+      left: -1px;
+      top: 5px;
+      width: 13px;
+      height: 13px;
+      border: 1px solid #f1592a;
+      background: #fff;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✓';
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  font-size: 19px;
+  line-height: 0.8;
+  color: #f1592a;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.check-box{
+  display: inline-block;
+  color: #000;
+  padding: 0 15px;
+}
+//end
+.selected-option{
+  background-color: #f1592a;
+  padding: 7px 15px;
+border-radius: 5px;
+color: #fff;
+}
+.close-btn{
+  display: inline-block;
+      color: #fff;
+      font-size: 14px;
+      margin-left: 10px;
+      vertical-align: text-bottom;
+}
+.border-line{
+  border: 1px solid;
+  padding: 10px 0;
+  color: #fff;
+}
+.package-card{
+  margin-top: 15px;
+}
+.img-edit{
+  margin-top: 5px;
 }
