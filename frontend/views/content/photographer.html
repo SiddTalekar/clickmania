@@ -1,6 +1,7 @@
 <div class="photographer-page">
   <div class="profile-banner">
 <img src="frontend/img/photographer/prof-bg.jpg" alt="" class="img-responsive">
+<span class="change-cover"><img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline">Upload Cover Photo</span>
 <div class="container">
   <div class="profile-block">
 <div class="holder1 display-inline">
@@ -8,7 +9,7 @@
   <div class="profile-holder">
     <img src="frontend/img/photographer/profile.png" alt="" class="img-responsive prof-img">
 
-    <div class="upload-trans">upload</div>
+    <div class="upload-trans"><span><img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline">Upload Profile Pic</span></div>
   </div>
     <div class="quarter-circle"></div>
 
@@ -30,7 +31,9 @@
   <div class="under-line">
     <img src="frontend/img/photographer/under.png" alt="" class="img-responsive">
   </div>
+
 </div>
+  <span class="border-line"></span>
 <div class="btn-1">
   <button type="button" class="btn btn-default btn-select">WORK</button>
       <div class="under-down"></div>
@@ -38,6 +41,7 @@
     <img src="frontend/img/photographer/under.png" alt="" class="img-responsive">
   </div>
 </div>
+<span class="border-line"></span>
 <div class="btn-1">
   <button type="button" class="btn btn-default btn-select">HISTORY</button>
       <div class="under-down"></div>
@@ -53,7 +57,7 @@
 <div class="container">
   <div class="row">
   <div class="about-desc">
-    <div class="about-head text-capitalize">about rahul mallesh<img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline pull-right"></div>
+    <div class="about-head text-capitalize">about rahul mallesh<img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline pull-right img-edit"></div>
     <div class="abt-form">
       <form action="" class="form-horizontal">
         <div class="form-group">
@@ -61,30 +65,58 @@
   <label for="name" class="">
      <img src="frontend/img/photographer/form/user.png" alt="" class="img-responsive display-inline">Name:</label>
 <div class="display-inline">
-  <input type="text" class="form-control" id="name">
+  <input type="text" class="form-control" id="name" placeholder="Please enter your full name">
 </div>
  </div>
         <div class="form-group">
    <label for="name" class="">
  <img src="frontend/img/photographer/form/loc.png" alt="" class="img-responsive display-inline">
      Location:</label>
-  <div class="display-inline">
+    <div class="selected-option display-inline">
+      <span>Mumbai</span>
+      <div class="close-btn">x</div>
+    </div>
+    <i class="fa fa-plus" aria-hidden="true"></i>
+  <!-- <div class="display-inline">
      <input type="text" class="form-control" id="location">
-  </div>
+  </div> -->
  </div>
         <div class="form-group">
    <label for="speciality" class="">
  <img src="frontend/img/photographer/form/cam.png" alt="" class="img-responsive display-inline">
      Speciality:</label>
-   <div class="display-inline">
+
+     <p class="check-box">
+       <input type="checkbox" id="test1"/>
+       <label for="test1" class="check-label">Underwater</label>
+     </p>
+     <p class="check-box">
+       <input type="checkbox" id="test2"/>
+       <label for="test2" class="check-label">Wedding</label>
+     </p>
+     <p class="check-box">
+       <input type="checkbox" id="test3"/>
+       <label for="test3" class="check-label">Food</label>
+     </p>
+     <p class="check-box">
+       <input type="checkbox" id="test4"/>
+       <label for="test4" class="check-label">Wildlife</label>
+     </p>
+     <p class="check-box">
+       <input type="checkbox" id="test5"/>
+       <label for="test5" class="check-label">Others</label>
+     </p>
+
+
+   <!-- <div class="display-inline">
      <input type="text" class="form-control" id="speciality">
-   </div>
+   </div> -->
  </div>
         <div class="form-group">
    <label for="bio" class="vat">
       <img src="frontend/img/photographer/form/edit.png" alt="" class="img-responsive display-inline">Bio:</label>
   <div class="inline">
-     <textarea class="form-control text-set" id="bio" rows="4"></textarea>
+     <textarea class="form-control text-set" id="bio" rows="5" placeholder="Describe yourself as a photographer in less than 250 characters"></textarea>
   </div>
 </div>
 <div class="form-group">
@@ -92,8 +124,11 @@
   <img src="frontend/img/photographer/form/tag.png" alt="" class="img-responsive display-inline">
   Pricing:</label>
 <div class="display-inline">
-  <input type="text" class="form-control" id="pricing">
+  <input type="text" class="form-control" id="pricing" placeholder="Give an estimate of the fee you charge">
 </div>
+</div>
+<div class="sub-sec text-center">
+  <button type="submit" class="btn btn-default">Done</button>
 </div>
       </form>
     </div>
@@ -101,7 +136,7 @@
 </div>
 
 <!-- secondpart -->
-<!-- secondpart -->
+
 <div class="row">
 <div class="about-desc">
   <div class="about-head text-capitalize">Membership</div>
@@ -114,12 +149,16 @@
     </div>
     <div class="upgrade-pkg">
       <div class="row">
+
         <div class="col-md-6 text-center">
-          <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
-        <div class="display-inline">
-            <span class="display-block">Silver Package</span>
-          <span class="display-block">Rs 2300</span>
-        </div>
+          <div class="package-card">
+            <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
+          <div class="display-inline pkg-info">
+              <span class="display-block package-name">SILVER PACKAGE</span>
+            <span class="display-block package-price">&#8377; 2300 plus taxes</span>
+          </div>
+          </div>
+
         </div>
         <div class="col-md-6 border-divider">
           <ul>
@@ -136,11 +175,14 @@
     <div class="upgrade-pkg2 gold">
       <div class="row">
         <div class="col-md-6 text-center">
-          <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
-        <div class="display-inline">
-            <span class="display-block">Gold Package</span>
-          <span class="display-block">Rs 3400</span>
-        </div>
+          <div class="package-card">
+            <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
+          <div class="display-inline pkg-info">
+              <span class="display-block package-name">GOLD PACKAGE</span>
+            <span class="display-block package-price">&#8377; 3400 plus taxes</span>
+          </div>
+          </div>
+
         </div>
         <div class="col-md-6 border-divider">
           <ul>
