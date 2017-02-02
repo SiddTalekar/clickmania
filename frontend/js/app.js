@@ -32,7 +32,17 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             url: "/login",
             templateUrl: "frontend/views/template.html",
             controller: 'LoginCtrl'
-        });
+        })
+        .state('Users', {
+            url: "/users",
+            templateUrl: "frontend/views/template.html",
+            controller: 'UsersCtrl'
+        })
+         .state('User Profile', {
+              url: "/user-profile",
+              templateUrl: "frontend/views/template.html",
+              controller: 'UserProfileCtrl'
+          });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);
 });
