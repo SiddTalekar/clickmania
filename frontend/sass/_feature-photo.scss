@@ -150,7 +150,7 @@ hr.style17:after {
     background-color: #f15a29;
     border: none;
     border-radius: 4px;
-    padding: 5px 41px;
+    padding: 6px 45px;
 }
 
 .orange-btn:focus,
@@ -169,7 +169,24 @@ hr.style17:after {
     min-height: 416px;
 }
 
+.facek {
+    background-color: #3b5997;
+}
+
+.fspan {
+    background-color: #354f88;
+}
+
+.googleb {
+    background-color: #de4c33;
+}
+
+.googlespan {
+    background-color: #ce3e26;
+}
+
 .btn-social {
+    margin: 0 13px;
     position: relative;
     padding-left: 44px;
     text-align: left;
@@ -177,9 +194,7 @@ hr.style17:after {
     overflow: hidden;
     text-overflow: ellipsis;
     color: #fff;
-    background-color: #3b5998;
-    border-color: rgba(0,0,0,0.2);
-    margin-top: 5px;
+    font-family: dosis-Light;
 
     span {
         position: absolute;
@@ -190,7 +205,65 @@ hr.style17:after {
         line-height: 34px;
         font-size: 1.6em;
         text-align: center;
-        border-right: 1px solid rgba(0,0,0,0.2);
-        background-color: #0d2558;
+    }
+}
+
+.btn-social:focus,
+.btn-social:hover {
+    color: #fff;
+    outline: none;
+}
+
+.flink {
+    font-family: dosis-Light;
+    float: right;
+    color: #676666 !important;
+    font-size: 17px;
+    text-decoration: none !important;
+}
+
+.list {
+    list-style: none;
+
+    li::before {
+        content: "• ";
+        color: #f15a29;
+        font-size: 15px;
+        padding-right: 3px;
+    }
+}
+
+.intro-con {
+    margin: 0;
+    font-size: 26px;
+    text-align: justify;
+    font-weight: 100;
+}
+
+.intro {
+    margin-top: -35px;
+
+    strong {
+      font-family: helveticalt-narrow;
+        font-weight: 600;
+    }
+}
+
+.list {
+    background-image: url("/../frontend/img/clickm/11.png");
+    background-repeat: no-repeat;
+    background-position: 100% 46%;
+    background-size: 34% 100%;
+
+    li {
+        margin-left: -18px !important;
+        padding-bottom: 5px;
+    }
+
+    h2 {
+        font-family: 'Damion-Regular';
+        font-size: 55px;
+        color: #f15a29;
+        margin: 0;
     }
 }

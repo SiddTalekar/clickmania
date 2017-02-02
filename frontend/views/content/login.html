@@ -7,7 +7,7 @@
         <h1 class="sech damionr ft100">Featured photographer</h1>
         <p class="hctl">You could be a featured photographer on Clickmania and come under the lens of those who would love to harness your services. For as low as Rs. 1000 you could shoecase your work for a month.</p>
     </div>
-    <!-- START SELECT TAB -->
+    <!-- start section tab -->
     <div class="row">
         <div class="col-md-12 text-center">
             <ul class="full-tabs pad60 list-inline">
@@ -16,7 +16,9 @@
             </ul>
         </div>
     </div>
-    <div class="row">
+    <!-- end section tab -->
+    <!-- start first tab -->
+    <div class="row" ng-if="activeTab == 1">
         <div class="col-md-6 ">
             <div class="row mr15 light-grey min-h">
                 <div class="col-md-12 text-center">
@@ -36,44 +38,61 @@
                 </div>
                 <div class="col-xs-12 mr40 text-center">
                     <button class="btn orange-btn" type="button">Sign up</button>
-                  <br>
-                  <hr class="style17 text-center">
-                  <br>
-                  <div class="input-group">
-                      <span class="input-group-btn">
-                        <a class="btn btn-block btn-social">
-                        <span class="fa fa-facebook"></span> Sign in with Facebook
-                      </a></span>
-                  </div>
+                    <br>
+                    <hr class="style17 text-center">
+                    <br>
+                    <a href="#" class="btn btn-social facek">
+                        <span class="fa fa-facebook fspan"></span> Sign up with Facebook
+                    </a>
+                    <a href="#" class="btn btn-social googleb">
+                        <span class="fa icon-google-plus googlespan"></span> Sign up with Google+
+                    </a>
                 </div>
-
             </div>
         </div>
-
-    <div class="col-md-6">
-        <div class="row mr15 light-grey min-h">
-            <div class="col-md-12 text-center">
-                <h1 class="damionr orange-color forml">Login</h1>
-            </div>
-            <div class="col-md-6">
-                <input type="text" class="reg-btn form-control" aria-label="..." placeholder="First Name">
-            </div>
-            <div class="col-md-6">
-                <input type="text" class="reg-btn form-control" aria-label="..." placeholder="Email id">
-            </div>
-            <div class="col-xs-12 mr40 text-center">
-                <button class="btn orange-btn" type="button">Login</button>
-              <br>
-              <hr class="style17 text-center">
-              <br>
-              <div class="input-group">
-                  <span class="input-group-btn">
-                    <a class="btn btn-block btn-social">
-                    <span class="fa fa-facebook"></span> Sign in with Facebook
-                  </a></span>
-              </div>
+        <div class="col-md-6">
+            <div class="row mr15 light-grey min-h">
+                <div class="col-md-12 text-center">
+                    <h1 class="damionr orange-color forml">Login</h1>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="reg-btn form-control" aria-label="..." placeholder="First Name">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="reg-btn form-control" aria-label="..." placeholder="Email id">
+                    <a class="flink"> Forgot Password?</a>
+                </div>
+                <div class="col-xs-12 mr40 text-center">
+                    <button class="btn orange-btn" type="button"> Login</button>
+                    <br>
+                    <hr class="style17 text-center">
+                    <br>
+                    <a href="#" class="btn btn-social facek">
+                        <span class="fa fa-facebook fspan"></span> Login with Facebook
+                    </a>
+                    <a href="#" class="btn btn-social googleb">
+                        <span class="fa icon-google-plus googlespan"></span> Login with Google+
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- end first tab -->
+    <!-- start second tab -->
+    <div class="row" ng-if="activeTab == 2">
+        <div class="col-md-12">
+            <div class="intro hctl">
+                <strong class="intro-con">Hi Manan,</strong>
+                <p class="intro-con">You can become a featured photographer for the month of <strong>March</strong> by only paying <i class="fa fa-inr"></i><strong>1150.</strong></p>
+                <p class="intro-con">Inorder to become a featured photographer you need to subscribe.</p>
+            </div>
+            <ul class="list pad60">
+                <h2>Benefits</h2>
+                <li class="intro-con">100 photos</li>
+                <li class="intro-con">3mb per photo</li>
+                <li class="intro-con">Photos can be edited by you.</li>
+                <li class="intro-con">Valid till 1 year.</li>
+            </ul>
+        </div>
+    </div>
 </div>
