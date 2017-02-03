@@ -1,8 +1,8 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.swiper'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
-    $scope.menutitle = NavigationService.makeactive("Home"); //This is the Title of the Website
+    $scope.menutitle = NavigationService.makeactive("ClickMania"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 
@@ -16,15 +16,47 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         "frontend/img/bg1.jpg"
 
     ];
+
+    $scope.fpUser = [{
+        profile: "frontend/img/pic1.png",
+        background: "frontend/img/fp_bg1.png",
+        title: "Zaroon Jaffrani | Pune",
+        speciality: "wild life"
+    }, {
+        profile: "frontend/img/pic2.png",
+        background: "frontend/img/fp_bg1.png",
+        title: "Asmara Khan | Banglore",
+        speciality: "wedding"
+    }, {
+        profile: "frontend/img/pic3.png",
+        background: "frontend/img/fp_bg1.png",
+        title: "Fatema | Delhi",
+        speciality: "wild life"
+    }, {
+        profile: "frontend/img/clickm/pic1.png",
+        background: "frontend/img/fp_bg1.png",
+        title: "Zaroon Jaffrani | Pune",
+        speciality: "wild life"
+    }, {
+        profile: "frontend/img/clickm/pic2.png",
+        background: "frontend/img/fp_bg1.png",
+        title: "Asmara Khan | Banglore",
+        speciality: "Wedding"
+    }, {
+        profile: "frontend/img/pic3.png",
+        background: "frontend/img/fp_bg1.png",
+        title: "Fatema | Delhi",
+        speciality: "wild life"
+    }];
 })
 
-.controller('PhotographerCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
+.controller('PhotographerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
     $scope.template = TemplateService.changecontent("photographer"); //Use same name of .html file
     $scope.menutitle = NavigationService.makeactive("Photographer"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.tab = 1;
-    $scope.enquiry = function() {
+    $scope.enquiry = function () {
         $uibModal.open({
             animation: true,
             templateUrl: "views/modal/profile-info.html",
@@ -36,7 +68,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 
-.controller('FormCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -44,22 +76,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         $scope.formSubmitted = false;
 
-        $scope.submitForm = function(data) {
+        $scope.submitForm = function (data) {
             console.log(data);
             $scope.formSubmitted = true;
         };
     })
-    .controller('LoginCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("login"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Login"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.activeTab = 1;
-        $scope.toggleTab = function(val) {
+        $scope.toggleTab = function (val) {
             $scope.activeTab = val;
         };
     })
-    .controller('UsersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('UsersCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("users"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Users"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -109,24 +141,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('UserProfileCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('UserProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("user-profile"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("User Profile"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('headerctrl', function($scope, TemplateService) {
+    .controller('headerctrl', function ($scope, TemplateService) {
         $scope.template = TemplateService;
-        $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+        $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
             $(window).scrollTop(0);
         });
         $.fancybox.close(true);
     })
 
-.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
+.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
-    $scope.changeLanguage = function() {
+    $scope.changeLanguage = function () {
         console.log("Language CLicked");
 
         if (!$.jStorage.get("language")) {

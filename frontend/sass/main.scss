@@ -7,7 +7,7 @@
     @import "../../bower_components/fancyBox/source/jquery.fancybox";
     @import "../../bower_components/smart-app-banner/smart-app-banner";
     /* Bootstrap Variables Goes Here */
-
+    
     $brand-primary: #0d9dff !default;
     $brand-success: #84ce3c !default;
     $brand-warning: #ffec39 !default;
@@ -15,181 +15,197 @@
     $brand-info: #000072 !default;
     $orangeColor: #f4511e !default;
     $whiteColor: #ffffff !default;
+    $lightBlackColor: rgba(55, 55, 55, 0.92);
     @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
     @font-face {
         font-family: 'Glyphicons Halflings';
         src: url("../fonts/glyphicons-halflings-regular.eot");
         src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
     }
-
+    
+    @font-face {
+        font-family: 'hs-semiBold';
+        src: url("../fonts/HoneyScript-SemiBold.ttf");
+    }
+    
+    @font-face {
+        font-family: 'alegreya-light';
+        src: url("../fonts/AlegreyaSans-Light.otf");
+    }
+    
+    @font-face {
+        font-family: 'hs-light';
+        src: url("../fonts/HoneyScript-Light.ttf");
+    }
+    
     @font-face {
         font-family: 'damion-regular';
         src: url("../fonts/Damion-Regular.ttf");
     }
-
+    
     @font-face {
         font-family: 'dosis-bold';
         src: url("../fonts/Dosis-Bold_0.ttf");
     }
-
+    
     @font-face {
         font-family: 'dosis-extraBold';
         src: url("../fonts/Dosis-ExtraBold_0.ttf");
     }
-
+    
     @font-face {
         font-family: 'dosis-extraLight';
         src: url("../fonts/Dosis-ExtraLight_0.ttf");
     }
-
+    
     @font-face {
         font-family: 'dosis-light';
         src: url("../fonts/Dosis-Light_1.ttf");
     }
-
+    
     @font-face {
         font-family: 'dosis-light';
         src: url("../fonts/Dosis-Light_1.ttf");
     }
-
+    
     @font-face {
         font-family: 'dosis-light';
         src: url("../fonts/Dosis-Light_1.ttf");
     }
-
+    
     @font-face {
         font-family: 'dosis-medium';
         src: url("../fonts/Dosis-Medium_0.ttf");
     }
-
+    
     @font-face {
         font-family: 'dosis-regular';
         src: url("../fonts/Dosis-Regular_0.ttf");
     }
-
+    
     @font-face {
         font-family: 'helveticalt';
         src: url("../fonts/HELVETICALT.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-black';
         src: url("../fonts/HELVETICALT-BLACK.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-bold';
         src: url("../fonts/HELVETICALT-BOLD.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-boldoblique';
         src: url("../fonts/HELVETICALT-BOLDOBLIQUE.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-compressed';
         src: url("../fonts/HELVETICALT-COMPRESSED.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-condensed';
         src: url("../fonts/HELVETICALT-CONDENSED.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-condensed-black';
         src: url("../fonts/HELVETICALT-CONDENSED-BLACK.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-condensed-bold';
         src: url("../fonts/HELVETICALT-CONDENSED-BOLD.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-condensed-light';
         src: url("../fonts/HELVETICALT-CONDENSED-LIGHT.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-condensed-oblique';
         src: url("../fonts/HELVETICALT-CONDENSED-OBLIQUE.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-light';
         src: url("../fonts/HELVETICALT-LIGHT.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-lightOblique';
         src: url("../fonts/HELVETICALT-LIGHTOBLIQUE.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-narrow';
         src: url("../fonts/HELVETICALT-NARROW.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-narrow-boldOblique';
         src: url("../fonts/HELVETICALT-NARROW-BOLDOBLIQUE.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-narrow-oblique';
         src: url("../fonts/HELVETICALT-NARROW-OBLIQUE.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-oblique';
         src: url("../fonts/HELVETICALT-OBLIQUE.OTF");
     }
-
+    
     @font-face {
         font-family: 'helveticalt-ultraCompressed';
         src: url("../fonts/HELVETICALT-ULTRACOMPRESSED.OTF");
     }
-
+    
     body {
         //padding-top: 70px;
-        font-family: sans-serif;
+        font-family: 'dosis-regular';
         font-size: 16px; // default size is 16px
         overflow-x: hidden!important; // It is must to keep it as an imp
     }
-
+    
     img.loading {
         text-align: center;
         opacity: 1;
         width: 32px !important;
         height: auto;
     }
-
+    
     img {
         opacity: 0;
         @include transition(all 300ms ease);
     }
-
+    
     img.doneLoading {
         opacity: 1;
     }
-
+    
     nav li:hover .dropdown-menu {
         display: block;
     }
-
+    
     #map img {
         opacity: 1;
     }
-
+    
     a,
     .btn,
     [ui-sref] {
         cursor: pointer;
         @include transition(all ease 300ms);
     }
-
+    
     .flexslider {
         .flex-direction-nav {
             a {
@@ -197,6 +213,13 @@
                 width: 125px;
                 color: transparent;
             }
+            // .flex-prev {
+            //     &:before {
+            //         content: url("../img/prev.png");
+            //         display: block;
+            //         height: 50%;
+            //         @include transform(scale(.4));
+            //     }
             .flex-prev {
                 &:before {
                     content: url("../img/prev.png");
@@ -215,15 +238,15 @@
             }
         }
     }
-
+    
     .flex-control-paging li a {
         background-color: rgba(255, 255, 255, 0.5);
     }
-
+    
     .flex-control-paging li a.flex-active {
         background-color: #fff;
     }
-
+    
     // footer section
     footer {
         // font-size: 12px;
@@ -278,7 +301,7 @@
             }
         }
     }
-
+    
     // end of footer section
     //bootstrap forms
     .input-lg,
@@ -290,17 +313,17 @@
         border-radius: 0;
         @include box-shadow(none);
     }
-
+    
     .form-control:focus {
         border-color: $brand-primary;
         outline: 0;
         @include box-shadow(none);
     }
-
+    
     .form-group {
         position: relative;
     }
-
+    
     .form-invalid {
         color: $brand-danger;
         .form-control {
@@ -311,11 +334,11 @@
             }
         }
     }
-
+    
     .form-submission {
         min-height: 300px;
     }
-
+    
     //FLEX SLIDER FIXES
     .flex-direction-nav {
         a {
@@ -329,30 +352,30 @@
         }
     }
     /* Start writing sass here */
-
+    
     .content {
         min-height: 450px;
     }
-
+    
     .img-full {
         width: 100%;
         display: block;
     }
-
+    
     // Header section which includes navbar design
     header>nav.navbar {
         margin-bottom: 0!important;
     }
-
+    
     header>nav>div.navbar-header>button.navbar-toggle {
         display: none;
     }
-
+    
     .navbar-default {
         background-color: transparent;
         position: relative;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle {
         width: 44px;
         position: relative;
@@ -362,32 +385,32 @@
         float: left;
         border: none;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float {
         float: right;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar1 {
         float: right;
         width: 26px;
         height: 4px;
         background-color: $orangeColor;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar2 {
         float: right;
         width: 23px;
         height: 4px;
         background-color: $orangeColor;
     }
-
+    
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar3 {
         float: right;
         width: 20px;
         height: 4px;
         background-color: $orangeColor;
     }
-
+    
     // for clickmania logo adjustment which includes boot strap's class navbar-brand
     a.navbar-brand {
         height: auto;
@@ -400,7 +423,7 @@
             width: 230px;
         }
     }
-
+    
     // end of clickmania logo adjustment
     // search bar
     .Search_bar {
@@ -422,7 +445,7 @@
             }
         }
     }
-
+    
     // end of search bar
     // To display photographer's image(user image)
     .photographer {
@@ -441,7 +464,7 @@
             text-align: justify;
         }
     }
-
+    
     //end display photographer's image(user image)
     // This section contains main background image with hamberger menu
     .swiper-container {
@@ -460,6 +483,13 @@
                 border-radius: 0;
                 background-color: transparent;
                 color: $whiteColor;
+                h2 {
+                    font-family: 'hs-semiBold';
+                    font-size: 65px;
+                    span {
+                        vertical-align: text-bottom;
+                    }
+                }
                 .input-group {
                     .form-control {
                         height: 36px;
@@ -485,13 +515,101 @@
             top: -68px;
             z-index: 99;
             p {
+                font-family: 'alegreya-light';
                 text-transform: capitalize;
                 color: $whiteColor;
                 cursor: pointer;
             }
         }
     }
-
+    
+    // It contains feature photographer flex-slider
+    section.featu_photo_caraso {
+        .flexslider {
+            margin-bottom: 29px;
+        }
+        .fp_padd_rl {
+            // It will give you padding right & left 25px for flex-slider
+            padding: 0 25px;
+            h2 {
+                font-family: 'damion-regular';
+                color: $orangeColor;
+                font-size: 57px;
+                margin-bottom: 24px;
+            }
+            h2:after {
+                content: "Photographer";
+                position: relative;
+                top: 45px;
+                left: -167px;
+                z-index: 5;
+            }
+            .fp_width {
+                width: 343px!important;
+                .fp_innerPadd {
+                    position: relative;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    margin-bottom: 5px;
+                    -moz-box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.26);
+                    -ms-box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.26);
+                    -webkit-box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.26);
+                    box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.26);
+                    // box-shadow: inset 0 0 10px #000000;
+                    .fp_user_icn {
+                        position: absolute;
+                        width: 80%;
+                        color: $whiteColor;
+                        margin: 0 auto;
+                        top: 50px;
+                        left: 0;
+                        right: 0;
+                        .border-half {
+                            border: 7px solid $orangeColor;
+                            border-radius: 50%;
+                            width: 150px;
+                            padding: 5px;
+                            margin: auto;
+                            border-top: 7px solid transparent;
+                            border-right: 7px solid transparent;
+                            border-bottom: 7px solid transparent;
+                            @include transform(rotate(57deg));
+                            img {
+                                display: inline-block;
+                                border-radius: 50%;
+                                width: 125px;
+                                border: 3px solid $orangeColor;
+                                @include transform(rotate(-57deg));
+                            }
+                        }
+                        h3,
+                        p {
+                            margin-top: 0;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+            .view_prof_btn {
+                padding: 7px 0;
+                button.btn {
+                    background-color: $orangeColor;
+                }
+            }
+            .fp_viewAll_btn {
+                margin-bottom: 25px;
+                button {
+                    background-color: $lightBlackColor;
+                    color: $whiteColor;
+                }
+            }
+        }
+        .flex-control-nav {
+            display: none!important; // for dots navigation 
+        }
+    }
+    
+    //end of feature photographer flex-slider
     @import "fancybox-override";
     @import "rishabh";
     @import "feature-photo";

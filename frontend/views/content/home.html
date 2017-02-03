@@ -45,8 +45,8 @@
             <div class="row">
                 <div class="col-md-8 col-md-push-2 jumbotron_middle">
                     <div class="jumbotron">
-                        <h2 class="text-center">They froze time to let pictures<br>
-                            <div class="text-right">away stories</div>
+                        <h2 class="text-center">They froze time to let pictures
+                            <span class="text-right">away stories</span>
                         </h2>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search for photographer">
@@ -70,33 +70,54 @@
     <!--main-->
 </swiper>
 <!--flex slider for featured photographer-->
-<!--<div class="container">
-    <div class="row">
-        <swiper autoplay="5000" effect="slide" loop="true">
-            <slides>
-                <slide ng-repeat="imgs in slides track by $index">
-                    <img ng-src="{{imgs}}" class="img-full" noloading="true">
-                </slide>
-            </slides>
-            <prev></prev>
-            <next></next>
-        </swiper>
+<section class="featu_photo_caraso">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="fp_padd_rl">
+                <h2>Featured</h2>
+                <!--padding right & left-->
+                <flex-slider slide="user in fpUser track by $index" animation="slide" prev-text="" next-text="" item-margin="10" max-items="3"
+                    item-width="250">
+                    <!--ng-repeat="user in fpUser track by $index"-->
+                    <li class="fp_width">
+                        <div class="fp_innerPadd">
+                            <!--inner padding for li-->
+                            <img ng-src="{{user.background}}" class="img-responsive">
+                            <div class="fp_user_icn text-center">
+                                <div class="border-half">
+                                    <img ng-src="{{user.profile}}" class="img-responsive">
+                                </div>
+                                <h3>{{user.title}}</h3>
+                                <p>{{user.speciality}}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-push-2">
+                            <div class="view_prof_btn">
+                                <button class="btn btn-danger btn-block">View Profile</button>
+                            </div>
+                        </div>
+                    </li>
+                </flex-slider>
+                <div class="col-md-2 col-md-push-5">
+                    <div class="fp_viewAll_btn">
+                        <button class="btn btn-block">View All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>-->
-<div class="container">
-    <!--<flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="" item-margin="2" item-width="3">
-            <li>
-                <img ng-src="{{s}}" class="img-full" class="img-responsive">
-            </li>
-        </flex-slider>-->
-    <swiper autoplay="5000" effect="slide" loop="true" slides-per-view="3" space-between="20">
-        <slides>
-            <slide ng-repeat="s in mySlides track by $index">
-                <img ng-src="{{s}}" class="img-full" noloading="true">
-            </slide>
-        </slides>
-        <prev></prev>
-        <next></next>
-    </swiper>
-    <!--<slides-per-view="3" space-between="20"-->
-</div>
+</section>
+<!--end of section flex slider for featured photographer-->
+<!--photo contest-->
+<section class="photo_contest">
+    <div class="container">
+        <div class="row">
+            <div class="camera_img">
+                <div class="col-md-2">
+                    <img src="frontend/img/photo_contest1.png" alt="Camera" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end of photo contest-->
