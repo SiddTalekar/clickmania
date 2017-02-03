@@ -1,3 +1,22 @@
+<div class="container-fluid pad0">
+    <div class="head-section">
+        <img src="frontend/img/clickm/bg1.jpg" alt="" class="img-responsive">
+        <!-- start section tab -->
+        <div class="row googleb">
+            <div class="col-md-12 text-center">
+                <ul class="full-tabs2 list-inline">
+                    <li ng-class="{'active': activeTab == 1}" ng-click="toggleTab(1)">ABOUT
+                        <img src="frontend/img/photographer/under.png" alt="" class="img-responsive">
+                    </li>
+                    <span class="border-line"></span>
+                    <li ng-class="{'active': activeTab == 2}" ng-click="toggleTab(2)">WORK
+                        <img src="frontend/img/photographer/under.png" alt="" class="img-responsive"></li>
+                    <span class="border-line"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- dosis-medium for categories -->
 <div class="container">
     <div class="row">
@@ -6,30 +25,26 @@
             <div class="abt-form">
                 <form action="" class="form-horizontal">
                     <div class="form-group">
-
                         <label for="name" class="">
-<img src="frontend/img/photographer/form/user.png" alt="" class="img-responsive display-inline">Name:</label>
+                          <img src="frontend/img/photographer/form/user.png" alt="" class="img-responsive display-inline">Name:</label>
                         <div class="display-inline">
                             <input type="text" class="form-control" id="name" placeholder="Please enter your full name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="name" class="">
-<img src="frontend/img/photographer/form/loc.png" alt="" class="img-responsive display-inline">
-Location:</label>
+                            <img src="frontend/img/photographer/form/loc.png" alt="" class="img-responsive display-inline">
+                            Location:</label>
                         <div class="selected-option display-inline">
                             <span>Mumbai</span>
                             <div class="close-btn">x</div>
                         </div>
                         <i class="fa fa-plus" aria-hidden="true"></i>
-                        <!-- <div class="display-inline">
-<input type="text" class="form-control" id="location">
-</div> -->
                     </div>
                     <div class="form-group">
                         <label for="speciality" class="">
-<img src="frontend/img/photographer/form/cam.png" alt="" class="img-responsive display-inline">
-Speciality:</label>
+                          <img src="frontend/img/photographer/form/cam.png" alt="" class="img-responsive display-inline">
+                          Speciality:</label>
 
                         <p class="check-box">
                             <input type="checkbox" id="test1" />
@@ -52,22 +67,18 @@ Speciality:</label>
                             <label for="test5" class="check-label">Others</label>
                         </p>
 
-
-                        <!-- <div class="display-inline">
-<input type="text" class="form-control" id="speciality">
-</div> -->
                     </div>
                     <div class="form-group">
                         <label for="bio" class="vat">
-<img src="frontend/img/photographer/form/edit.png" alt="" class="img-responsive display-inline">Bio:</label>
+                            <img src="frontend/img/photographer/form/edit.png" alt="" class="img-responsive display-inline">Bio:</label>
                         <div class="inline">
                             <textarea class="form-control text-set" id="bio" rows="5" placeholder="Describe yourself as a photographer in less than 250 characters"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="Pricing" class="">
-<img src="frontend/img/photographer/form/tag.png" alt="" class="img-responsive display-inline">
-Pricing:</label>
+                            <img src="frontend/img/photographer/form/tag.png" alt="" class="img-responsive display-inline">
+                            Pricing:</label>
                         <div class="display-inline">
                             <input type="text" class="form-control" id="pricing" placeholder="Give an estimate of the fee you charge">
                         </div>
@@ -79,72 +90,5 @@ Pricing:</label>
             </div>
         </div>
     </div>
-
     <!-- secondpart -->
-
-    <div class="row">
-        <div class="about-desc">
-            <div class="about-head text-capitalize">Membership</div>
-            <div class="abt-2">
-                <div class="red-sec">
-                    <p>
-                        You are currently registered as a free user
-                    </p>
-                </div>
-                <div class="upgrade-sec">
-                    <p class="text-uppercase">Upgrade to the following premium packages</p>
-                </div>
-                <div class="upgrade-pkg">
-                    <div class="row">
-
-                        <div class="col-md-6 text-center">
-                            <div class="package-card">
-                                <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
-                                <div class="display-inline pkg-info">
-                                    <span class="display-block package-name">SILVER PACKAGE</span>
-                                    <span class="display-block package-price">&#8377; 2300 plus taxes</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 border-divider">
-                            <ul>
-                                <li>30 photos</li>
-                                <li>2mb per photo</li>
-                                <li>Photos can be edited by you</li>
-                                <li>Valid for 1 year</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-default btn-full">UPGRADE NOW</button>
-                </div>
-                <br>
-                <div class="upgrade-pkg2 gold">
-                    <div class="row">
-                        <div class="col-md-6 text-center">
-                            <div class="package-card">
-                                <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
-                                <div class="display-inline pkg-info">
-                                    <span class="display-block package-name">GOLD PACKAGE</span>
-                                    <span class="display-block package-price">&#8377; 3400 plus taxes</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 border-divider">
-                            <ul>
-                                <li>100 photos</li>
-                                <li>3mb per photo</li>
-                                <li>Photos can be edited by you</li>
-                                <li>Valid for 1 year</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-default btn-full">UPGRADE NOW</button>
-                </div>
-                <br>
-            </div>
-        </div>
-    </div>
-    <!-- end -->
 </div>

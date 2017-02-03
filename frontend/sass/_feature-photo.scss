@@ -32,7 +32,7 @@
 }
 
 .img-min-h {
-    min-height: 210px;
+    min-height: 160px;
 }
 
 .forml {
@@ -60,6 +60,48 @@
         :hover {
             background-color: #f15a29;
             color: white;
+        }
+    }
+}
+
+.full-tabs2 {
+    margin: 0;
+
+    .border-line {
+        border: 2px solid;
+        padding: 21px 0 0;
+        color: #fff;
+        border-radius: 6px;
+    }
+
+    li {
+        padding: 0 40px;
+        margin-bottom: -2px;
+        border-radius: 3px;
+        border-color: transparent;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 48px;
+        cursor: pointer;
+        color: #ffffff;
+        border-bottom: 5px solid transparent;
+        position: relative;
+
+        img {
+            display: none;
+        }
+
+        &.active {
+            border-bottom: 5px solid black !important;
+            color: white;
+
+            img {
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translate(-42%, -43%);
+                z-index: 999999;
+            }
         }
     }
 }
@@ -350,6 +392,7 @@ hr.border-hr:after {
             }
 
             .title-intro {
+                font-size: 14px;
                 font-family: hctl;
                 padding: 0 20px;
             }
@@ -385,12 +428,12 @@ hr.border-hr:after {
 
 .sub-main {
     position: relative;
-    padding-bottom: 60px;
+    padding: 10px 0 60px;
 
     .sub-title {
         position: absolute;
         top: 62px;
-        right: 80px;
+        right: 70px;
 
         .fith {
             margin: 0;
@@ -407,4 +450,8 @@ hr.border-hr:after {
             margin-top: 15px;
         }
     }
+}
+
+.pad0 {
+    padding: 0 !important;
 }
