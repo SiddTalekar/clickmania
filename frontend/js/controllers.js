@@ -50,58 +50,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }];
 })
 
-.controller('PhotographerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
-    $scope.template = TemplateService.changecontent("photographer"); //Use same name of .html file
-    $scope.menutitle = NavigationService.makeactive("Photographer"); //This is the Title of the Website
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-    $scope.tab = 1;
-<<<<<<< HEAD
-    $scope.enquiry = function () {
-=======
-    $scope.showForm=true;
-    $scope.noEdit=true;
-    $scope.hideAboutDesc=false;
-    $scope.profileSelect=false;
-    $scope.showForm=function() {
-        $scope.noEdit=false;
-      $scope.showForm=false;
-      $scope.hideAboutDesc=true;
-      $scope.profileSelect=true;
-    }
-    $scope.showMembership=false;
-    $scope.goldenMember=true;
-    $scope.silverMember=true;
-    $scope.silverMember=function() {
-          $scope.profileSelect=true;
-          $scope.noEdit=false;
-      $scope.showMembership=true;
-      $scope.silverMember=false;
-        $scope.goldenMember=true;
-        $scope.showForm=false;
-        $scope.hideAboutDesc=true;
-    }
-    $scope.goldMember=function() {
-      $scope.noEdit=false;
-          $scope.profileSelect=true;
-      $scope.showMembership=true;
-      $scope.goldenMember=false;
-      $scope.silverMember=true;
-      $scope.showForm=false;
-      $scope.hideAboutDesc=true;
-    }
-    $scope.enquiry = function() {
->>>>>>> fdb27bd584ba2beacf7b71b1207fcf06b6469296
-        $uibModal.open({
-            animation: true,
-            templateUrl: "views/modal/profile-info.html",
-            scope: $scope,
-            windowClass: "mod-fix"
-        });
-    };
-
-})
-
 
 .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
