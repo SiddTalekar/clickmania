@@ -24,6 +24,37 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.tab = 1;
+    $scope.showForm=true;
+    $scope.noEdit=true;
+    $scope.hideAboutDesc=false;
+    $scope.profileSelect=false;
+    $scope.showForm=function() {
+        $scope.noEdit=false;
+      $scope.showForm=false;
+      $scope.hideAboutDesc=true;
+      $scope.profileSelect=true;
+    }
+    $scope.showMembership=false;
+    $scope.goldenMember=true;
+    $scope.silverMember=true;
+    $scope.silverMember=function() {
+          $scope.profileSelect=true;
+          $scope.noEdit=false;
+      $scope.showMembership=true;
+      $scope.silverMember=false;
+        $scope.goldenMember=true;
+        $scope.showForm=false;
+        $scope.hideAboutDesc=true;
+    }
+    $scope.goldMember=function() {
+      $scope.noEdit=false;
+          $scope.profileSelect=true;
+      $scope.showMembership=true;
+      $scope.goldenMember=false;
+      $scope.silverMember=true;
+      $scope.showForm=false;
+      $scope.hideAboutDesc=true;
+    }
     $scope.enquiry = function() {
         $uibModal.open({
             animation: true,
