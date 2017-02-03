@@ -404,26 +404,27 @@ hr.border-hr:after {
             top: -30px;
             right: 0;
 
-            .border-half {
-                border: 7px solid #f15a29;
-                border-radius: 50%;
-                width: 150px;
-                padding: 5px;
-                margin: auto;
-                border-top: 7px solid transparent;
-                border-right: 7px solid transparent;
-                border-bottom: 7px solid transparent;
-                transform: rotate(57deg);
-            }
 
-            img {
-                border-radius: 50%;
-                width: 125px;
-                border: 3px solid #f15a29;
-                transform: rotate(-57deg);
-            }
         }
     }
+}
+.border-half {
+    border: 7px solid #f15a29;
+    border-radius: 50%;
+    width: 150px;
+    padding: 5px;
+    margin: auto;
+    border-top: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    transform: rotate(57deg);
+}
+
+.prof-img{
+    border-radius: 50%;
+    width: 125px;
+    border: 3px solid #f15a29;
+    transform: rotate(-57deg);
 }
 
 .sub-main {
