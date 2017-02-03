@@ -19,8 +19,8 @@
 </div>
 <div class="name-sec display-inline"><span>Rahul Mallesh</span></div>
 </div>
-<div class="row">
-  <div class="col-md-offset-3 col-md-6">
+<div class="row text-center">
+  <!-- <div class=""> -->
 <div class="btn-1" ng-click="tab = 1" ng-class="{'active':tab == 1}">
   <button type="button" class="btn btn-default btn-select">
     ABOUT
@@ -58,7 +58,7 @@
       </div>
   </div>
 </div>
-    </div>
+    <!-- </div> -->
 </div>
 </div>
 </div>
@@ -66,274 +66,283 @@
 <div class="container">
   <div class="row">
     <!-- //form-input -->
-<div class="about-part" ng-if="tab == 1">
-  <div ng-hide="hideAboutDesc" class="about-desc">
-    <div class="about-head text-capitalize">about rahul mallesh
-      <img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline pull-right img-edit" ng-hide="noEdit">
+<div class="part-1" ng-if="tab == 1">
+  <div class="about-part">
+    <div ng-hide="hideAboutDesc" class="about-desc">
+      <div class="about-head text-capitalize">about rahul mallesh
+        <img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline pull-right img-edit" ng-hide="noEdit">
+      </div>
+      <div class="abt-form">
+        <form class="form-horizontal">
+          <div class="form-group">
+
+    <label for="name" class="">
+       <img src="frontend/img/photographer/form/user.png" alt="" class="img-responsive display-inline">Name:</label>
+    <div class="display-inline wd70">
+    <input type="text" class="form-control" id="name" placeholder="Please enter your full name">
     </div>
+     </div>
+          <div class="form-group">
+     <label for="name" class="">
+     <img src="frontend/img/photographer/form/loc.png" alt="" class="img-responsive display-inline">
+       Location:</label>
+      <div class="selected-option display-inline">
+        <span>Mumbai</span>
+        <div class="close-btn">x</div>
+      </div>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    <!-- <div class="display-inline">
+       <input type="text" class="form-control" id="location">
+    </div> -->
+     </div>
+          <div class="form-group">
+     <label for="speciality" class="">
+     <img src="frontend/img/photographer/form/cam.png" alt="" class="img-responsive display-inline">
+       Speciality:</label>
+
+       <p class="check-box">
+         <input type="checkbox" id="test1"/>
+         <label for="test1" class="check-label">Underwater</label>
+       </p>
+       <p class="check-box">
+         <input type="checkbox" id="test2"/>
+         <label for="test2" class="check-label">Wedding</label>
+       </p>
+       <p class="check-box">
+         <input type="checkbox" id="test3"/>
+         <label for="test3" class="check-label">Food</label>
+       </p>
+       <p class="check-box">
+         <input type="checkbox" id="test4"/>
+         <label for="test4" class="check-label">Wildlife</label>
+       </p>
+       <p class="check-box">
+         <input type="checkbox" id="test5"/>
+         <label for="test5" class="check-label">Others</label>
+       </p>
+
+
+     <!-- <div class="display-inline">
+       <input type="text" class="form-control" id="speciality">
+     </div> -->
+     </div>
+          <div class="form-group">
+     <label for="bio" class="vat">
+        <img src="frontend/img/photographer/form/edit.png" alt="" class="img-responsive display-inline">Bio:</label>
+    <div class="inline">
+       <textarea class="form-control text-set" id="bio" rows="5" placeholder="Describe yourself as a photographer in less than 250 characters"></textarea>
+    </div>
+    </div>
+    <div class="form-group">
+    <label for="Pricing" class="">
+    <img src="frontend/img/photographer/form/tag.png" alt="" class="img-responsive display-inline">
+    Pricing:</label>
+    <div class="display-inline wd70">
+    <input type="text" class="form-control" id="pricing" placeholder="Give an estimate of the fee you charge">
+    </div>
+    </div>
+    <div class="sub-sec text-center">
+    <button type="submit" class="btn btn-default" ng-click="showForm()">Done</button>
+    </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- /form-submit -->
+    <div ng-hide="showForm" class="about-desc">
+    <div class="about-head text-capitalize">about rahul mallesh test <div class="edit-pencil display-inline pull-right" ng-hide="noEdit">
+      <span>Edit</span><img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline pull-right img-edit">
+    </div></div>
     <div class="abt-form">
-      <form class="form-horizontal">
+      <form action="" class="form-horizontal">
         <div class="form-group">
 
-  <label for="name" class="">
+    <label for="name" class="">
      <img src="frontend/img/photographer/form/user.png" alt="" class="img-responsive display-inline">Name:</label>
-  <div class="display-inline">
-  <input type="text" class="form-control" id="name" placeholder="Please enter your full name">
-  </div>
-   </div>
+    <div class="display-inline">
+    <input type="text" class="form-control" id="name" placeholder="Please enter your full name" value="Rahul Mallesh" readonly>
+    </div>
+    </div>
         <div class="form-group">
-   <label for="name" class="">
-   <img src="frontend/img/photographer/form/loc.png" alt="" class="img-responsive display-inline">
+     <label for="name" class="">
+    <img src="frontend/img/photographer/form/loc.png" alt="" class="img-responsive display-inline">
      Location:</label>
     <div class="selected-option display-inline">
       <span>Mumbai</span>
-      <div class="close-btn">x</div>
+
     </div>
-    <i class="fa fa-plus" aria-hidden="true"></i>
-  <!-- <div class="display-inline">
+    <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
+    <!-- <div class="display-inline">
      <input type="text" class="form-control" id="location">
-  </div> -->
-   </div>
-        <div class="form-group">
-   <label for="speciality" class="">
-   <img src="frontend/img/photographer/form/cam.png" alt="" class="img-responsive display-inline">
-     Speciality:</label>
-
-     <p class="check-box">
-       <input type="checkbox" id="test1"/>
-       <label for="test1" class="check-label">Underwater</label>
-     </p>
-     <p class="check-box">
-       <input type="checkbox" id="test2"/>
-       <label for="test2" class="check-label">Wedding</label>
-     </p>
-     <p class="check-box">
-       <input type="checkbox" id="test3"/>
-       <label for="test3" class="check-label">Food</label>
-     </p>
-     <p class="check-box">
-       <input type="checkbox" id="test4"/>
-       <label for="test4" class="check-label">Wildlife</label>
-     </p>
-     <p class="check-box">
-       <input type="checkbox" id="test5"/>
-       <label for="test5" class="check-label">Others</label>
-     </p>
-
-
-   <!-- <div class="display-inline">
-     <input type="text" class="form-control" id="speciality">
-   </div> -->
-   </div>
-        <div class="form-group">
-   <label for="bio" class="vat">
-      <img src="frontend/img/photographer/form/edit.png" alt="" class="img-responsive display-inline">Bio:</label>
-  <div class="inline">
-     <textarea class="form-control text-set" id="bio" rows="5" placeholder="Describe yourself as a photographer in less than 250 characters"></textarea>
-  </div>
-  </div>
-  <div class="form-group">
-  <label for="Pricing" class="">
-  <img src="frontend/img/photographer/form/tag.png" alt="" class="img-responsive display-inline">
-  Pricing:</label>
-  <div class="display-inline">
-  <input type="text" class="form-control" id="pricing" placeholder="Give an estimate of the fee you charge">
-  </div>
-  </div>
-  <div class="sub-sec text-center">
-  <button type="submit" class="btn btn-default" ng-click="showForm()">Done</button>
-  </div>
-      </form>
+    </div> -->
     </div>
-  </div>
-
-
-  <!-- /form-submit -->
-  <div ng-hide="showForm" class="about-desc">
-  <div class="about-head text-capitalize">about rahul mallesh test <div class="edit-pencil display-inline" ng-hide="noEdit">
-    <span>Edit</span><img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline pull-right img-edit">
-  </div></div>
-  <div class="abt-form">
-    <form action="" class="form-horizontal">
-      <div class="form-group">
-
-  <label for="name" class="">
-   <img src="frontend/img/photographer/form/user.png" alt="" class="img-responsive display-inline">Name:</label>
-  <div class="display-inline">
-  <input type="text" class="form-control" id="name" placeholder="Please enter your full name" value="Rahul Mallesh" readonly>
-  </div>
-  </div>
-      <div class="form-group">
-   <label for="name" class="">
-  <img src="frontend/img/photographer/form/loc.png" alt="" class="img-responsive display-inline">
-   Location:</label>
-  <div class="selected-option display-inline">
-    <span>Mumbai</span>
-
-  </div>
-  <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
-  <!-- <div class="display-inline">
-   <input type="text" class="form-control" id="location">
-  </div> -->
-  </div>
-      <div class="form-group">
-   <label for="speciality" class="">
-  <img src="frontend/img/photographer/form/cam.png" alt="" class="img-responsive display-inline">
-   Speciality:</label>
-   <div class="selected-option display-inline">
-     <span>Underwater</span>
-
-   </div>  <div class="selected-option display-inline">
-       <span>Wedding</span>
+        <div class="form-group">
+     <label for="speciality" class="">
+    <img src="frontend/img/photographer/form/cam.png" alt="" class="img-responsive display-inline">
+     Speciality:</label>
+     <div class="selected-option display-inline">
+       <span>Underwater</span>
 
      </div>  <div class="selected-option display-inline">
-         <span>Food</span>
+         <span>Wedding</span>
 
-       </div>
+       </div>  <div class="selected-option display-inline">
+           <span>Food</span>
+
+         </div>
 
 
 
-   <!-- <div class="display-inline">
-   <input type="text" class="form-control" id="speciality">
-   </div> -->
-  </div>
-      <div class="form-group">
-   <label for="bio" class="vat">
-    <img src="frontend/img/photographer/form/edit.png" alt="" class="img-responsive display-inline">Bio:</label>
-  <div class="inline">
-   <textarea class="form-control text-set" id="bio" rows="5" placeholder="" value="" readonly>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus tempore ipsum qui voluptatem, autem dolorem doloremque reiciendis, maxime sapiente reprehenderit dicta! Harum distinctio error sequi dignissimos voluptatum perferendis, deserunt quos.
-   </textarea>
-  </div>
-  </div>
-  <div class="form-group">
-  <label for="Pricing" class="">
-  <img src="frontend/img/photographer/form/tag.png" alt="" class="img-responsive display-inline">
-  Pricing:</label>
-  <div class="display-inline">
-  <input type="text" class="form-control" id="pricing" placeholder="" value="&#8377; 5000" readonly>
-  </div>
-  </div>
-  <div class="sub-sec text-center">
-  <!-- <button type="submit" class="btn btn-default">Done</button> -->
-  </div>
-    </form>
-  </div>
-  </div>
-</div>
-
-</div>
-
-<!-- secondpart -->
-
-<div class="row">
-<div class="about-desc" ng-hide="showMembership">
-  <div class="about-head text-capitalize">Membership</div>
-  <div class="abt-2">
-    <div class="red-sec"><p>
-      You are currently registered as a free user
-    </p></div>
-    <div class="upgrade-sec">
-      <p class="text-uppercase">Upgrade to the following premium packages</p>
+     <!-- <div class="display-inline">
+     <input type="text" class="form-control" id="speciality">
+     </div> -->
     </div>
-    <div class="upgrade-pkg">
-      <div class="row">
+        <div class="form-group">
+     <label for="bio" class="vat">
+      <img src="frontend/img/photographer/form/edit.png" alt="" class="img-responsive display-inline">Bio:</label>
+    <div class="inline">
+     <textarea class="form-control text-set" id="bio" rows="5" placeholder="" value="" readonly>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus tempore ipsum qui voluptatem, autem dolorem doloremque reiciendis, maxime sapiente reprehenderit dicta! Harum distinctio error sequi dignissimos voluptatum perferendis, deserunt quos.
+     </textarea>
+    </div>
+    </div>
+    <div class="form-group">
+    <label for="Pricing" class="">
+    <img src="frontend/img/photographer/form/tag.png" alt="" class="img-responsive display-inline">
+    Pricing:</label>
+    <div class="display-inline">
+    <input type="text" class="form-control" id="pricing" placeholder="" value="&#8377; 5000" readonly>
+    </div>
+    </div>
+    <div class="sub-sec text-center">
+    <!-- <button type="submit" class="btn btn-default">Done</button> -->
+    </div>
+      </form>
+    </div>
+    </div>
+  </div>
 
-        <div class="col-md-6 text-center">
-          <div class="package-card">
-            <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
-          <div class="display-inline pkg-info">
-              <span class="display-block package-name">SILVER PACKAGE</span>
-            <span class="display-block package-price">&#8377; 2300 plus taxes</span>
-          </div>
-          </div>
 
-        </div>
-        <div class="col-md-6 border-divider">
-          <ul>
-            <li>30 photos</li>
-            <li>2mb per photo</li>
-            <li>Photos can be edited by you</li>
-            <li>Valid for 1 year</li>
-          </ul>
-        </div>
+
+  <!-- secondpart -->
+
+  <div class="row">
+  <div class="about-desc" ng-hide="showMembership">
+    <div class="about-head text-capitalize">Membership</div>
+    <div class="abt-2">
+      <div class="red-sec"><p>
+        You are currently registered as a free user
+      </p></div>
+      <div class="upgrade-sec">
+        <p class="text-uppercase">Upgrade to the following premium packages</p>
       </div>
-<button type="button" class="btn btn-default btn-full" ng-click="silverMember()">UPGRADE NOW</button>
-    </div>
-    <br>
-    <div class="upgrade-pkg2 gold">
-      <div class="row">
-        <div class="col-md-6 text-center">
-          <div class="package-card">
-            <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
-          <div class="display-inline pkg-info">
-              <span class="display-block package-name">GOLD PACKAGE</span>
-            <span class="display-block package-price">&#8377; 3400 plus taxes</span>
-          </div>
-          </div>
+      <div class="upgrade-pkg">
+        <div class="row">
 
+          <div class="col-md-6 text-center">
+            <div class="package-card">
+              <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
+            <div class="display-inline pkg-info">
+                <span class="display-block package-name">SILVER PACKAGE</span>
+              <span class="display-block package-price">&#8377; 2300 plus taxes</span>
+            </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 border-divider">
+            <ul>
+              <li>30 photos</li>
+              <li>2mb per photo</li>
+              <li>Photos can be edited by you</li>
+              <li>Valid for 1 year</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-6 border-divider">
-          <ul>
-            <li>100 photos</li>
-            <li>3mb per photo</li>
-            <li>Photos can be edited by you</li>
-            <li>Valid for 1 year</li>
-          </ul>
-        </div>
+  <button type="button" class="btn btn-default btn-full" ng-click="silverMember()">UPGRADE NOW</button>
       </div>
-      <button type="button" class="btn btn-default btn-full" ng-click="goldMember()">UPGRADE NOW</button>
-    </div>
-    <br>
-  </div>
-</div>
-</div>
+      <br>
+      <div class="upgrade-pkg2 gold">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <div class="package-card">
+              <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
+            <div class="display-inline pkg-info">
+                <span class="display-block package-name">GOLD PACKAGE</span>
+              <span class="display-block package-price">&#8377; 3400 plus taxes</span>
+            </div>
+            </div>
 
-<!-- goldmember -->
-<div class="about-desc" ng-hide="goldenMember">
-  <div class="about-head text-capitalize">Membership</div>
-  <div class="abt-2">
-    <div class="red-sec"><p>
-      You are currently registered as a Gold Package
-    </p></div>
-  </div>
-</div>
-<!-- silverMember -->
-<div class="about-desc" ng-hide="silverMember">
-  <div class="about-head text-capitalize">Membership</div>
-  <div class="abt-2">
-    <div class="red-sec"><p>
-      You are currently registered as a Silver Package
-    </p></div>
-    <div class="upgrade-sec">
-      <p class="text-uppercase">Upgrade to the following premium packages</p>
-    </div>
-    <div class="upgrade-pkg2 gold">
-      <div class="row">
-        <div class="col-md-6 text-center">
-          <div class="package-card">
-            <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
-          <div class="display-inline pkg-info">
-              <span class="display-block package-name">GOLD PACKAGE</span>
-            <span class="display-block package-price">&#8377; 3400 plus taxes</span>
           </div>
+          <div class="col-md-6 border-divider">
+            <ul>
+              <li>100 photos</li>
+              <li>3mb per photo</li>
+              <li>Photos can be edited by you</li>
+              <li>Valid for 1 year</li>
+            </ul>
           </div>
-
         </div>
-        <div class="col-md-6 border-divider">
-          <ul>
-            <li>100 photos</li>
-            <li>3mb per photo</li>
-            <li>Photos can be edited by you</li>
-            <li>Valid for 1 year</li>
-          </ul>
-        </div>
+        <button type="button" class="btn btn-default btn-full" ng-click="goldMember()">UPGRADE NOW</button>
       </div>
-      <button type="button" class="btn btn-default btn-full" ng-click="goldMember()">UPGRADE NOW</button>
+      <br>
     </div>
+  </div>
+  </div>
+
+  <!-- goldmember -->
+  <div class="about-desc" ng-hide="goldenMember">
+    <div class="about-head text-capitalize">Membership</div>
+    <div class="abt-2">
+      <div class="red-sec"><p>
+        You are currently registered as a Gold Package
+      </p></div>
+    </div>
+  </div>
+  <!-- silverMember -->
+  <div class="about-desc" ng-hide="silverMember">
+    <div class="about-head text-capitalize">Membership</div>
+    <div class="abt-2">
+      <div class="red-sec"><p>
+        You are currently registered as a Silver Package
+      </p></div>
+      <div class="upgrade-sec">
+        <p class="text-uppercase">Upgrade to the following premium packages</p>
+      </div>
+      <div class="upgrade-pkg2 gold">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <div class="package-card">
+              <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
+            <div class="display-inline pkg-info">
+                <span class="display-block package-name">GOLD PACKAGE</span>
+              <span class="display-block package-price">&#8377; 3400 plus taxes</span>
+            </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 border-divider">
+            <ul>
+              <li>100 photos</li>
+              <li>3mb per photo</li>
+              <li>Photos can be edited by you</li>
+              <li>Valid for 1 year</li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="btn btn-default btn-full" ng-click="goldMember()">UPGRADE NOW</button>
+      </div>
+    </div>
+  </div>
   </div>
 </div>
 <!-- end -->
+
+<!-- work-sec -->
+<div class="work-part" ng-if="tab == 2">
+
+</div>
+
 </div>
 
   </div>
