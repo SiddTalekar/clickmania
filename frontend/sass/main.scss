@@ -16,6 +16,7 @@
     $orangeColor: #f4511e !default;
     $whiteColor: #ffffff !default;
     $lightBlackColor: rgba(55, 55, 55, 0.92);
+    $borderRadius: 4px; // used to overwrite the inheritance for btn class mentioned in Node-framework
     @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
     @font-face {
         font-family: 'Glyphicons Halflings';
@@ -175,6 +176,40 @@
         overflow-x: hidden!important; // It is must to keep it as an imp
     }
     
+    //used for @extend
+    .myBtnOrange {
+        background-color: $orangeColor;
+        color: $whiteColor;
+        border-radius: $borderRadius;
+        border-color: $orangeColor;
+    }
+    
+    .myBtnDarkGray {
+        background-color: $lightBlackColor;
+        color: $whiteColor;
+        border-radius: $borderRadius;
+        border-color: $lightBlackColor;
+    }
+    
+    .myBtnWhite {
+        background-color: $whiteColor;
+        color: $orangeColor;
+        border-radius: $borderRadius;
+        border-color: $whiteColor;
+    }
+    
+    .myJumbotron {
+        color: $whiteColor;
+        background-color: transparent;
+    }
+    
+    .mg {
+        // margin top and bottom
+        margin-top: 53px;
+        margin-bottom: 53px;
+    }
+    
+    // end of @extend classes
     img.loading {
         text-align: center;
         opacity: 1;
@@ -507,24 +542,55 @@
                 }
             }
         }
-        .scroll_img {
-            // Used to position scroll down image
-            width: 100%;
+        // .scroll_img {
+        //     // Used to position scroll down image
+        //     width: 100%;
+        //     display: inline-block;
+        //     position: relative;
+        //     top: -68px;
+        //     z-index: 99;
+        //     p {
+        //         font-family: 'alegreya-light';
+        //         text-transform: capitalize;
+        //         color: $whiteColor;
+        //         cursor: pointer;
+        //     }
+        // }
+    }
+    
+    .scroll_down {
+        // Used to position scroll down automatically to next div
+        position: relative;
+        top: -63px;
+        z-index: 99;
+        cursor: pointer;
+        p {
+            font-family: 'alegreya-light';
+            font-weight: 900;
+            text-transform: capitalize;
+            color: $whiteColor;
+        }
+        hr {
+            margin-top: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+        hr:after {
+            content: '';
+            background-size: cover;
+            background-position: center center;
             display: inline-block;
-            position: relative;
-            top: -68px;
-            z-index: 99;
-            p {
-                font-family: 'alegreya-light';
-                text-transform: capitalize;
-                color: $whiteColor;
-                cursor: pointer;
-            }
+            width: 60px;
+            height: 60px;
+            background-image: url(/../frontend/img/scroll.png);
+            background-repeat: no-repeat;
+            cursor: pointer;
         }
     }
     
     // It contains feature photographer flex-slider
     section.featu_photo_caraso {
+        @extend .mg;
         .flexslider {
             margin-bottom: 29px;
         }
@@ -606,6 +672,51 @@
         }
         .flex-control-nav {
             display: none!important; // for dots navigation 
+        }
+    }
+    
+    // start of photo contest section
+    section.pht_contest {
+        background-image: url(../img/photo_contest2.jpg);
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        height: 400px;
+        background-repeat: no-repeat;
+        // .camera_img {
+        //     background-image: url(../img/photo_contest1.png);
+        //     width: 100px;
+        //     height: 100px;
+        //     background-repeat: no-repeat;
+        // }
+        .camera_img {
+            position: relative;
+            top: -36px;
+        }
+        .jumbotron {
+            @extend .myJumbotron;
+            padding-top: 0!important;
+            h2 {
+                font-family: 'damion-regular';
+                font-size: 65px;
+                font-weight: 500;
+                height: 101px;
+                margin-top: -24px;
+            }
+            h2:after {
+                content: "Photo Contest";
+                color: $orangeColor;
+                position: relative;
+                top: -28px;
+                left: 103px;
+                display: inline-block;
+                z-index: 5;
+            }
+            .pht_contest_btn {
+                button {
+                    @extend .myBtnWhite;
+                }
+            }
         }
     }
     
