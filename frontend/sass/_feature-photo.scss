@@ -15,12 +15,158 @@
     font-family: dosis-Light;
 }
 
+.grey-back {
+    background-color: #f1f1f1;
+}
+
 .hctl {
     font-family: hctl;
 }
 
 .light-grey {
     background-color: #f6f6f6;
+}
+
+.relative {
+    position: relative;
+}
+
+.ab {
+    position: absolute;
+    bottom: 0;
+    margin: auto 0;
+    right: 0;
+    width: 100%;
+
+    .border-profile {
+        margin-left: 13%;
+        margin-bottom: -36px;
+        border: 11px solid #f15a29;
+        border-radius: 50%;
+        width: 26%;
+        padding: 12px;
+        border-top: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        transform: rotate(57deg);
+        display: inline-block;
+        float: left;
+
+        .profile-logo {
+            width: 40px;
+            position: absolute;
+            z-index: 9;
+            left: 54%;
+            top: 0;
+            transform: rotate(-53deg);
+        }
+
+        .prof-img {
+            width: 100%;
+        }
+    }
+}
+
+.user-name {
+    margin-left: 15px;
+    position: absolute;
+    bottom: 115px;
+    float: left;
+
+    p {
+        font-size: 30px;
+        font-family: dosis-Light;
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-family: dosis-Light;
+        color: #fff;
+        text-transform: capitalize;
+    }
+}
+
+.profile-img {
+    display: inline;
+    float: left;
+
+    img {
+        width: 75px;
+    }
+}
+
+.pad26 {
+    padding: 26px 0;
+}
+
+.pad-border {
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cecece;
+}
+
+.user-section {
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cecece;
+}
+
+.input-border {
+    width: 100%;
+    border: 1px solid #cecece !important;
+    height: auto;
+}
+
+.pub-r {
+    background-image: url("frontend/img/photographer/form/edit-white.png");
+    background-color: rgba(140, 139, 139, 0.36);
+    background-repeat: no-repeat;
+    background-position: 20px 13px;
+    padding: 7px 49px;
+    color: #807d7d;
+    font-size: 22px !important;
+    height: auto;
+}
+
+.pub-btn {
+    font-size: 20px;
+    color: #fff;
+    background: #f1592a;
+    padding: 9px 24px;
+    border: 1px solid #f1592a;
+}
+
+.profile-intro {
+    margin-top: 17px;
+    padding-left: 85px;
+}
+
+.main-cont {
+    border-radius: 5px;
+    margin: 60px 150px;
+
+    .intro {
+        display: inline;
+        font-size: 20px;
+        font-family: dosis-Light;
+        color: #f15a29;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
+
+.so-nam {
+    font-size: 36px;
+    font-family: dosis-Light;
+    color: #f15a29;
+    font-weight: 700;
+
+    img {
+        width: 70px;
+        margin: 0 15px;
+    }
 }
 
 .orange-color {
@@ -222,6 +368,10 @@ hr.border-hr:after {
     border: none;
     border-radius: 4px;
     padding: 5px 45px;
+}
+
+.whit-back {
+    background-color: #fff;
 }
 
 .whit-btn:focus,
