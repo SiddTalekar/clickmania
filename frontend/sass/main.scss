@@ -286,7 +286,7 @@
     footer {
         // font-size: 12px;
         color: $whiteColor;
-        padding: 10px 0;
+        // padding: 10px 0;
         a[target="_blank"] {
             color: $whiteColor;
             text-decoration: none;
@@ -675,6 +675,7 @@
         }
     }
     
+    //end feature photographer flex-slider
     // start of photo contest section
     section.pht_contest {
         background-image: url(../img/photo_contest2.jpg);
@@ -720,6 +721,112 @@
         }
     }
     
+    // end of photo contest section
+    // start of section categories
+    section.categories {
+        background-image: url(../img/cat1.jpg);
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        height: auto;
+        background-repeat: no-repeat;
+        .ht30 {
+            display: inline-block;
+            height: 130px;
+            position: relative;
+            .imgwt {
+                position: absolute;
+                top: -25px;
+                left: -71px;
+                transform: rotate(79deg);
+                width: 130px;
+            }
+            h2 {
+                position: relative;
+                font-family: 'damion-regular';
+                font-size: 65px;
+                font-weight: 500;
+                color: $whiteColor;
+            }
+        }
+        .all_cate {
+            display: inline-block;
+            @extend .mg;
+            .padd_rt {
+                // need to change in col-xs 
+                padding-right: 0;
+            }
+            .padd_lt {
+                // need to change in col-xs 
+                padding-left: 0;
+            }
+            button {
+                margin-top: 50px;
+                @extend .myBtnOrange;
+            }
+            .btn:hover {
+                @extend .myBtnOrange;
+            }
+        }
+    }
+    
+    // end of section categories
+    //start of section sign up
+    section.signup {
+        .cam_img1 {
+            position: relative;
+            top: -108px;
+            z-index: -3;
+            display: inline-block;
+        }
+        h2 {
+            font-family: 'damion-regular';
+            font-size: 65px;
+            color: black;
+            font-weight: 500;
+        }
+        .cam_heading {
+            position: relative;
+            height: 101px;
+            margin-bottom: 10px;
+            h2:nth-child(odd) {
+                margin-bottom: 0;
+            }
+            h2:nth-child(even) {
+                margin-top: 0;
+                color: $orangeColor;
+                text-indent: 52px;
+                position: relative;
+                top: -35px;
+                z-index: -3;
+            }
+            h2:nth-child(even):after {
+                content: '\3F';
+                color: $orangeColor;
+                top: -79px;
+                position: absolute;
+                color: #f4511e;
+                font-size: 155px;
+            }
+        }
+        button {
+            @extend .myBtnOrange;
+        }
+        button:hover {
+            @extend .myBtnOrange;
+        }
+        // h2:before {
+        //     //   content: "Camera";
+        //     color: $orangeColor;
+        //     position: relative;
+        //     bottom: -38px;
+        //     left: 234px;
+        //     display: inline-block;
+        //     z-index: -3;
+        // }
+    }
+    
+    //end of section sign up
     //end of feature photographer flex-slider
     @import "fancybox-override";
     @import "rishabh";
