@@ -60,6 +60,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.noEdit=true;
     $scope.hideAboutDesc=false;
     $scope.profileSelect=false;
+    $scope.freeMember=false;
+    $scope.silverSub=true;
+    $scope.chooseSilver=function() {
+        $scope.freeMember=true;
+          $scope.silverSub=false;
+    }
     $scope.showForm=function() {
         $scope.noEdit=false;
       $scope.showForm=false;
@@ -87,12 +93,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       $scope.showForm=false;
       $scope.hideAboutDesc=true;
     }
-    $scope.enquiry = function() {
+    $scope.uploadImg = function() {
         $uibModal.open({
             animation: true,
-            templateUrl: "views/modal/profile-info.html",
+            templateUrl: "frontend/views/modal/upload-photo.html",
             scope: $scope,
-            windowClass: "mod-fix"
+windowClass: 'upload-pic'
         });
     };
 
