@@ -25,41 +25,25 @@
   <button type="button" class="btn btn-default btn-select">
     ABOUT
     </button>
-  <!-- <button type="button" class="btn btn-default btn-select">ABOUT</button> -->
-<div class="selected-tab">
-  <div class="under-down"></div>
-    <div class="under-line">
-      <img src="frontend/img/photographer/under.png" alt="" class="img-responsive">
-    </div>
-</div>
-
+          <img src="frontend/img/photographer/under.png" alt="" class="img-responsive">
 </div>
   <span class="border-line"></span>
 <div class="btn-1"  ng-click="tab = 2" ng-class="{'active':tab == 2}">
   <button type="button" class="btn btn-default btn-select">
     WORK
     </button>
-    <div class="selected-tab">
-      <div class="under-down"></div>
-        <div class="under-line">
-          <img src="frontend/img/photographer/under.png" alt="" class="img-responsive">
-        </div>
-    </div>
+              <img src="frontend/img/photographer/under.png" alt="" class="img-responsive">
+
 </div>
 <span class="border-line"></span>
 <div class="btn-1" ng-click="tab = 3" ng-class="{'active':tab == 3}">
   <button type="button" class="btn btn-default btn-select">
   HISTORY
     </button>
-  <div class="selected-tab">
-    <div class="under-down"></div>
-      <div class="under-line">
-        <img src="frontend/img/photographer/under.png" alt="" class="img-responsive">
-      </div>
-  </div>
+              <img src="frontend/img/photographer/under.png" alt="" class="img-responsive">
+
 </div>
-    <!-- </div> -->
-</div>
+    </div>
 </div>
 </div>
 
@@ -340,9 +324,85 @@
 
 <!-- work-sec -->
 <div class="work-part" ng-if="tab == 2">
+<div class="" ng-hide="freeMember">
+  <div class="free-member">
+    <span class="small-font left-font">As a</span>
+    <span class="orange-color big-font">Free Member</span>
+    <span class="small-font">you are unable to upload photos</span>
+  </div>
+  <div class="package-block">
+    <p class="text-uppercase text-center">Upgrade to the following premium packages to upload</p>
+    <div class="row">
+      <div class="col-md-6">
+  <div class="silver-pack">
+    <div class="silver-content text-center">
+  <div class="package-head">
+    <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
+      <div class="display-inline pkg-info">
+      <span class="package-name">SILVER PACKAGE</span>
+  </div>
 
+    </div>
+      <span class="display-block package-price">&#8377; 2300 plus taxes</span>
+      <ul class="package-specs text-left">
+        <li>30 photos</li>
+        <li>2mb per photo</li>
+        <li>Photos can be edited by you</li>
+        <li>Valid for 1 year</li>
+      </ul>
+          <button type="button" class="btn btn-default btn-full" ng-click="chooseSilver()">UPGRADE NOW</button>
+    </div>
+
+  </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="silver-pack or-cont">
+          <div class="silver-content text-center">
+        <div class="package-head1">
+          <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
+            <div class="display-inline pkg-info">
+            <span class="package-name">GOLD PACKAGE</span>
+        </div>
+
+          </div>
+            <span class="display-block package-price">&#8377; 3450 plus taxes</span>
+            <ul class="package-specs text-left">
+              <li>100 photos</li>
+              <li>3mb per photo</li>
+              <li>Photos can be edited by you</li>
+              <li>Valid for 1 year</li>
+            </ul>
+                <button type="button" class="btn btn-default btn-full" ng-click="goldMember()">UPGRADE NOW</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="silver-subscribed" ng-hide="silverSub">
+  <div class="free-member">
+    <span class="small-font left-font">You are now</span>
+    <span class="orange-color big-font">Subscribed</span>
+    <span class="small-font">to a silver package</span>
+  </div>
+  <div class="upload-pic text-center">
+    <button type="button" class="btn btn-default text-uppercase" ng-click="uploadImg()">Start uploading</button>
+  </div>
+<div class="terms">
+  <span class="text-center">Terms and conditions</span>
+  <ul class="package-specs text-left">
+    <li>30 photos</li>
+    <li>2mb per photo</li>
+    <li>Photos can be edited by you</li>
+    <li>Valid for 1 year</li>
+  </ul>
+</div>
 </div>
 
+
+</div>
 </div>
 
   </div>
