@@ -28,17 +28,17 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'FormCtrl'
         })
-        .state('Login', {
+        .state('login', {
             url: "/login",
             templateUrl: "frontend/views/template.html",
             controller: 'LoginCtrl'
         })
-        .state('Users', {
+        .state('users', {
             url: "/users",
             templateUrl: "frontend/views/template.html",
             controller: 'UsersCtrl'
         })
-         .state('User Profile', {
+         .state('user-profile', {
               url: "/user-profile",
               templateUrl: "frontend/views/template.html",
               controller: 'UserProfileCtrl'

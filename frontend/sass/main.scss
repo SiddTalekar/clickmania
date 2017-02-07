@@ -286,7 +286,7 @@
     footer {
         // font-size: 12px;
         color: $whiteColor;
-        padding: 10px 0;
+        // padding: 10px 0;
         a[target="_blank"] {
             color: $whiteColor;
             text-decoration: none;
@@ -407,7 +407,8 @@
     }
     
     .navbar-default {
-        background-color: transparent;
+        background-color: $whiteColor;
+        border: none;
         position: relative;
     }
     
@@ -589,7 +590,7 @@
     }
     
     // It contains feature photographer flex-slider
-    section.featu_photo_caraso {
+    .featu_photo_caraso {
         @extend .mg;
         .flexslider {
             margin-bottom: 29px;
@@ -659,14 +660,15 @@
             .view_prof_btn {
                 padding: 7px 0;
                 button.btn {
-                    background-color: $orangeColor;
+                    // background-color: $orangeColor;
+                    @extend .myBtnOrange;
                 }
             }
             .fp_viewAll_btn {
                 margin-bottom: 25px;
                 button {
-                    background-color: $lightBlackColor;
-                    color: $whiteColor;
+                    // 
+                    @extend .myBtnDarkGray;
                 }
             }
         }
@@ -675,8 +677,9 @@
         }
     }
     
+    //end feature photographer flex-slider
     // start of photo contest section
-    section.pht_contest {
+    .pht_contest {
         background-image: url(../img/photo_contest2.jpg);
         width: 100%;
         background-position: center center;
@@ -696,21 +699,28 @@
         .jumbotron {
             @extend .myJumbotron;
             padding-top: 0!important;
-            h2 {
-                font-family: 'damion-regular';
-                font-size: 65px;
-                font-weight: 500;
-                height: 101px;
-                margin-top: -24px;
-            }
-            h2:after {
-                content: "Photo Contest";
-                color: $orangeColor;
+            .ht100 {
                 position: relative;
-                top: -28px;
-                left: 103px;
-                display: inline-block;
-                z-index: 5;
+                height: 100px;
+                margin-top: -20px;
+                margin-bottom: 10px;
+                h2 {
+                    font-family: 'damion-regular';
+                    font-size: 65px;
+                    font-weight: 500;
+                }
+                h2:nth-child(odd) {
+                    color: $whiteColor;
+                    margin: 0 0;
+                }
+                h2:nth-child(even) {
+                    color: $orangeColor;
+                    white-space: nowrap;
+                    position: absolute;
+                    text-indent: 97px;
+                    top: 44px;
+                    margin: 0 0;
+                }
             }
             .pht_contest_btn {
                 button {
@@ -720,7 +730,151 @@
         }
     }
     
-    //end of feature photographer flex-slider
+    // end of photo contest section
+    // start of section categories
+    .categories {
+        background-image: url(../img/cat1.jpg);
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        height: auto;
+        background-repeat: no-repeat;
+        .ht30 {
+            display: inline-block;
+            height: 130px;
+            position: relative;
+            .imgwt {
+                position: absolute;
+                top: -25px;
+                left: -71px;
+                transform: rotate(79deg);
+                width: 130px;
+            }
+            h2 {
+                position: relative;
+                font-family: 'damion-regular';
+                font-size: 65px;
+                font-weight: 500;
+                color: $whiteColor;
+            }
+        }
+        .all_cate {
+            display: inline-block;
+            @extend .mg;
+            .padd_rt {
+                // need to change in col-xs 
+                padding-right: 0;
+            }
+            .padd_lt {
+                // need to change in col-xs 
+                padding-left: 0;
+            }
+            button {
+                margin-top: 50px;
+                @extend .myBtnOrange;
+            }
+            .btn:hover {
+                @extend .myBtnOrange;
+            }
+        }
+    }
+    
+    // end of section categories
+    //start of section sign up
+    .signup {
+        position: relative;
+        .img_relative {
+            position: relative;
+            top: -108px;
+            width: 400px;
+            z-index: -3;
+            display: inline-block;
+        }
+        h2 {
+            font-family: 'damion-regular';
+            font-size: 65px;
+            color: black;
+            font-weight: 500;
+        }
+        .cam_heading {
+            position: relative;
+            height: 101px;
+            margin-top: 51px;
+            margin-bottom: 18px;
+            h2:nth-child(odd) {
+                margin-bottom: 0;
+            }
+            h2:nth-child(even) {
+                margin-top: 0;
+                color: $orangeColor;
+                text-indent: 52px;
+                position: relative;
+                top: -35px;
+                z-index: -3;
+            }
+            h2:nth-child(even):after {
+                content: '\3F';
+                color: $orangeColor;
+                top: -79px;
+                position: absolute;
+                color: #f4511e;
+                font-size: 155px;
+            }
+        }
+        button {
+            @extend .myBtnOrange;
+        }
+        button:hover {
+            @extend .myBtnOrange;
+        }
+        // h2:before {
+        //     //   content: "Camera";
+        //     color: $orangeColor;
+        //     position: relative;
+        //     bottom: -38px;
+        //     left: 234px;
+        //     display: inline-block;
+        //     z-index: -3;
+        // }
+        .img_absolute {
+            position: absolute;
+            width: 40%;
+            height: auto;
+            top: -25px;
+            z-index: -4;
+            right: -19px;
+            display: inline-block;
+        }
+    }
+    
+    //end of section sign up
+    // start of Artist of the month section
+    .atm {
+        // artist of the month
+        position: relative;
+        background-image: url(../img/atm.png);
+        width: 100%;
+        height: 451px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .atm_title {
+            display: inline-block;
+            height: 100px;
+            h2 {
+                font-family: 'damion-regular';
+                font-size: 65px;
+                color: $orangeColor;
+                margin-bottom: 0;
+            }
+        }
+        .bg_img {
+            position: relative;
+            top: -15px;
+        }
+    }
+    
+    // end of Artist of the mont section
     @import "fancybox-override";
     @import "rishabh";
     @import "feature-photo";
