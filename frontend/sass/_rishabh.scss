@@ -138,7 +138,7 @@ color: #fff;
 
 //about desc
 .about-head{
-  background-color: #777;
+  background-color: #5d5d5d;
   border-radius: 5px 5px 0 0;
   color: #fff;
 font-family: 'Dosis-Regular';
@@ -553,26 +553,90 @@ margin: 0 auto;
 }
 
 .select_join {
-  width: 170px;
-  height: 28px;
+  width: 220px;
+  height: 36px;
   overflow: hidden;
-  background: url('http://s24.postimg.org/lyhytocf5/dropdown.png') no-repeat right #FEFEFE;
+  background: url('../img/photographer/arrow.jpg') no-repeat right #FEFEFE;
   border: #FEFEFE 1px solid;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: inset 0px 0px 10px 1px #FEFEFE;
   box-shadow: inset 0px 0px 10px 1px #FEFEFE;
 }
+
 .select_join select {
   background: transparent;
-  width: 170px;
-  font-size:7pt;
-  color:grey;
-  border: 0;
+  width: 220px;
+  padding: 0 10px;
+  font-size: 12pt;
+  color: #c0c0c0;
+  border: 1px solid #ccc;
   border-radius: 0;
-  height: 28px;
+  height: 34px;
   -webkit-appearance: none;
 }
 .select_join select:focus {
   outline: none;
+}
+.upl-sec{
+  .upload-pic{
+    margin: 15px 0;
+  }
+  .note-msg{
+    font-family: 'dosis-regular';
+  }
+  .upload-head{
+      font-family: 'damion-regular';
+      color: $orangeColor;
+      font-size: 30px;
+  }
+  p{
+    font-family: 'dosis-regular';
+    font-size: 20px;
+    font-weight: 600;
+    span{
+      font-weight: 400;
+    }
+  }
+
+}
+.img-holder{
+  margin: 18px 5px;
+    border: 10px solid #fff;
+box-shadow: 4px 5px 3px #c0c0c0;
+}
+.upload-imageblock{
+  position: relative;
+  width: 50%;
+}
+.close-modal{
+  position: absolute;
+      top: -9px;
+      right: -22px;
+      background: $orangeColor;
+      width: 20px;
+      padding: 0px 4px;
+      height: 20px;
+      border-radius: 50%;
+      color: #fff;
+      line-height: 1.2;
+}
+//
+.uploaded-images{
+  .package-head{
+    .pkg-info{
+      margin-left: 12px;
+      width: auto;
+    }
+    display: inline-block;
+    width: 24%;
+      background: linear-gradient(to right,rgb(173,173,173),rgb(228,228,228));
+    img{
+        // width: 50px;
+        width: 40px;
+padding: 3px 2px;
+margin-left: 5px;
+vertical-align: -webkit-baseline-middle;
+    }
+  }
 }
