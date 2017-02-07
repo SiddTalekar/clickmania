@@ -407,7 +407,8 @@
     }
     
     .navbar-default {
-        background-color: transparent;
+        background-color: $whiteColor;
+        border: none;
         position: relative;
     }
     
@@ -589,7 +590,7 @@
     }
     
     // It contains feature photographer flex-slider
-    section.featu_photo_caraso {
+    .featu_photo_caraso {
         @extend .mg;
         .flexslider {
             margin-bottom: 29px;
@@ -659,14 +660,15 @@
             .view_prof_btn {
                 padding: 7px 0;
                 button.btn {
-                    background-color: $orangeColor;
+                    // background-color: $orangeColor;
+                    @extend .myBtnOrange;
                 }
             }
             .fp_viewAll_btn {
                 margin-bottom: 25px;
                 button {
-                    background-color: $lightBlackColor;
-                    color: $whiteColor;
+                    // 
+                    @extend .myBtnDarkGray;
                 }
             }
         }
@@ -677,7 +679,7 @@
     
     //end feature photographer flex-slider
     // start of photo contest section
-    section.pht_contest {
+    .pht_contest {
         background-image: url(../img/photo_contest2.jpg);
         width: 100%;
         background-position: center center;
@@ -697,21 +699,28 @@
         .jumbotron {
             @extend .myJumbotron;
             padding-top: 0!important;
-            h2 {
-                font-family: 'damion-regular';
-                font-size: 65px;
-                font-weight: 500;
-                height: 101px;
-                margin-top: -24px;
-            }
-            h2:after {
-                content: "Photo Contest";
-                color: $orangeColor;
+            .ht100 {
                 position: relative;
-                top: -28px;
-                left: 103px;
-                display: inline-block;
-                z-index: 5;
+                height: 100px;
+                margin-top: -20px;
+                margin-bottom: 10px;
+                h2 {
+                    font-family: 'damion-regular';
+                    font-size: 65px;
+                    font-weight: 500;
+                }
+                h2:nth-child(odd) {
+                    color: $whiteColor;
+                    margin: 0 0;
+                }
+                h2:nth-child(even) {
+                    color: $orangeColor;
+                    white-space: nowrap;
+                    position: absolute;
+                    text-indent: 97px;
+                    top: 44px;
+                    margin: 0 0;
+                }
             }
             .pht_contest_btn {
                 button {
@@ -723,7 +732,7 @@
     
     // end of photo contest section
     // start of section categories
-    section.categories {
+    .categories {
         background-image: url(../img/cat1.jpg);
         width: 100%;
         background-position: center center;
@@ -772,10 +781,12 @@
     
     // end of section categories
     //start of section sign up
-    section.signup {
-        .cam_img1 {
+    .signup {
+        position: relative;
+        .img_relative {
             position: relative;
             top: -108px;
+            width: 400px;
             z-index: -3;
             display: inline-block;
         }
@@ -788,7 +799,8 @@
         .cam_heading {
             position: relative;
             height: 101px;
-            margin-bottom: 10px;
+            margin-top: 51px;
+            margin-bottom: 18px;
             h2:nth-child(odd) {
                 margin-bottom: 0;
             }
@@ -824,10 +836,45 @@
         //     display: inline-block;
         //     z-index: -3;
         // }
+        .img_absolute {
+            position: absolute;
+            width: 40%;
+            height: auto;
+            top: -25px;
+            z-index: -4;
+            right: -19px;
+            display: inline-block;
+        }
     }
     
     //end of section sign up
-    //end of feature photographer flex-slider
+    // start of Artist of the month section
+    .atm {
+        // artist of the month
+        position: relative;
+        background-image: url(../img/atm.png);
+        width: 100%;
+        height: 451px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .atm_title {
+            display: inline-block;
+            height: 100px;
+            h2 {
+                font-family: 'damion-regular';
+                font-size: 65px;
+                color: $orangeColor;
+                margin-bottom: 0;
+            }
+        }
+        .bg_img {
+            position: relative;
+            top: -15px;
+        }
+    }
+    
+    // end of Artist of the mont section
     @import "fancybox-override";
     @import "rishabh";
     @import "feature-photo";
