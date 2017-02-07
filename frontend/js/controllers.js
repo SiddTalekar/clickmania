@@ -172,7 +172,7 @@ windowClass: 'upload-pic'
             "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
         }];
         $scope.subclick = {
-            "background": "frontend/img/clickm/25.jpg",
+            "background": "frontend/img/user-back.png",
             "titleOne": "If you wish to join as a",
             "titleTwo": "featured photographer"
         };
@@ -187,6 +187,37 @@ windowClass: 'upload-pic'
         $scope.toggleTab = function (val) {
             $scope.activeTab = val;
         };
+        $scope.fpUser = [{
+            profile: "frontend/img/pic1.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Zaroon Jaffrani | Pune",
+            speciality: "wild life"
+        }, {
+            profile: "frontend/img/pic2.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Asmara Khan | Banglore",
+            speciality: "wedding"
+        }, {
+            profile: "frontend/img/pic3.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Fatema | Delhi",
+            speciality: "wild life"
+        }, {
+            profile: "frontend/img/clickm/pic1.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Zaroon Jaffrani | Pune",
+            speciality: "wild life"
+        }, {
+            profile: "frontend/img/clickm/pic2.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Asmara Khan | Banglore",
+            speciality: "Wedding"
+        }, {
+            profile: "frontend/img/pic3.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Fatema | Delhi",
+            speciality: "wild life"
+        }];
 
     })
     .controller('headerctrl', function ($scope, TemplateService) {

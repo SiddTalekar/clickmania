@@ -1,9 +1,10 @@
 <div class="container-fluid pad0 ">
     <div class="head-section relative">
-        <img src="frontend/img/clickm/5.jpg" alt="" class="img-full img-responsive">
+      <img src="frontend/img/clickm/5.jpg" alt="" class="img-full img-responsive">
+        <img src="frontend/img/fh.png" alt="" class="img-responsive img-left">
         <div class="ab">
             <div class="border-profile">
-                <img src="frontend/img/photographer/small-logo.png" alt="" class="img-responsive profile-logo">
+                <img src="frontend/img/photographer/small-logo.png" alt="" class="img-responsive profile-user">
                 <img src="frontend/img/clickm/pic1.png" alt="" class="img-responsive prof-img">
             </div>
             <div class="user-name inline">
@@ -33,7 +34,7 @@
     <div class="container ">
         <div class="row">
             <div class="main-cont whit-back">
-                <div class="about-head text-capitalize">about asmara khan<img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline pull-right img-edit"></div>
+                <div class="about-head text-capitalize">about asmara khan <span class="pull-right"><a href="#" class="whit-color"><img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline"> Edits</a></span></div>
                 <div class="abt-form">
                     <form action="" class="form-horizontal">
                         <div class="form-group">
@@ -78,7 +79,6 @@
                                 <input type="checkbox" id="test5" />
                                 <label for="test5" class="check-label">Others</label>
                             </p>
-
                         </div>
                         <div class="form-group">
                             <label for="bio" class="vat">
@@ -90,13 +90,10 @@
                         <div class="form-group">
                             <label for="Pricing" class="">
                             <img src="frontend/img/photographer/form/tag.png" alt="" class="img-responsive display-inline">
-                            Pricing:</label>
+                            Pricing:</label><i class="fa fa-inr"></i>
                             <div class="display-inline">
                                 <input type="text" class="form-control" id="pricing" placeholder="Give an estimate of the fee you charge">
                             </div>
-                        </div>
-                        <div class="sub-sec text-center">
-                            <button type="submit" class="btn btn-default">Done</button>
                         </div>
                     </form>
                 </div>
@@ -105,9 +102,9 @@
                 <span>Share this Profile on </span><span><img src="frontend/img/social/4.png" alt=""></span><span><img src="frontend/img/social/3.png" alt=""></span><span><img src="frontend/img/social/2.png" alt=""></span><span><img src="frontend/img/social/1.png" alt=""></span>
             </div>
             <div class="main-cont whit-back">
-                <div class="about-head text-capitalize">about asmara khan<img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline pull-right img-edit"></div>
+                <div class="about-head text-capitalize">REVIEWS</div>
                 <div class="abt-form">
-                    <div class="input-group pad26">
+                    <div class="input-group pad25">
                         <input type="text" class="pub-r form-control" placeholder="Write a review for asmara khan" aria-describedby="basic-addon2">
                         <span class="input-group-addon pub-btn" id="basic-addon2">Publish review</span>
                     </div>
@@ -117,17 +114,38 @@
                             <p class="intro">zarna parekh</p>
                             <p>1 Day ago</p>
                         </div>
-                        <p>Clickmania is an online mobile photo-sharing site that allows its users to share pictures and videos either publicly or privately on the app, as well as through a variety of other social networking platforms, such as Facebook,
+                        <p class="inline-block">Clickmania is an online mobile photo-sharing site that allows its users to share pictures and videos either publicly or privately on the app, as well as through a variety of other social networking platforms, such as Facebook,
                             Twitter, Tumblr, and Flickr. </p>
                         <textarea name="name" class="input-border" placeholder="Write a comment..."></textarea>
                     </div>
-                    <div class="input-group pad26">
+                    <div class="input-group pad25">
                         <input type="text" class="pub-r form-control" placeholder="Write a review for asmara khan" aria-describedby="basic-addon2">
                         <span class="input-group-addon pub-btn" id="basic-addon2">Publish review</span>
                     </div>
                 </div>
             </div>
+            <div class="other-section">
+                <h2 class="head-f">View other <br> &nbsp;&nbsp;Photographers</h2>
+                <div class="row pad-up100">
+                    <div class="col-sm-6 col-md-4 pad5" ng-repeat="user in fpUser">
+                        <div class="thumbnail shadow">
+                            <img src="{{user.background}}" alt="...">
+                            <div class="user-ab">
+                                <div class="border-half">
+                                    <img src="frontend/img/clickm/pic1.png" alt="" class="img-responsive prof-img doneLoading">
+                                </div>
+                                <div class="intro-profile">
+                                    <p class="name-loc">{{user.title}}</p>
+                                    <p class="spec">Speciality: {{user.speciality}}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="btn orange-btn" role="button">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- secondpart -->
     </div>
-</div>
