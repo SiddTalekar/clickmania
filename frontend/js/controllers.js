@@ -56,54 +56,67 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.tab = 1;
-    $scope.showForm = true;
-    $scope.noEdit = true;
-    $scope.hideAboutDesc = false;
-    $scope.profileSelect = false;
-    $scope.freeMember = false;
-    $scope.silverSub = true;
-    $scope.chooseSilver = function() {
-        $scope.freeMember = true;
-        $scope.silverSub = false;
+    $scope.showForm=true;
+    $scope.noEdit=true;
+    $scope.hideAboutDesc=false;
+    $scope.profileSelect=false;
+    $scope.freeMember=false;
+    $scope.silverSub=true;
+    $scope.chooseSilver=function() {
+        $scope.freeMember=true;
+          $scope.silverSub=false;
     }
-    $scope.showForm = function() {
-        $scope.noEdit = false;
-        $scope.showForm = false;
-        $scope.hideAboutDesc = true;
-        $scope.profileSelect = true;
+    $scope.showForm=function() {
+        $scope.noEdit=false;
+      $scope.showForm=false;
+      $scope.hideAboutDesc=true;
+      $scope.profileSelect=true;
     }
-    $scope.showMembership = false;
-    $scope.goldenMember = true;
-    $scope.silverMember = true;
-    $scope.silverMember = function() {
-        $scope.profileSelect = true;
-        $scope.noEdit = false;
-        $scope.showMembership = true;
-        $scope.silverMember = false;
-        $scope.goldenMember = true;
-        $scope.showForm = false;
-        $scope.hideAboutDesc = true;
+    $scope.showMembership=false;
+    $scope.goldenMember=true;
+    $scope.silverMember=true;
+    $scope.silverMember=function() {
+          $scope.profileSelect=true;
+          $scope.noEdit=false;
+      $scope.showMembership=true;
+      $scope.silverMember=false;
+        $scope.goldenMember=true;
+        $scope.showForm=false;
+        $scope.hideAboutDesc=true;
     }
-    $scope.goldMember = function() {
-        $scope.noEdit = false;
-        $scope.profileSelect = true;
-        $scope.showMembership = true;
-        $scope.goldenMember = false;
-        $scope.silverMember = true;
-        $scope.showForm = false;
-        $scope.hideAboutDesc = true;
+    $scope.goldMember=function() {
+      $scope.noEdit=false;
+          $scope.profileSelect=true;
+      $scope.showMembership=true;
+      $scope.goldenMember=false;
+      $scope.silverMember=true;
+      $scope.showForm=false;
+      $scope.hideAboutDesc=true;
     }
     $scope.uploadImg = function() {
         $uibModal.open({
             animation: true,
             templateUrl: "frontend/views/modal/upload-photo.html",
             scope: $scope,
-            windowClass: 'upload-pic'
+windowClass: 'upload-pic'
         });
     };
 
-})
+        $scope.uploadList = [
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg'
+                   ];
+                   $scope.subclick = {
+                       "background": "frontend/img/user-back.png",
+                       "titleOne": "Upgrade to",
+                       "titleTwo": "Gold"
+                   };
 
+})
 
 .controller('FormCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("form"); //Use same name of .html file

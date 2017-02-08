@@ -17,7 +17,9 @@
     <div class="quarter-circle"></div>
 
 </div>
-<div class="name-sec display-inline"><span>Rahul Mallesh</span></div>
+<div class="name-sec display-inline"><span class="name-part">Rahul Mallesh</span>
+<span class="loc-span">Location: Mumbai | Delhi</span>
+<span class="loc-span">Speciality: Underwater</span></div>
 </div>
 <div class="row text-center">
   <!-- <div class=""> -->
@@ -79,7 +81,7 @@
        <input type="text" class="form-control" id="location">
     </div> -->
      </div>
-          <div class="form-group">
+          <div class="form-group custom-check">
      <label for="speciality" class="">
      <img src="frontend/img/photographer/form/cam.png" alt="" class="img-responsive display-inline">
        Speciality:</label>
@@ -408,8 +410,123 @@
       <div class="display-inline pkg-info">
       <span class="package-name">SILVER PACKAGE</span>
   </div>
+</div>    <span class="count-images">YOU HAVE UPLOADED <span class="orange-color">12 OUT OF 30 PHOTOS</span></span>
+<div class="checkbox-form">
+  <form action="#" class="circular-checkbox display-inline">
+    <p>My Photos</p>
+    <p>
+      <input type="checkbox" id="underwater" />
+      <label for="underwater">Underwater</label>
+    </p>
+    <p>
+      <input type="checkbox" id="chennai" />
+      <label for="chennai">Chennai</label>
+    </p>
+    <p>
+      <input type="checkbox" id="mumbai" />
+      <label for="mumbai">Mumbai</label>
+    </p>
+  </form>
+  <div class="upload-pic display-inline">
+    <button type="button" class="btn btn-default text-uppercase" ng-click="uploadImg()">Upload picture</button>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-md-4" ng-repeat="item in uploadList track by $index">
+<div class="img-holder">
+
+  <img src="{{item}}" alt="" class="img-responsive">
+<div class="edit-image">
+<div class="edit-uploaded">
+  <button type="button" class="btn btn-default">  <i class="fa fa-eye" aria-hidden="true"></i>View</button>
+  <button type="button" class="btn btn-default">  <i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button>
+
+</div>
+</div>
+</div>
+  </div>
+
+</div>
+<div class="upload-pic text-center ld-more">
+  <button type="button" class="btn btn-default text-uppercase" ng-click="uploadImg()">Load more</button>
+</div>
+<!-- upgradegold -->
+<div class="upgrade-gd">
+  <div class="free-member">
+    <span class="small-font left-font">Want to</span>
+    <span class="orange-color big-font">Upload</span>
+    <span class="small-font">more photos</span>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="sub-main">
+              <img src="{{subclick.background}}" alt="..." class="img-full img-min-h">
+              <div class="sub-title text-right">
+<div class="upgrd-gold text-center">
+  <h1 class="damionr font70 white-color">{{subclick.titleOne}}</h1>
+  <h1 class="damionr font70  white-color">{{subclick.titleTwo}}</h1>
+  <p class="text-center btn-fix"><a class="btn orange-btn btn-fix" type="button">Click here</a></p>
+</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+
+<!-- gold-package -->
+<div class="uploaded-images">
+  <div class="package-head head-gold">
+    <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
+      <div class="display-inline pkg-info">
+      <span class="package-name">GOLD PACKAGE</span>
+  </div>
+</div>    <span class="count-images">YOU HAVE UPLOADED <span class="orange-color">70 OUT OF 100 PHOTOS</span></span>
+<div class="checkbox-form">
+  <form action="#" class="circular-checkbox display-inline">
+    <p>My Photos</p>
+    <p>
+      <input type="checkbox" id="underwater" />
+      <label for="underwater">Underwater</label>
+    </p>
+    <p>
+      <input type="checkbox" id="chennai" />
+      <label for="chennai">Chennai</label>
+    </p>
+    <p>
+      <input type="checkbox" id="mumbai" />
+      <label for="mumbai">Mumbai</label>
+    </p>
+  </form>
+  <div class="upload-pic display-inline">
+    <button type="button" class="btn btn-default text-uppercase" ng-click="uploadImg()">Upload picture</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4" ng-repeat="item in uploadList track by $index">
+<div class="img-holder">
+
+  <img src="{{item}}" alt="" class="img-responsive">
+<div class="edit-image">
+<div class="edit-uploaded">
+  <button type="button" class="btn btn-default">  <i class="fa fa-eye" aria-hidden="true"></i>View</button>
+  <button type="button" class="btn btn-default">  <i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button>
+
+</div>
+</div>
+</div>
+  </div>
+
+</div>
+<div class="upload-pic text-center ld-more">
+  <button type="button" class="btn btn-default text-uppercase" ng-click="uploadImg()">Load more</button>
+</div>
+
+</div>
+
 
 </div>
 </div>
