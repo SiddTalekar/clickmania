@@ -1,15 +1,15 @@
 <div class="container-fluid pad0 ">
     <div class="head-section relative">
-      <img src="frontend/img/clickm/5.jpg" alt="" class="img-full img-responsive">
+        <img src="frontend/img/clickm/5.jpg" alt="" class="img-full img-responsive">
         <img src="frontend/img/fh.png" alt="" class="img-responsive img-left">
         <div class="ab">
             <div class="border-profile">
                 <img src="frontend/img/photographer/small-logo.png" alt="" class="img-responsive profile-user">
-                <img src="frontend/img/clickm/pic1.png" alt="" class="img-responsive prof-img">
+                <img src="{{userHead.profile}}" alt="" class="img-responsive prof-img">
             </div>
             <div class="user-name inline">
-                <h1>asmara khan</h1>
-                <p>Location: banglor | chennai | mumbai</p>
+                <h1>{{userHead.name}} {{userHead.surName}}</h1>
+                <p>Location: <span ng-repeat="loc in userHead.location">{{loc}}</p>
                 <p>Speciality: wildlife , wedding , travel</p>
             </div>
         </div>
@@ -34,7 +34,7 @@
     <div class="container ">
         <div class="row">
             <div class="main-cont whit-back">
-                <div class="about-head text-capitalize">about asmara khan <span class="pull-right"><a href="#" class="whit-color"><img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline"> Edits</a></span></div>
+                <div class="about-head text-capitalize">about asmara khan <span class="pull-right"><a href="#" class="whit-color"><img src="frontend/img/photographer/form/edit-white.png" alt="" class="img-responsive display-inline"> Edit</a></span></div>
                 <div class="abt-form">
                     <form action="" class="form-horizontal">
                         <div class="form-group">
@@ -108,14 +108,13 @@
                         <input type="text" class="pub-r form-control" placeholder="Write a review for asmara khan" aria-describedby="basic-addon2">
                         <span class="input-group-addon pub-btn" id="basic-addon2">Publish review</span>
                     </div>
-                    <div class="user-section">
-                        <div class="profile-img"><img src="frontend/img/5.png" alt=""></div>
+                    <div class="user-section" ng-repeat="data in reviewList">
+                        <div class="profile-img"><img ng-src="{{data.profile}}" alt=""></div>
                         <div class="profile-intro">
-                            <p class="intro">zarna parekh</p>
-                            <p>1 Day ago</p>
+                            <p class="intro">{{data.name}} {{data.surName}}</p>
+                            <p>{{data.days}} Day ago</p>
                         </div>
-                        <p class="inline-block">Clickmania is an online mobile photo-sharing site that allows its users to share pictures and videos either publicly or privately on the app, as well as through a variety of other social networking platforms, such as Facebook,
-                            Twitter, Tumblr, and Flickr. </p>
+                        <p class="inline-block">{{data.content}}</p>
                         <textarea name="name" class="input-border" placeholder="Write a comment..."></textarea>
                     </div>
                     <div class="input-group pad25">
@@ -129,17 +128,16 @@
                 <div class="row pad-up100">
                     <div class="col-sm-6 col-md-4 pad5" ng-repeat="user in fpUser">
                         <div class="thumbnail shadow">
-                            <img src="{{user.background}}" alt="...">
+                            <img ng-src="{{user.background}}" alt="...">
                             <div class="user-ab">
                                 <div class="border-half">
-                                    <img src="frontend/img/clickm/pic1.png" alt="" class="img-responsive prof-img doneLoading">
+                                    <img ng-src="{{user.profile}}" alt="" class="img-responsive prof-img doneLoading">
                                 </div>
                                 <div class="intro-profile">
-                                    <p class="name-loc">{{user.title}}</p>
-                                    <p class="spec">Speciality: {{user.speciality}}</p>
+                                    <p class="name-loc text-capitalize">{{user.name}} {{user.surName}} | {{user.place}} </p>
+                                    <p class="spec text-capitalize">Speciality: {{user.speciality}}</p>
                                 </div>
                             </div>
-
                         </div>
                         <div class="text-center">
                             <a href="#" class="btn orange-btn" role="button">View Profile</a>
