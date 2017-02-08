@@ -28,10 +28,10 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'FormCtrl'
         })
-        .state('login', {
-            url: "/login",
+        .state('feature-photographer', {
+            url: "/feature-photographer",
             templateUrl: "frontend/views/template.html",
-            controller: 'LoginCtrl'
+            controller: 'FeaturPCtrl'
         })
         .state('users', {
             url: "/users",
