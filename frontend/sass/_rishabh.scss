@@ -146,7 +146,7 @@ color: #fff;
   display: block;
    font-size: 22px;
    line-height: 1;
-
+letter-spacing: 2px;
 }
 //about desc
 .about-head{
@@ -743,11 +743,12 @@ padding: 0 160px 0 10px;
     padding: 10px 70px;
 }
 }
+.btn-fix{
+  width: auto!important;
+float: none!important;
+}
 .upgrade-gd{
-  .btn-fix{
-    width: auto!important;
-  float: none!important;
-  }
+
   .upgrd-gold{
 
     margin: 0 auto;
@@ -813,4 +814,89 @@ color: #fff;
 }
 .head-gold{
   background: linear-gradient(to right,#c9b459,#f9ef76)!important;
+}
+//history
+.history-sec{
+  font-size: 19px;
+  padding: 10px 30px 1px;
+    text-align: left;
+
+  }
+  .history-sec2{
+    font-size: 19px;
+    padding: 5px 30px 1px;
+      text-align: left;
+
+    }
+
+.his-under{
+  border-bottom: 2px solid #e5e5e5;
+border-radius: 5px;
+}
+//current package status
+.current-package{
+  padding-top: 60px;
+}
+.subs-info{
+  p{
+    font-size: 24px;
+  }
+}
+.historypackage-card1{
+    background: linear-gradient(to right,rgb(173,173,173),rgb(228,228,228));
+    padding: 40px;
+  border-radius: 3px;
+  margin-bottom: 60px;
+  img{
+    width: 60px;
+    vertical-align: top;
+  }
+  .pkg-info{
+    width: 100%;
+    margin-left: 8px;
+    .upload-pic{
+      float: right;
+    }
+    button{
+      margin: 15px;
+      width: 85%;
+
+    }
+  }
+  .package-name,.package-price{
+    font-size: 25px;
+    line-height: 1;
+  }
+}
+.vam{
+  vertical-align: middle;
+}
+.validity{
+
+    vertical-align: top;
+}
+.dosis-medium{
+  font-family: 'dosis-medium';
+}
+.dosis-light{
+  font-family: 'dosis-light';
+}
+.set-1{
+  line-height: 1;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.pdt10{
+  padding-top: 10px;
+}
+.pdb-25{
+  padding-bottom: 25px;
+}
+.upgrade-inner{
+  display: inline-block;
+position: absolute;
+bottom: 25%;
+   right: 30px;
+color: #fff;
+font-size: 25px;
 }
