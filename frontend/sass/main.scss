@@ -919,14 +919,39 @@
             font-weight: 500;
         }
         .padd63 {
+            position: relative;
             text-align: justify;
             box-sizing: border-box;
             padding: 15px 63px;
+            line-height: 19px;
+            p:first-child:before {
+                // used for quotation mark
+                content: "\0022";
+                font-family: 'damion-regular';
+                color: $orangeColor;
+                position: absolute;
+                font-size: 105px;
+                transform: rotate(180deg);
+                top: -22px;
+                left: 38px;
+            }
+            p:last-child {
+                color: $orangeColor;
+                text-transform: capitalize;
+            }
+        }
+        .abslt {
+            // used for downside logo image
+            position: absolute;
+            right: -12px;
+            bottom: 35px;
+            width: 53px;
+            transform: rotate(-35deg);
         }
     }
     
-    // end of testimonial
-    @import "fancybox-override";
+    // end 
+    of testimonial @import "fancybox-override";
     @import "rishabh";
     @import "feature-photo";
     @import "mobile";
