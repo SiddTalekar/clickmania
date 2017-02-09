@@ -237,7 +237,8 @@
                 height: 100px;
                 width: 125px;
                 color: transparent;
-                top: 36%;
+                //  top: 36%;
+                top: 42%;
             }
             // .flex-prev {
             //     &:before {
@@ -514,6 +515,14 @@
         background: -ms-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
         background: -moz-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
         background: -webkit-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        .swiper-button-next {
+            background-image: url(/../frontend/img/rt_arrow.png);
+            top: 59%;
+        }
+        .swiper-button-prev {
+            background-image: url(/../frontend/img/lt_arrow.png);
+            top: 59%;
+        }
         .bg_main {
             position: absolute;
             top: 50%;
@@ -527,18 +536,20 @@
                 color: $whiteColor;
                 h2 {
                     font-family: 'hs-semiBold';
-                    font-size: 65px;
-                    line-height: 50px;
-                    height: 112px;
+                    white-space: nowrap;
+                    font-size: 80px;
+                    line-height: 55px;
+                    height: 135px;
                 }
                 .input-group {
                     .form-control {
-                        height: 36px;
+                        height: 45px;
                     }
                     .input-group-btn {
                         button {
                             background-color: $orangeColor;
                             border-color: $orangeColor;
+                            height: 45px;
                             .fa-search:before {
                                 font-size: 20px;
                                 color: $whiteColor;
@@ -932,6 +943,9 @@
             font-weight: 500;
         }
         .flex-direction-nav a {
+            display: none;
+        }
+        .flex-control-nav {
             display: none;
         }
         .padd63 {
