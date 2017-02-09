@@ -842,7 +842,7 @@ border-radius: 5px;
     font-size: 24px;
   }
 }
-.historypackage-card1{
+.historypackage-card1,.historypackage-card2{
     background: linear-gradient(to right,rgb(173,173,173),rgb(228,228,228));
     padding: 40px;
   border-radius: 3px;
@@ -895,8 +895,13 @@ border-radius: 5px;
 .upgrade-inner{
   display: inline-block;
 position: absolute;
-bottom: 25%;
-   right: 30px;
+bottom: 17%;
+padding-bottom: 20px;
+   right: 70px;
 color: #fff;
 font-size: 25px;
+border-left: 1px solid;
+}
+.historypackage-card2{
+    background: linear-gradient(to right,#c9b459,#f9ef76);
 }
