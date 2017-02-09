@@ -11,7 +11,7 @@
                         <img ng-src="{{user.background}}" alt="...">
                         <div class="user-ab">
                             <div class="border-half">
-                                <img ng-src="{{user.profile}}" alt="" class="img-responsive prof-img doneLoading">
+                                <img ng-src="{{user.profile}}" alt="" class="img-responsive profile-f-img doneLoading">
                             </div>
                             <div class="intro-profile">
                                 <p class="name-loc text-capitalize">{{user.name}} {{user.surName}} | {{user.place}} </p>
@@ -36,7 +36,14 @@
     </div>
     <div class="row">
         <div class="col-md-3">
+          <h2 class="border-up">City</h2>
+          <div class="location">
+            <div class="checkbox checkboxing"><input value="" type="checkbox" ng-click="checkAllLocation()" id="location" class="ng-pristine ng-untouched ng-valid ng-not-empty"><label for="location"><span></span> All</label></div>
+          </div>
             <h2 class="border-up">City</h2>
+            <div class="price">
+              <div class="checkbox checkboxing"><input value="" type="checkbox" ng-click="checkAllLocation()" id="price" class="ng-pristine ng-untouched ng-valid ng-not-empty"><label for="price"><span></span> 1000-15000</label></div>
+            </div>
         </div>
         <div class="col-md-9 users">
             <div class="col-sm-6 col-md-4" ng-repeat="list in usersList">
@@ -44,7 +51,7 @@
                     <img ng-src="{{list.background}}" alt="..." class="img-full img-min-h">
                     <div class="user-icon">
                         <div class="border-half">
-                            <img ng-src="{{list.profile}}" alt="" class="img-responsive prof-img">
+                            <img ng-src="{{list.profile}}" alt="" class="img-responsive profile-f-img">
                         </div>
                     </div>
                     <hr class="border-line2 text-center">

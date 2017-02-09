@@ -5,7 +5,7 @@
         <div class="ab">
             <div class="border-profile">
                 <img src="frontend/img/photographer/small-logo.png" alt="" class="img-responsive profile-user">
-                <img src="{{userHead.profile}}" alt="" class="img-responsive prof-img">
+                <img src="{{userHead.profile}}" alt="" class="img-responsive profile-f-img">
             </div>
             <div class="user-name inline">
                 <h1>{{userHead.name}} {{userHead.surName}}</h1>
@@ -21,8 +21,8 @@
                     </li>
                     <span class="border-line"></span>
                     <li ng-class="{'active': activeTab == 2}" ng-click="toggleTab(2)">WORK
-                        <img src="frontend/img/photographer/under.png" alt="" class="img-responsive"></li>                  
-                    </ul>
+                        <img src="frontend/img/photographer/under.png" alt="" class="img-responsive"></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -124,6 +124,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="" ng-if="activeTab == 2">
                 <div class="main-cont damionr sec-tab">
                     <h1 class="orange-color sech  ft100 text-capitalize ng-binding">asmara</h1>
@@ -142,7 +143,7 @@
                             <img ng-src="{{user.background}}" alt="...">
                             <div class="user-ab">
                                 <div class="border-half">
-                                    <img ng-src="{{user.profile}}" alt="" class="img-responsive prof-img doneLoading">
+                                    <img ng-src="{{user.profile}}" alt="" class="img-responsive profile-f-img doneLoading">
                                 </div>
                                 <div class="intro-profile">
                                     <p class="name-loc text-capitalize">{{user.name}} {{user.surName}} | {{user.place}} </p>
