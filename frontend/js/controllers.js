@@ -56,71 +56,65 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.tab = 1;
-    $scope.showForm=true;
-    $scope.noEdit=true;
-    $scope.hideAboutDesc=false;
-    $scope.profileSelect=false;
-    $scope.freeMember=false;
-    $scope.silverSub=true;
-    $scope.hideHistory=false;
-        $scope.packageStatus=true;
-    $scope.chooseSilverhis=function(){
-      $scope.hideHistory=true;
-      $scope.packageStatus=false;
+    $scope.showForm = true;
+    $scope.noEdit = true;
+    $scope.hideAboutDesc = false;
+    $scope.profileSelect = false;
+    $scope.freeMember = false;
+    $scope.silverSub = true;
+    $scope.chooseSilver = function() {
+        $scope.freeMember = true;
+        $scope.silverSub = false;
     }
-    $scope.chooseSilver=function() {
-        $scope.freeMember=true;
-          $scope.silverSub=false;
+    $scope.showForm = function() {
+        $scope.noEdit = false;
+        $scope.showForm = false;
+        $scope.hideAboutDesc = true;
+        $scope.profileSelect = true;
     }
-    $scope.showForm=function() {
-        $scope.noEdit=false;
-      $scope.showForm=false;
-      $scope.hideAboutDesc=true;
-      $scope.profileSelect=true;
+    $scope.showMembership = false;
+    $scope.goldenMember = true;
+    $scope.silverMember = true;
+    $scope.silverMember = function() {
+        $scope.profileSelect = true;
+        $scope.noEdit = false;
+        $scope.showMembership = true;
+        $scope.silverMember = false;
+        $scope.goldenMember = true;
+        $scope.showForm = false;
+        $scope.hideAboutDesc = true;
     }
-    $scope.showMembership=false;
-    $scope.goldenMember=true;
-    $scope.silverMember=true;
-    $scope.silverMember=function() {
-          $scope.profileSelect=true;
-          $scope.noEdit=false;
-      $scope.showMembership=true;
-      $scope.silverMember=false;
-        $scope.goldenMember=true;
-        $scope.showForm=false;
-        $scope.hideAboutDesc=true;
-    }
-    $scope.goldMember=function() {
-      $scope.noEdit=false;
-          $scope.profileSelect=true;
-      $scope.showMembership=true;
-      $scope.goldenMember=false;
-      $scope.silverMember=true;
-      $scope.showForm=false;
-      $scope.hideAboutDesc=true;
+    $scope.goldMember = function() {
+        $scope.noEdit = false;
+        $scope.profileSelect = true;
+        $scope.showMembership = true;
+        $scope.goldenMember = false;
+        $scope.silverMember = true;
+        $scope.showForm = false;
+        $scope.hideAboutDesc = true;
     }
     $scope.uploadImg = function() {
         $uibModal.open({
             animation: true,
             templateUrl: "frontend/views/modal/upload-photo.html",
             scope: $scope,
-windowClass: 'upload-pic'
+            windowClass: 'upload-pic'
         });
     };
 
-        $scope.uploadList = [
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg'
-                   ];
-                   $scope.subclick = {
-                       "background": "frontend/img/user-back.png",
-                       "titleOne": "Upgrade to",
-                       "titleTwo": "Gold"
-                   };
+    $scope.uploadList = [
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg'
+    ];
+    $scope.subclick = {
+        "background": "frontend/img/user-back.png",
+        "titleOne": "Upgrade to",
+        "titleTwo": "Gold"
+    };
 
 })
 
@@ -236,8 +230,8 @@ windowClass: 'upload-pic'
             background: "frontend/img/clickm/5.jpg",
             name: "zohn",
             surName: "carter",
-            location: ['mumbai | ','pune | ','delhi'],
-            speciality:  ['wedding','wildlife','travel']
+            location: ['mumbai | ', 'pune | ', 'delhi'],
+            speciality: ['wedding', 'wildlife', 'travel']
         };
         $scope.reviewList = [{
             "profile": "frontend/img/pic/pic1.jpg",
@@ -302,6 +296,113 @@ windowClass: 'upload-pic'
             "place": "new mumbai",
             "speciality": "wild life"
         }];
+
+    })
+    .controller('WildPhotoCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("wild-photographer"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Wild Photographer"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.fpUser = [{
+            "profile": "frontend/img/pic/pic1.jpg",
+            "background": "frontend/img/fp_bg1.png",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "speciality": "wild life"
+        }, {
+            "profile": "frontend/img/pic/pic2.jpg",
+            "background": "frontend/img/fp_bg1.png",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "speciality": "wedding"
+        }, {
+            "profile": "frontend/img/pic/pic3.jpg",
+            "background": "frontend/img/fp_bg1.png",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "speciality": "wild life"
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/fp_bg1.png",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "speciality": "wild life"
+        }];
+
+        //uib controller
+        $scope.totalItems = 64;
+        $scope.currentPage = 1;
+
+        $scope.setPage = function(pageNo) {
+            $scope.currentPage = pageNo;
+        };
+
+        $scope.pageChanged = function() {
+            $log.log('Page changed to: ' + $scope.currentPage);
+        };
+
+        $scope.maxSize = 1;
+        $scope.bigTotalItems = 175;
+        $scope.bigCurrentPage = 1;
+        $scope.usersList = [{
+            "profile": "frontend/img/pic/pic1.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "sagar",
+            "surName": "roy",
+            "place": "pune",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic3.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "zaroon",
+            "surName": "jaffrani",
+            "place": "pune",
+            "content": " You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+
+        }, {
+            "profile": "frontend/img/pic/pic2.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "rayeesh",
+            "surName": "khan",
+            "place": "pune",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? "
+        }, {
+            "profile": "frontend/img/pic/pic5.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "sagar",
+            "surName": "roy",
+            "place": "pune",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic6.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "dipesh",
+            "surName": "yask",
+            "place": "pune",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }];
+        $scope.categories = [{
+            "background": "frontend/img/cat3.jpg"
+        }, {
+            "background": "frontend/img/cat4.jpg"
+        }, {
+            "background": "frontend/img/cat3.jpg"
+        }, {
+            "background": "frontend/img/cat4.jpg"
+        }];
+
 
     })
     .controller('headerctrl', function($scope, TemplateService) {
