@@ -42,7 +42,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
               url: "/user-profile",
               templateUrl: "frontend/views/template.html",
               controller: 'UserProfileCtrl'
-          });
+          }).state('wild-photographer', {
+               url: "/wild-photographer",
+               templateUrl: "frontend/views/template.html",
+               controller: 'WildPhotoCtrl'
+           });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);
 });

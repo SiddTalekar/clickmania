@@ -15,16 +15,56 @@
     font-family: dosis-Light;
 }
 
-.grey-back {
-    background-color: #f1f1f1;
-}
-
 .hctl {
     font-family: hctl;
 }
 
 .light-grey {
     background-color: #f6f6f6;
+}
+
+header {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.51);
+}
+
+.grey-back {
+    background-color: #f1f1f1;
+}
+
+.orange-color {
+    color: $orangeColor;
+}
+
+.white-color {
+    color: $whiteColor !important;
+}
+
+.facek {
+    background-color: #3b5997;
+}
+
+.fspan {
+    background-color: #354f88;
+}
+
+.googleb {
+    background-color: #f15a29;
+}
+
+.google-back {
+    background-color: #de4c33;
+}
+
+.googlespan {
+    background-color: #ce3e26;
+}
+
+.black-back {
+    background-color: #252525;
+}
+
+.whit-back {
+    background-color: #fff;
 }
 
 .relative {
@@ -35,8 +75,140 @@
     display: inline-block;
 }
 
-header {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.51);
+.pad25 {
+    padding: 25px 0;
+}
+
+.pad-up100 {
+    padding-top: 83px;
+}
+
+.shadow {
+    position: relative;
+    border: none;
+    padding: 9px;
+    box-shadow: 0 0 6px black;
+    border-radius: 0;
+}
+
+.pad5 {
+    padding: 0 5px 60px;
+}
+
+.img-left {
+    position: absolute;
+    top: -45px;
+    left: -75px;
+    width: 430px;
+}
+
+.other-section {
+    margin: 60px 150px 0;
+    position: relative;
+}
+
+.pad-border {
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cecece;
+}
+
+.user-section {
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cecece;
+}
+
+.input-border {
+    width: 100%;
+    border: 1px solid #cecece !important;
+    height: auto;
+}
+
+.pub-r {
+    background-image: url("../img/pencil.png");
+    background-color: #f4f4f4;
+    background-repeat: no-repeat;
+    background-position: 20px 13px;
+    padding: 7px 49px;
+    color: #807d7d;
+    font-size: 22px !important;
+    height: auto;
+}
+
+.pub-btn {
+    font-size: 20px;
+    color: #fff;
+    background: #f1592a;
+    padding: 9px 24px;
+    border: 1px solid #f1592a;
+}
+
+.profile-intro {
+    margin-top: 17px;
+    padding-left: 85px;
+}
+
+.f-photo-div {
+    position: relative;
+    margin: 50px 0 0;
+}
+
+.img-min-h {
+    min-height: 160px;
+}
+
+.forml {
+    padding: 36px 0;
+    margin: 0;
+}
+
+.mr15 {
+    margin: 0 3px;
+}
+
+.pad-right5 {
+    padding: 0 5px;
+}
+
+.font70 {
+    font-size: 70px;
+}
+
+.ft100 {
+    font-size: 100px;
+}
+
+.pad60 {
+    padding: 70px 0;
+}
+
+.mr40 {
+    margin: 40px 0;
+}
+
+.min-h {
+    min-height: 416px;
+}
+
+.pad100 {
+    padding: 0 100px;
+}
+
+.marg-rel {
+    position: relative;
+    margin: 0 26px;
+}
+
+.view-orang {
+    margin-top: 0 !important;
+    margin-bottom: 44px !important;
+    background-color: transparent !important;
+    border: 1px solid #f15a29 !important;
+}
+
+.pad0 {
+    padding: 0 !important;
 }
 
 .ab {
@@ -107,10 +279,6 @@ header {
     }
 }
 
-.pad25 {
-    padding: 25px 0;
-}
-
 .head-f {
     font-family: 'damion-regular';
     color: #f4511e;
@@ -121,10 +289,6 @@ header {
     top: 0;
     left: 0;
     margin: 0;
-}
-
-.pad-up100 {
-    padding-top: 83px;
 }
 
 .user-ab {
@@ -154,72 +318,6 @@ header {
         color: #fff;
         font-size: 16px;
     }
-}
-
-.shadow {
-    position: relative;
-    border: none;
-    padding: 9px;
-    box-shadow: 0 0 6px black;
-    border-radius: 0;
-}
-
-.pad5 {
-    padding: 0 5px 60px;
-}
-
-.img-left {
-    position: absolute;
-    top: -45px;
-    left: -75px;
-    width: 430px;
-}
-
-.other-section {
-    margin: 60px 150px 0;
-    position: relative;
-}
-
-.pad-border {
-    padding: 0 0 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #cecece;
-}
-
-.user-section {
-    padding: 0 0 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #cecece;
-}
-
-.input-border {
-    width: 100%;
-    border: 1px solid #cecece !important;
-    height: auto;
-}
-
-.pub-r {
-    background-image: url("../img/pencil.png");
-    background-color: #f4f4f4;
-    background-repeat: no-repeat;
-    background-position: 20px 13px;
-    padding: 7px 49px;
-    color: #807d7d;
-    font-size: 22px !important;
-    height: auto;
-}
-
-.pub-btn {
-    font-size: 20px;
-    color: #fff;
-    background: #f1592a;
-    padding: 9px 24px;
-    border: 1px solid #f1592a;
-}
-
-.profile-intro {
-    margin-top: 17px;
-    padding-left: 85px;
 }
 
 .main-cont {
@@ -252,29 +350,11 @@ header {
     }
 }
 
-.orange-color {
-    color: $orangeColor;
-}
-
-.white-color {
-    color: $whiteColor;
-}
-
-.img-min-h {
-    min-height: 160px;
-}
-
-.forml {
-    padding: 36px 0;
-    margin: 0;
-}
-
-.mr15 {
-    margin: 0 3px;
-}
-
-.pad-right5 {
-    padding: 0 5px;
+.view-a {
+    margin-top: -32px;
+    margin-bottom: 29px;
+    background-color: transparent !important;
+    border: 1px solid white !important;
 }
 
 .full-tabs {
@@ -359,10 +439,6 @@ hr.border-hr:after {
     font-family: helveticalt-narrow;
 }
 
-.font70 {
-    font-size: 70px;
-}
-
 .head-name {
     text-align: center;
 
@@ -398,14 +474,6 @@ hr.border-hr:after {
         margin: 0;
         color: $orangeColor;
     }
-}
-
-.ft100 {
-    font-size: 100px;
-}
-
-.pad60 {
-    padding: 70px 0;
 }
 
 .reg-btn {
@@ -459,10 +527,6 @@ hr.border-hr:after {
     padding: 6px 36px;
 }
 
-.whit-back {
-    background-color: #fff;
-}
-
 .whit-btn:focus,
 .whit-btn:hover {
     color: #f15a29;
@@ -479,34 +543,6 @@ hr.border-hr:after {
 .whit-color:focus,
 .whit-color:hover {
     color: #fff;
-}
-
-.mr40 {
-    margin: 40px 0;
-}
-
-.min-h {
-    min-height: 416px;
-}
-
-.facek {
-    background-color: #3b5997;
-}
-
-.fspan {
-    background-color: #354f88;
-}
-
-.googleb {
-    background-color: #f15a29;
-}
-
-.google-back {
-    background-color: #de4c33;
-}
-
-.googlespan {
-    background-color: #ce3e26;
 }
 
 .btn-social {
@@ -594,10 +630,6 @@ hr.border-hr:after {
     }
 }
 
-.pad100 {
-    padding: 0 100px;
-}
-
 .users {
     .thumbnail {
         margin: 50px 0;
@@ -655,7 +687,7 @@ hr.border-hr:after {
             }
 
             .title-intro {
-                font-size: 14px;
+                font-size: 13px;
                 font-family: hctl;
                 padding: 0 20px;
                 color: black;
@@ -685,9 +717,29 @@ hr.border-hr:after {
 
 .prof-img {
     border-radius: 50%;
-    width: 125px;
+    width: 150px;
     border: 3px solid #f15a29;
     transform: rotate(-44deg);
+}
+
+.sec-tab {
+    padding-left: 20%;
+    margin-top: 100px;
+
+    h1 {
+        line-height: 39px;
+    }
+
+    p {
+        color: black;
+        font-size: 60px;
+        line-height: 47px;
+    }
+
+    a {
+        font-size: 26px;
+        margin-top: 20px;
+    }
 }
 
 .sub-main {
@@ -736,8 +788,4 @@ hr.border-hr:after {
             }
         }
     }
-}
-
-.pad0 {
-    padding: 0 !important;
 }
