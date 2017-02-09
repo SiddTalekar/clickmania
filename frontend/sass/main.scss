@@ -65,16 +65,6 @@
     }
     
     @font-face {
-        font-family: 'dosis-light';
-        src: url("../fonts/Dosis-Light_1.ttf");
-    }
-    
-    @font-face {
-        font-family: 'dosis-light';
-        src: url("../fonts/Dosis-Light_1.ttf");
-    }
-    
-    @font-face {
         font-family: 'dosis-medium';
         src: url("../fonts/Dosis-Medium_0.ttf");
     }
@@ -247,6 +237,7 @@
                 height: 100px;
                 width: 125px;
                 color: transparent;
+                top: 36%;
             }
             // .flex-prev {
             //     &:before {
@@ -257,7 +248,7 @@
             //     }
             .flex-prev {
                 &:before {
-                    content: url("../img/prev.png");
+                    content: url("../img/previous1.png");
                     display: block;
                     height: 50%;
                     @include transform(scale(.4));
@@ -265,7 +256,7 @@
             }
             .flex-next {
                 &:before {
-                    content: url("../img/next.png");
+                    content: url("../img/next1.png");
                     display: block;
                     height: 50%;
                     @include transform(scale(.4));
@@ -298,9 +289,13 @@
                 display: inline-block;
                 padding-top: 35px;
                 padding-bottom: 35px;
+                h3 {
+                    font-family: 'dosis-light';
+                }
                 .input-group {
                     .form-control {
                         height: 43px;
+                        background-color: transparent;
                     }
                     .input-group-btn {
                         .btn {
@@ -312,13 +307,22 @@
                     }
                 }
                 .list-group-item {
+                    font-family: 'dosis-extraLight';
                     background-color: transparent;
                     border: none;
+                }
+                .soc_icns {
+                    display: inline-block;
+                    width: 40%;
+                    p {
+                        margin-top: 14px;
+                    }
                 }
             }
         }
         .footer_bgdw {
             // footer background down which includes orange background
+            font-family: 'dosis-medium';
             font-size: 12px;
             background-color: $orangeColor;
             height: 50px;
@@ -380,10 +384,12 @@
             height: auto;
         }
         .flex-prev {
-            left: 10px !important;
+            // left: 10px !important;
+            left: -100px !important;
         }
         .flex-next {
-            right: 10px !important;
+            // right: 10px !important;
+            right: -100px !important;
         }
     }
     /* Start writing sass here */
@@ -522,9 +528,8 @@
                 h2 {
                     font-family: 'hs-semiBold';
                     font-size: 65px;
-                    span {
-                        vertical-align: text-bottom;
-                    }
+                    line-height: 50px;
+                    height: 112px;
                 }
                 .input-group {
                     .form-control {
@@ -592,6 +597,7 @@
     // It contains feature photographer flex-slider
     .featu_photo_caraso {
         @extend .mg;
+        position: relative;
         .flexslider {
             margin-bottom: 29px;
         }
@@ -604,12 +610,11 @@
                 font-size: 57px;
                 margin-bottom: 24px;
             }
-            h2:after {
-                content: "Photographer";
+            .head-f {
                 position: relative;
-                top: 45px;
-                left: -167px;
-                z-index: 5;
+                top: 8px;
+                left: -45px;
+                margin-bottom: 0;
             }
             .fp_width {
                 width: 343px!important;
@@ -912,11 +917,22 @@
         @include display(flex);
         @include flex-direction(column);
         @include justify-content(center);
+        .abslt {
+            // used for downside logo image
+            position: absolute;
+            right: -12px;
+            bottom: 35px;
+            width: 53px;
+            transform: rotate(-35deg);
+        }
         h2 {
             font-family: 'damion-regular';
             font-size: 65px;
             color: $whiteColor;
             font-weight: 500;
+        }
+        .flex-direction-nav a {
+            display: none;
         }
         .padd63 {
             position: relative;
@@ -940,18 +956,10 @@
                 text-transform: capitalize;
             }
         }
-        .abslt {
-            // used for downside logo image
-            position: absolute;
-            right: -12px;
-            bottom: 35px;
-            width: 53px;
-            transform: rotate(-35deg);
-        }
     }
     
-    // end 
-    of testimonial @import "fancybox-override";
+    // end of testimonial 
+    @import "fancybox-override";
     @import "rishabh";
     @import "feature-photo";
     @import "mobile";
