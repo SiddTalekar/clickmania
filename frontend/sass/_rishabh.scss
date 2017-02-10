@@ -1,3 +1,13 @@
+$brand-holder: #ccc !default;
+.dosis-medium{
+  font-family: 'dosis-medium';
+}
+.dosis-light{
+  font-family: 'dosis-light';
+}
+.damoin{
+  font-family: 'damion-regular';
+}
 .orange-color{
   color: #f1592a;
 }
@@ -567,6 +577,11 @@ margin: 0 auto;
   top: 30%;
 }
 
+.black-drop{
+  background-color: #000;
+opacity: 0.8!important;
+}
+
 .select_join {
   width: 220px;
   height: 36px;
@@ -622,13 +637,15 @@ box-shadow: 4px 5px 3px #c0c0c0;
 }
 .upload-imageblock{
   position: relative;
-  width: 50%;
+  // width: 50%;
+  padding: 25px;
 }
 .close-modal{
   position: absolute;
       top: -9px;
-      right: -22px;
-      background: $orangeColor;
+      z-index: 99;
+      right: -10px;
+      background: #f4511e;
       width: 20px;
       padding: 0px 4px;
       height: 20px;
@@ -636,6 +653,7 @@ box-shadow: 4px 5px 3px #c0c0c0;
       color: #fff;
       line-height: 1.2;
 }
+
 //
 .uploaded-images{
   padding: 0 30px;
@@ -875,12 +893,7 @@ border-radius: 5px;
 
     vertical-align: top;
 }
-.dosis-medium{
-  font-family: 'dosis-medium';
-}
-.dosis-light{
-  font-family: 'dosis-light';
-}
+
 .set-1{
   line-height: 1;
   font-size: 20px;
@@ -904,4 +917,84 @@ border-left: 1px solid;
 }
 .historypackage-card2{
     background: linear-gradient(to right,#c9b459,#f9ef76);
+}
+.sign-up{
+  .fcbk{
+    background-color: #3b5998;
+    i{
+      background-color: #354f88;
+    }
+  }
+  .gplus{
+    background-color: #de4c33;
+    i{
+      background-color: #ce3e26;
+    }
+  }
+  .soc-btn{
+    margin: 0 20px;
+    padding: 0px 23px 0px 0;
+        font-size: 16px;
+        width: 35%;
+
+        text-align: left;
+        color: #fff;
+        border: 0;
+        i{
+
+padding: 10px;
+margin-right: 12px;
+width: 20%;
+text-align: center;
+        }
+  }
+  .sign-btn{
+    color: #fff;
+  background-color: $orangeColor;
+  font-size: 16px;
+  padding: 4px 20px 7px;
+  width: 25%;
+  border: 0;
+  border-radius: 3px;
+  }
+  .signup-form{
+    input{
+      border: 0;
+  border-bottom: 1px solid $orangeColor;
+  font-size: 16px;
+    }
+  }
+.s-gn{
+    font-size: 34px;
+  }
+  span{
+    display: block;
+  }
+  .detail-text{
+    color: $brand-holder;
+    margin: 10px 0 20px;
+  }
+}
+.mgt15{
+  margin-top: 15px;
+}
+.mg10{
+  margin: 10px;
+}
+.border-div{
+  width: 20%;
+border: 1px solid #ccc;
+display: inline-block;
+}
+.divide-or{
+  .detail-text{
+    font-size: 24px;
+    line-height: 1;
+    vertical-align: -webkit-baseline-middle;
+  }
+}
+.exist-user{
+  color: #000;
+  margin-bottom: 5px;
+  font-size: 17px;
 }

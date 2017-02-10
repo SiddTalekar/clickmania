@@ -1,4 +1,4 @@
-<header>
+<header ng-controller="headerctrl">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="row">
@@ -54,7 +54,7 @@
                         <div class="photographer_img">
                             <img src="frontend/img/user.png" alt="UserImage" class="img-responsive">
                         </div>
-                        <span>Sign up as photographer</span>
+                        <span ng-click="uploadSignup()">Sign up as photographer</span>
                     </div>
                     <!--photographer-->
                 </div>
