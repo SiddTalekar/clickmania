@@ -58,7 +58,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }];
 
     // To scroll down to a particular div
-    $scope.goToElemment = function (eID) { // para will take an elementId 
+    $scope.goToElemment = function (eID) { // para will take an elementId
         $location.hash('bottom');
         anchorSmoothScroll.scrollTo(eID);
     };
@@ -314,12 +314,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
 
     })
-    .controller('WildPhotoCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('WildPhotoCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("wild-photographer"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Wild Photographer"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
+        $scope.checkboxData = [
+          {label: 'mumbai',value: false},
+          {label: 'banglore',value: false},
+          {label: 'pune',value: false},
+          {label: 'chennai',value: false},
+          {label: 'karnataka',value: false},
+          {label: 'delhi',value: false}
+          ];
+        $scope.checkall = false;
+        $scope.toggleAll = function() {
+          $scope.checkall = !$scope.checkall;
+          for(var key in $scope.checkboxData) {
+            $scope.checkboxData[key].value = $scope.checkall;
+          }
+        };
         $scope.fpUser = [{
             "profile": "frontend/img/pic/pic1.jpg",
             "background": "frontend/img/fp_bg1.png",
@@ -354,11 +369,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.totalItems = 64;
         $scope.currentPage = 1;
 
-        $scope.setPage = function (pageNo) {
+        $scope.setPage = function(pageNo) {
             $scope.currentPage = pageNo;
         };
 
-        $scope.pageChanged = function () {
+        $scope.pageChanged = function() {
             $log.log('Page changed to: ' + $scope.currentPage);
         };
 
