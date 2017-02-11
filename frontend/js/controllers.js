@@ -118,7 +118,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             animation: true,
             templateUrl: "frontend/views/modal/upload-photo.html",
             scope: $scope,
-            windowClass: 'upload-pic'
+            windowClass: 'upload-pic',
+            backdropClass: 'black-drop'
         });
     };
 
@@ -420,13 +421,45 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
     })
-    .controller('headerctrl', function ($scope, TemplateService) {
-        $scope.template = TemplateService;
-        $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-            $(window).scrollTop(0);
+
+.controller('headerctrl', function ($scope, TemplateService, $uibModal) {
+    $scope.template = TemplateService;
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+        $(window).scrollTop(0);
+    });
+    $.fancybox.close(true);
+    $scope.uploadSignup = function () {
+        console.log("signup");
+        $uibModal.open({
+            animation: true,
+            templateUrl: "frontend/views/modal/signup-profile.html",
+            scope: $scope,
+            windowClass: '',
+            backdropClass: 'black-drop'
         });
-        $.fancybox.close(true);
-    })
+    };
+    $scope.logIn = function () {
+        console.log("login");
+        $uibModal.open({
+            animation: true,
+            templateUrl: "frontend/views/modal/login.html",
+            scope: $scope,
+            windowClass: '',
+            backdropClass: 'black-drop'
+        });
+    };
+
+    //     $scope.signUp = function() {
+    //       console.log(modal);
+    //         $uibModal.open({
+    //             animation: true,
+    //             templateUrl: "frontend/views/modal/sign-up.html",
+    //             scope: $scope,
+    // windowClass: 'upload-pic'
+    // backdropClass: 'black-drop'
+    //         });
+    //     };
+})
 
 .controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
