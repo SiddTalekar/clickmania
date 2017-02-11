@@ -32,7 +32,9 @@
 </div>
 <div class="container">
     <div class="row">
-        <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm pull-right" boundary-link-numbers="true" rotate="false"></ul>
+        <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="fa fa-angle-double-left" ></i> Previous</button>
+   {{currentPage+1}} of {{numberOfPages()}}
+        <button ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1">Next <i class="fa fa-angle-double-right" ></i></button>
     </div>
     <div class="row">
         <div class="col-md-2">
@@ -41,7 +43,7 @@
                 <div class="checkbox checkboxing">
                     <input value="" type="checkbox" id="d" ng-model="checkall" ng-click="toggleAll()">
                     <label for="d"><span></span> all</label>
-                    <div  ng-repeat="dataPoint in checkboxData">
+                    <div ng-repeat="dataPoint in checkboxData">
                         <input value="" type="checkbox" id="{{dataPoint.label}}" ng-model="dataPoint.value">
                         <label for="{{dataPoint.label}}"><span></span> {{dataPoint.label}}</label>
                     </div>
@@ -49,11 +51,20 @@
             </div>
             <h2 class="border-up text-capitalize">Price <small>(per day)</small></h2>
             <div class="price">
-                <div class="checkbox checkboxing"><input value="" type="checkbox" ng-click="checkAllLocation()" id="price" class="ng-pristine ng-untouched ng-valid ng-not-empty"><label for="price"><span></span><i class="fa fa-inr"></i> 1000 - <i class="fa fa-inr"></i> 15000</label></div>
+                <div class="checkbox checkboxing">
+                    <input value="" type="checkbox" ng-click="checkAllLocation()" id="price" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                    <label for="price"><span></span><i class="fa fa-inr"></i> 1000 - <i class="fa fa-inr"></i> 15000</label><br>
+                    <input value="" type="checkbox" ng-click="checkAllLocation()" id="price1" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                    <label for="price1"><span></span><i class="fa fa-inr"></i> 15000 - <i class="fa fa-inr"></i> 250000</label><br>
+                    <input value="" type="checkbox" ng-click="checkAllLocation()" id="price2" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                    <label for="price2"><span></span><i class="fa fa-inr"></i> 250000 - <i class="fa fa-inr"></i> 50000</label><br>
+                    <input value="" type="checkbox" ng-click="checkAllLocation()" id="price3" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                    <label for="price3" class="text-lowercase"><span></span><i class="fa fa-inr"></i> 50000 and above</label><br>
+                </div>
             </div>
         </div>
         <div class="col-md-10 users">
-            <div class="col-sm-6 col-md-4" ng-repeat="list in usersList">
+            <div class="col-sm-6 col-md-4" ng-repeat="list in data  |  startFrom:currentPage*pageSize | limitTo:pageSize">
                 <div class="thumbnail">
                     <img ng-src="{{list.background}}" alt="..." class="img-full img-min-h">
                     <div class="user-icon">
@@ -70,7 +81,12 @@
                 </div>
             </div>
             <div class="col-md-12 text-center">
-                <ul uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false"></ul>
+                <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button> {{currentPage+1}} of {{numberOfPages()}}
+                <button ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
             </div>
         </div>
     </div>

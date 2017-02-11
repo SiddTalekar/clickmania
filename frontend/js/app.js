@@ -56,7 +56,12 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
     $locationProvider.html5Mode(isproduction);
 });
 
-
+firstapp.filter('startFrom', function() {
+    return function(input, start) {
+        start = +start; //parse to int
+        return input.slice(start);
+    }
+});
 firstapp.directive('img', function ($compile, $parse) {
     return {
         restrict: 'E',
@@ -162,7 +167,7 @@ firstapp.service('anchorSmoothScroll', function () {
             if (document.documentElement && document.documentElement.scrollTop)
                 return document.documentElement.scrollTop;
 
-            // for ie 6, 7, 8 
+            // for ie 6, 7, 8
             if (document.body.scrollTop) return document.body.scrollTop;
             return 0;
         }

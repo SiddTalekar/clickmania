@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.swiper'])
 
-.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location, anchorSmoothScroll) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout, $location, anchorSmoothScroll) {
     $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
     $scope.menutitle = NavigationService.makeactive("ClickMania"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
@@ -58,13 +58,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }];
 
     // To scroll down to a particular div
-    $scope.goToElemment = function (eID) { // para will take an elementId
+    $scope.goToElemment = function(eID) { // para will take an elementId
         $location.hash('bottom');
         anchorSmoothScroll.scrollTo(eID);
     };
 })
 
-.controller('PhotographerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
+.controller('PhotographerCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
     $scope.template = TemplateService.changecontent("photographer"); //Use same name of .html file
     $scope.menutitle = NavigationService.makeactive("Photographer"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
@@ -78,15 +78,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.silverSub = true;
     $scope.hideHistory = false;
     $scope.packageStatus = true;
-    $scope.chooseSilverhis = function () {
+    $scope.chooseSilverhis = function() {
         $scope.hideHistory = true;
         $scope.packageStatus = false;
     }
-    $scope.chooseSilver = function () {
+    $scope.chooseSilver = function() {
         $scope.freeMember = true;
         $scope.silverSub = false;
     }
-    $scope.showForm = function () {
+    $scope.showForm = function() {
         $scope.noEdit = false;
         $scope.showForm = false;
         $scope.hideAboutDesc = true;
@@ -95,7 +95,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.showMembership = false;
     $scope.goldenMember = true;
     $scope.silverMember = true;
-    $scope.silverMember = function () {
+    $scope.silverMember = function() {
         $scope.profileSelect = true;
         $scope.noEdit = false;
         $scope.showMembership = true;
@@ -104,7 +104,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.showForm = false;
         $scope.hideAboutDesc = true;
     }
-    $scope.goldMember = function () {
+    $scope.goldMember = function() {
         $scope.noEdit = false;
         $scope.profileSelect = true;
         $scope.showMembership = true;
@@ -113,7 +113,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.showForm = false;
         $scope.hideAboutDesc = true;
     }
-    $scope.uploadImg = function () {
+    $scope.uploadImg = function() {
         $uibModal.open({
             animation: true,
             templateUrl: "frontend/views/modal/upload-photo.html",
@@ -139,7 +139,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+.controller('FormCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -147,30 +147,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         $scope.formSubmitted = false;
 
-        $scope.submitForm = function (data) {
+        $scope.submitForm = function(data) {
             console.log(data);
             $scope.formSubmitted = true;
         };
     })
-    .controller('FeaturPCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('FeaturPCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("feature-photographer"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Feature Photographer"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.activeTab = 1;
-        $scope.toggleTab = function (val) {
+        $scope.toggleTab = function(val) {
             $scope.activeTab = val;
         };
 
     })
-    .controller('CategoriesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('CategoriesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("categories"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Categories"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('UsersCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('UsersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("users"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Users"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -232,13 +232,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('UserProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('UserProfileCtrl', function($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("user-profile"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("User Profile"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.activeTab = 1;
-        $scope.toggleTab = function (val) {
+        $scope.toggleTab = function(val) {
             $scope.activeTab = val;
         };
         $scope.userHead = {
@@ -314,26 +314,50 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
 
     })
-    .controller('WildPhotoCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('WildPhotoCtrl', function($scope, TemplateService, NavigationService, $timeout, $filter) {
         $scope.template = TemplateService.changecontent("wild-photographer"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Wild Photographer"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
 
-        $scope.checkboxData = [
-          {label: 'mumbai',value: false},
-          {label: 'banglore',value: false},
-          {label: 'pune',value: false},
-          {label: 'chennai',value: false},
-          {label: 'karnataka',value: false},
-          {label: 'delhi',value: false}
-          ];
+        $scope.currentPage = 0;
+           $scope.pageSize = 9;
+           $scope.data = [];
+           $scope.q = '';
+           $scope.getData = function () {
+             return $filter('filter')($scope.data, $scope.q)
+
+           }
+
+           $scope.numberOfPages=function(){
+               return Math.ceil($scope.getData().length/$scope.pageSize);
+           }
+
+        $scope.checkboxData = [{
+            label: 'mumbai',
+            value: false
+        }, {
+            label: 'banglore',
+            value: false
+        }, {
+            label: 'pune',
+            value: false
+        }, {
+            label: 'chennai',
+            value: false
+        }, {
+            label: 'karnataka',
+            value: false
+        }, {
+            label: 'delhi',
+            value: false
+        }];
         $scope.checkall = false;
         $scope.toggleAll = function() {
-          $scope.checkall = !$scope.checkall;
-          for(var key in $scope.checkboxData) {
-            $scope.checkboxData[key].value = $scope.checkall;
-          }
+            $scope.checkall = !$scope.checkall;
+            for (var key in $scope.checkboxData) {
+                $scope.checkboxData[key].value = $scope.checkall;
+            }
         };
         $scope.fpUser = [{
             "profile": "frontend/img/pic/pic1.jpg",
@@ -380,7 +404,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.maxSize = 1;
         $scope.bigTotalItems = 175;
         $scope.bigCurrentPage = 1;
-        $scope.usersList = [{
+        $scope.data = [{
             "profile": "frontend/img/pic/pic1.jpg",
             "background": "frontend/img/clickm/9.jpg",
             "name": "sagar",
@@ -423,6 +447,83 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             "surName": "ronsk",
             "place": "new mumbai",
             "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
         }];
         $scope.categories = [{
             "background": "frontend/img/cat3.jpg"
@@ -437,13 +538,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
-.controller('headerctrl', function ($scope, TemplateService, $uibModal) {
+.controller('headerctrl', function($scope, TemplateService, $uibModal) {
     $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
     $.fancybox.close(true);
-    $scope.uploadSignup = function () {
+    $scope.uploadSignup = function() {
         console.log("signup");
         $uibModal.open({
             animation: true,
@@ -453,7 +554,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             backdropClass: 'black-drop'
         });
     };
-    $scope.logIn = function () {
+    $scope.logIn = function() {
         console.log("login");
         $uibModal.open({
             animation: true,
@@ -476,9 +577,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     //     };
 })
 
-.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
+.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
 
-    $scope.changeLanguage = function () {
+    $scope.changeLanguage = function() {
         console.log("Language CLicked");
 
         if (!$.jStorage.get("language")) {
