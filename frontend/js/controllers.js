@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.swiper'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location, anchorSmoothScroll) {
     $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
     $scope.menutitle = NavigationService.makeactive("ClickMania"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
@@ -17,7 +17,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     ];
 
-    $scope.fpUser = [{
+    $scope.fpUser = [{ // Featured Photographer
         profile: "frontend/img/pic1.png",
         background: "frontend/img/fp_bg1.png",
         title: "Zaroon Jaffrani | Pune",
@@ -48,83 +48,97 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         title: "Fatema | Delhi",
         speciality: "wild life"
     }];
+
+    $scope.testimonial = [{
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 0the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambledLorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been",
+        ceo: "manan vora, CEO & founder Ting"
+    }, {
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 0the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambledLorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been",
+        ceo: "vora manan , CEO & founder Ting"
+    }];
+
+    // To scroll down to a particular div
+    $scope.goToElemment = function (eID) { // para will take an elementId 
+        $location.hash('bottom');
+        anchorSmoothScroll.scrollTo(eID);
+    };
 })
 
-.controller('PhotographerCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
+.controller('PhotographerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
     $scope.template = TemplateService.changecontent("photographer"); //Use same name of .html file
     $scope.menutitle = NavigationService.makeactive("Photographer"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     $scope.tab = 1;
-    $scope.showForm=true;
-    $scope.noEdit=true;
-    $scope.hideAboutDesc=false;
-    $scope.profileSelect=false;
-    $scope.freeMember=false;
-    $scope.silverSub=true;
-    $scope.hideHistory=false;
-        $scope.packageStatus=true;
-    $scope.chooseSilverhis=function(){
-      $scope.hideHistory=true;
-      $scope.packageStatus=false;
+    $scope.showForm = true;
+    $scope.noEdit = true;
+    $scope.hideAboutDesc = false;
+    $scope.profileSelect = false;
+    $scope.freeMember = false;
+    $scope.silverSub = true;
+    $scope.hideHistory = false;
+    $scope.packageStatus = true;
+    $scope.chooseSilverhis = function () {
+        $scope.hideHistory = true;
+        $scope.packageStatus = false;
     }
-    $scope.chooseSilver=function() {
-        $scope.freeMember=true;
-          $scope.silverSub=false;
+    $scope.chooseSilver = function () {
+        $scope.freeMember = true;
+        $scope.silverSub = false;
     }
-    $scope.showForm=function() {
-        $scope.noEdit=false;
-      $scope.showForm=false;
-      $scope.hideAboutDesc=true;
-      $scope.profileSelect=true;
+    $scope.showForm = function () {
+        $scope.noEdit = false;
+        $scope.showForm = false;
+        $scope.hideAboutDesc = true;
+        $scope.profileSelect = true;
     }
-    $scope.showMembership=false;
-    $scope.goldenMember=true;
-    $scope.silverMember=true;
-    $scope.silverMember=function() {
-          $scope.profileSelect=true;
-          $scope.noEdit=false;
-      $scope.showMembership=true;
-      $scope.silverMember=false;
-        $scope.goldenMember=true;
-        $scope.showForm=false;
-        $scope.hideAboutDesc=true;
+    $scope.showMembership = false;
+    $scope.goldenMember = true;
+    $scope.silverMember = true;
+    $scope.silverMember = function () {
+        $scope.profileSelect = true;
+        $scope.noEdit = false;
+        $scope.showMembership = true;
+        $scope.silverMember = false;
+        $scope.goldenMember = true;
+        $scope.showForm = false;
+        $scope.hideAboutDesc = true;
     }
-    $scope.goldMember=function() {
-      $scope.noEdit=false;
-          $scope.profileSelect=true;
-      $scope.showMembership=true;
-      $scope.goldenMember=false;
-      $scope.silverMember=true;
-      $scope.showForm=false;
-      $scope.hideAboutDesc=true;
+    $scope.goldMember = function () {
+        $scope.noEdit = false;
+        $scope.profileSelect = true;
+        $scope.showMembership = true;
+        $scope.goldenMember = false;
+        $scope.silverMember = true;
+        $scope.showForm = false;
+        $scope.hideAboutDesc = true;
     }
-    $scope.uploadImg = function() {
+    $scope.uploadImg = function () {
         $uibModal.open({
             animation: true,
             templateUrl: "frontend/views/modal/upload-photo.html",
             scope: $scope,
-windowClass: 'upload-pic'
+            windowClass: 'upload-pic'
         });
     };
 
-        $scope.uploadList = [
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg'
-                   ];
-                   $scope.subclick = {
-                       "background": "frontend/img/user-back.png",
-                       "titleOne": "Upgrade to",
-                       "titleTwo": "Gold"
-                   };
+    $scope.uploadList = [
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg',
+        'frontend/img/photographer/img.jpg'
+    ];
+    $scope.subclick = {
+        "background": "frontend/img/user-back.png",
+        "titleOne": "Upgrade to",
+        "titleTwo": "Gold"
+    };
 
 })
 
-.controller('FormCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -132,35 +146,30 @@ windowClass: 'upload-pic'
 
         $scope.formSubmitted = false;
 
-        $scope.submitForm = function(data) {
+        $scope.submitForm = function (data) {
             console.log(data);
             $scope.formSubmitted = true;
         };
     })
-    .controller('FeaturPCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('FeaturPCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("feature-photographer"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Feature Photographer"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.activeTab = 1;
-        $scope.toggleTab = function(val) {
+        $scope.toggleTab = function (val) {
             $scope.activeTab = val;
         };
-        $scope.data = {
-            "intro": "You could be a featured photographer on Clickmania and come under the lens of those who would love to harness your services. For as low as Rs. 1000 you could shoecase your work for a month.",
-            "name": "Manan",
-        };
-        $scope.benefits = [{
-            "list": "100 photos",
-        }, {
-            "list": "3mb per photo",
-        }, {
-            "list": "Photos can be edited by you.",
-        }, {
-            "list": "Valid till 1 year.",
-        }];
+
     })
-    .controller('UsersCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('CategoriesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("categories"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Categories"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+    })
+    .controller('UsersCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("users"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Users"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -222,13 +231,13 @@ windowClass: 'upload-pic'
         };
 
     })
-    .controller('UserProfileCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('UserProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("user-profile"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("User Profile"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.activeTab = 1;
-        $scope.toggleTab = function(val) {
+        $scope.toggleTab = function (val) {
             $scope.activeTab = val;
         };
         $scope.userHead = {
@@ -304,7 +313,7 @@ windowClass: 'upload-pic'
         }];
 
     })
-    .controller('WildPhotoCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    .controller('WildPhotoCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("wild-photographer"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Wild Photographer"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -344,11 +353,11 @@ windowClass: 'upload-pic'
         $scope.totalItems = 64;
         $scope.currentPage = 1;
 
-        $scope.setPage = function(pageNo) {
+        $scope.setPage = function (pageNo) {
             $scope.currentPage = pageNo;
         };
 
-        $scope.pageChanged = function() {
+        $scope.pageChanged = function () {
             $log.log('Page changed to: ' + $scope.currentPage);
         };
 
@@ -411,17 +420,17 @@ windowClass: 'upload-pic'
 
 
     })
-    .controller('headerctrl', function($scope, TemplateService) {
+    .controller('headerctrl', function ($scope, TemplateService) {
         $scope.template = TemplateService;
-        $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+        $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
             $(window).scrollTop(0);
         });
         $.fancybox.close(true);
     })
 
-.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
+.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
-    $scope.changeLanguage = function() {
+    $scope.changeLanguage = function () {
         console.log("Language CLicked");
 
         if (!$.jStorage.get("language")) {
