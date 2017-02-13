@@ -92,7 +92,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
     $scope.goldMember=function() {
       $scope.noEdit=false;
-          $scope.profileSelect=true;
+          $scope.profileSelect=false;
       $scope.showMembership=true;
       $scope.goldenMember=false;
       $scope.silverMember=true;

@@ -726,8 +726,8 @@ padding: 0 160px 0 10px;
   position: absolute;
   left: 3px;
   top: 0.14em;
-  width: 1.20em;
-  height: 1.15em;
+  width: 23px;
+  height: 23px;
   border: 1px solid #fff;
   /* background: transparent; */
   border-radius: 50%;
@@ -737,7 +737,7 @@ padding: 0 160px 0 10px;
 [type="checkbox"]:checked + label:after {
   content: '•';
   position: absolute;
-  top: -0.29em;
+  top: -25px;
   left: -0.8px;
   font-size: 4.5em;
   line-height: 0.76;
