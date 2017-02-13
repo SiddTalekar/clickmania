@@ -2,6 +2,13 @@ $brand-holder: #ccc !default;
 .dosis-medium{
   font-family: 'dosis-medium';
 }
+@font-face {
+    font-family: 'Foradian';
+    src: url("../fonts/Rupee.ttf");
+}
+.rupee{
+      font-family: 'Foradian';
+}
 .dosis-light{
   font-family: 'dosis-light';
 }
