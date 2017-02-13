@@ -18,6 +18,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'HomeCtrl'
         })
+        .state('categories', {
+            url: "/categories",
+            templateUrl: "frontend/views/template.html",
+            controller: 'CategoriesCtrl'
+        })
         .state('photographer', {
             url: "/photographer",
             templateUrl: "frontend/views/template.html",
@@ -38,20 +43,25 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "frontend/views/template.html",
             controller: 'UsersCtrl'
         })
-         .state('user-profile', {
-              url: "/user-profile",
-              templateUrl: "frontend/views/template.html",
-              controller: 'UserProfileCtrl'
-          }).state('wild-photographer', {
-               url: "/wild-photographer",
-               templateUrl: "frontend/views/template.html",
-               controller: 'WildPhotoCtrl'
-           });
+        .state('user-profile', {
+            url: "/user-profile",
+            templateUrl: "frontend/views/template.html",
+            controller: 'UserProfileCtrl'
+        }).state('wild-photographer', {
+            url: "/wild-photographer",
+            templateUrl: "frontend/views/template.html",
+            controller: 'WildPhotoCtrl'
+        });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);
 });
 
-
+firstapp.filter('startFrom', function() {
+    return function(input, start) {
+        start = +start; //parse to int
+        return input.slice(start);
+    }
+});
 firstapp.directive('img', function ($compile, $parse) {
     return {
         restrict: 'E',
@@ -114,4 +124,66 @@ firstapp.config(function ($translateProvider) {
     $translateProvider.translations('en', LanguageEnglish);
     $translateProvider.translations('hi', LanguageHindi);
     $translateProvider.preferredLanguage('en');
+});
+
+firstapp.service('anchorSmoothScroll', function () {
+
+    this.scrollTo = function (eID) {
+        // this is scrolling function
+        var startY = currentYPosition();
+        var stopY = elemPosition(eID);
+        //   alert(startY + '\n' + stopY);
+        var distance = stopY > startY ? stopY - startY : startY - stopY;
+
+        if (distance < 100) {
+            scrollTo(0, stopY);
+            return;
+        }
+        var speed = Math.round(distance / 100);
+        if (speed >= 20) speed = 20;
+        var step = Math.round(distance / 25);
+        var leapY = stopY > startY ? startY + step : startY - step;
+        var timer = 0;
+        if (stopY > startY) {
+            for (var i = startY; i < stopY; i += step) {
+                setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+                leapY += step;
+                if (leapY > stopY) leapY = stopY;
+                timer++;
+            }
+            return;
+        }
+        for (var i = startY; i > stopY; i -= step) {
+            setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+            leapY -= step;
+            if (leapY < stopY) leapY = stopY;
+            timer++;
+        }
+
+        function currentYPosition() {
+            if (self.pageYOffset) return self.pageYOffset;
+
+            // Internet Explorer 6 - standards mode
+            if (document.documentElement && document.documentElement.scrollTop)
+                return document.documentElement.scrollTop;
+
+            // for ie 6, 7, 8
+            if (document.body.scrollTop) return document.body.scrollTop;
+            return 0;
+        }
+
+        function elemPosition(eID) {
+            var elem = document.getElementById(eID);
+            var y = elem.offsetTop;
+            // console.log(y);
+            var node = elem;
+            while (node.offsetParent && node.offsetParent != document.body) {
+                node = node.offsetParent;
+                y += node.offsetTop;
+            }
+            return y;
+        }
+    };
+
+
 });

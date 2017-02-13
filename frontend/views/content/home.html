@@ -62,7 +62,7 @@
         </div>
     </div>
     <!--main-->
-    <div class="scroll_down text-center">
+    <div id="scrollArea" class="scroll_down text-center" ng-click="goToElemment('middle')">
         <p>Scroll Down</p>
         <hr class="text-center">
     </div>
@@ -99,7 +99,7 @@
                 </flex-slider>
                 <div class="col-md-2 col-md-push-5">
                     <div class="fp_viewAll_btn">
-                        <button class="btn btn-block">View All</button>
+                        <button class="btn btn-block" ui-sref="feature-photographer">View All</button>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
 <section class="pht_contest">
     <div class="container">
         <div class="row">
-            <div class="camera_img">
+            <div class="camera_img" id="middle">
                 <img src="frontend/img/photo_contest1.png" alt="Camera" class="img-responsive center-block" width="100" alt="">
             </div>
             <div class="col-md-6 col-md-push-3">
@@ -130,6 +130,12 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="compete_btn">
+        <p>
+            <a class="btn whit-btn " type="button" href="#"> COMPETE NOW</a>
+        </p>
+    </div>
 </section>
 <!--end of photo contest-->
 <!--start of Categories section-->
@@ -144,19 +150,19 @@
             </div>
             <div class="all_cate">
                 <div class=" col-md-12">
-                    <img src="frontend/img/cat2.jpg" class="img-responsive" alt="">
+                    <a ui-sref="wild-photographer"><img src="frontend/img/cat2.jpg" class="img-responsive" alt=""></a>
                 </div>
                 <div class=" col-md-6  col-xs-12 padd_rt">
-                    <img src="frontend/img/cat3.jpg" class="img-responsive" alt="">
+                    <a href="#"> <img src="frontend/img/cat3.jpg" class="img-responsive" alt=""></a>
                 </div>
                 <div class=" col-md-6 padd_lt">
-                    <img src="frontend/img/cat4.jpg" class="img-responsive" alt="">
+                    <a href="#"> <img src="frontend/img/cat4.jpg" class="img-responsive" alt=""></a>
                 </div>
                 <div class=" col-md-12">
-                    <img src="frontend/img/cat5.jpg" class="img-responsive" alt="">
+                    <a href="#"> <img src="frontend/img/cat5.jpg" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-md-2 col-md-push-5 ">
-                    <button class="btn btn-block">View All</button>
+                    <a href="#"> <button class="btn btn-block" ui-sref="categories">View All</button></a>
                 </div>
             </div>
         </div>
@@ -199,7 +205,7 @@
                     <img src="frontend/img/atm0.jpg" class="img-responsive" alt="">
                     <div class="user-ab">
                         <div class="border-half">
-                            <img src="frontend/img/clickm/pic1.png" alt="" class="img-responsive prof-img doneLoading">
+                            <img src="frontend/img/clickm/pic1.png" alt="" class="img-responsive profile-f-img doneLoading">
                         </div>
                         <!--<div class="intro-profile">
                             <p class="name-loc ng-binding">Zaroon Jaffrani | Pune</p>
@@ -227,18 +233,16 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h2 class="text-center">Testimonials</h2>
-                <flex-slider slide="user in fpUser track by $index" animation="slide" slide-show="true" pause-on-hover="true">
+                <flex-slider slide="x in testimonial track by $index" animation="slide" slide-show="true" pause-on-hover="true" slideshow-speed="3000">
                     <li>
                         <div class="padd63">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                of type and scrambledLorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been</p>
-                            <p class="text-right">asdasdasd</p>
+                            <p>{{x.text}}</p>
+                            <p class="text-right">{{x.ceo}}</p>
                         </div>
                     </li>
                 </flex-slider>
-                <img src="frontend/img/testi.png" alt="" class="img-responsive abslt">
+                <img src="frontend/img/testi1.png" alt="" class="img-responsive abslt_lt">
+                <img src="frontend/img/testi.png" alt="" class="img-responsive abslt_rt">
             </div>
         </div>
     </div>
