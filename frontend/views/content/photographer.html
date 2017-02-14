@@ -192,8 +192,7 @@
                                         <label for="bio" class="vat">
       <img src="frontend/img/photographer/form/edit.png" alt="" class="img-responsive display-inline">Bio:</label>
                                         <div class="inline">
-                                            <textarea class="form-control text-set" id="bio" rows="5" placeholder="" value="" readonly>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus tempore ipsum qui voluptatem, autem dolorem doloremque reiciendis, maxime sapiente reprehenderit dicta! Harum distinctio error sequi dignissimos voluptatum perferendis, deserunt quos.
+                                            <textarea class="form-control text-set" id="bio" rows="5" placeholder="" value="" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus tempore ipsum qui voluptatem, autem dolorem doloremque reiciendis, maxime sapiente reprehenderit dicta! Harum distinctio error sequi dignissimos voluptatum perferendis, deserunt quos.
      </textarea>
                                         </div>
                                     </div>
@@ -387,7 +386,7 @@
                                             <li>Photos can be edited by you</li>
                                             <li>Valid for 1 year</li>
                                         </ul>
-                                        <button type="button" class="btn btn-default btn-full" ng-click="goldMember()">UPGRADE NOW</button>
+                                        <button type="button" class="btn btn-default btn-full" ng-click="chooseGold()">UPGRADE NOW</button>
                                     </div>
 
                                 </div>
@@ -411,6 +410,27 @@
                             <li>2mb per photo</li>
                             <li>Photos can be edited by you</li>
                             <li>Valid for 1 year</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- //gold -->
+                <div class="silver-subscribed" ng-hide="goldSub">
+                    <div class="free-member">
+                        <span class="small-font left-font">You are now</span>
+                        <span class="orange-color big-font">Subscribed</span>
+                        <span class="small-font">to a gold package</span>
+                    </div>
+                    <div class="upload-pic text-center">
+                        <button type="button" class="btn btn-default text-uppercase" ng-click="uploadImg()">Start uploading</button>
+                    </div>
+                    <div class="terms">
+                        <span class="text-center">Terms and conditions</span>
+                        <ul class="package-specs text-left">
+                          <li>100 photos</li>
+                          <li>3mb per photo</li>
+                          <li>Photos can be edited by you</li>
+                          <li>Valid for 1 year</li>
                         </ul>
                     </div>
                 </div>
@@ -461,7 +481,7 @@
 
                     </div>
                     <div class="upload-pic text-center ld-more">
-                        <button type="button" class="btn btn-default text-uppercase" ng-click="uploadImg()">Load more</button>
+                        <button type="button" class="btn btn-default text-uppercase" ng-click="">Load more</button>
                     </div>
                     <!-- upgradegold -->
                     <div class="upgrade-gd">
@@ -476,8 +496,8 @@
                                     <img src="{{subclick.background}}" alt="..." class="img-full img-min-h">
                                     <div class="sub-title text-right">
                                         <div class="upgrd-gold text-center">
-                                            <h1 class="damionr font70 white-color">{{subclick.titleOne}}</h1>
-                                            <h1 class="damionr font70  white-color">{{subclick.titleTwo}}</h1>
+                                            <h1 class="damionr font70 white-color mgb0">{{subclick.titleOne}}</h1>
+                                            <h1 class="damionr font70  white-color mgt-8">{{subclick.titleTwo}}</h1>
                                             <p class="text-center btn-fix"><a class="btn orange-btn btn-fix" type="button">Click here</a></p>
                                         </div>
                                     </div>
@@ -500,16 +520,16 @@
                         <form action="#" class="circular-checkbox display-inline">
                             <p>My Photos</p>
                             <p>
-                                <input type="checkbox" id="underwater" />
-                                <label for="underwater">Underwater</label>
+                                <input type="checkbox" id="underwater1" />
+                                <label for="underwater1">Underwater</label>
                             </p>
                             <p>
-                                <input type="checkbox" id="chennai" />
-                                <label for="chennai">Chennai</label>
+                                <input type="checkbox" id="chennai1" />
+                                <label for="chennai1">Chennai</label>
                             </p>
                             <p>
-                                <input type="checkbox" id="mumbai" />
-                                <label for="mumbai">Mumbai</label>
+                                <input type="checkbox" id="mumbai2" />
+                                <label for="mumbai2">Mumbai</label>
                             </p>
                         </form>
                         <div class="upload-pic display-inline">
@@ -534,7 +554,7 @@
 
                     </div>
                     <div class="upload-pic text-center ld-more">
-                        <button type="button" class="btn btn-default text-uppercase" ng-click="uploadImg()">Load more</button>
+                        <button type="button" class="btn btn-default text-uppercase" ng-click="">Load more</button>
                     </div>
                 </div>
             </div>

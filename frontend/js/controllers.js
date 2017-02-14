@@ -72,6 +72,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.freeMember=true;
           $scope.silverSub=false;
     }
+        $scope.goldSub=true;
+    $scope.chooseGold=function() {
+        $scope.freeMember=true;
+          $scope.goldSub=false;
+    }
     $scope.showForm=function() {
         $scope.noEdit=false;
       $scope.showForm=false;
@@ -105,7 +110,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             templateUrl: "frontend/views/modal/upload-photo.html",
             scope: $scope,
 windowClass: 'upload-pic',
-backdropClass: 'black-drop'
+backdropClass: 'black-drop',
+size: 'lg'
         });
     };
 
