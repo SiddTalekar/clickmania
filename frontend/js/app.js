@@ -56,8 +56,8 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
     $locationProvider.html5Mode(isproduction);
 });
 
-firstapp.filter('startFrom', function() {
-    return function(input, start) {
+firstapp.filter('startFrom', function () {
+    return function (input, start) {
         start = +start; //parse to int
         return input.slice(start);
     }
@@ -167,7 +167,7 @@ firstapp.service('anchorSmoothScroll', function () {
             if (document.documentElement && document.documentElement.scrollTop)
                 return document.documentElement.scrollTop;
 
-            // for ie 6, 7, 8
+            // for ie 6, 7, 8 
             if (document.body.scrollTop) return document.body.scrollTop;
             return 0;
         }
@@ -175,15 +175,46 @@ firstapp.service('anchorSmoothScroll', function () {
         function elemPosition(eID) {
             var elem = document.getElementById(eID);
             var y = elem.offsetTop;
+            // alert('1st' + y);
             // console.log(y);
             var node = elem;
+
             while (node.offsetParent && node.offsetParent != document.body) {
                 node = node.offsetParent;
+                console.log(node);
                 y += node.offsetTop;
+                // console.log('node elem', node.offsetTop);
+                // alert(y);
             }
             return y;
         }
     };
 
 
+});
+
+firstapp.directive('sidebarDirective', function () {
+
+    return {
+        link: function (scope, element, attr) {
+
+            scope.$watch(attr.sidebarDirective, function (newVal) {
+
+                if (newVal) {
+                    element.addClass('show');
+                    return;
+                } else {
+                    if ($('div.icon_float').hasClass('hamburger-cross')) {
+                        $('div.icon_float').children().addClass(function (n) {
+                            $('div.icon_float').removeClass('hamburger-cross');
+                            $('div.icon_float > span.icon-bar').removeAttr('style');
+
+                            return 'icon_bar' + n;
+                        });
+                    }
+                    element.removeClass('show');
+                }
+            });
+        }
+    };
 });

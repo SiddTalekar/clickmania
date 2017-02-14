@@ -464,25 +464,45 @@
         float: right;
     }
     
-    header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar1 {
+    header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar0 {
         float: right;
         width: 26px;
         height: 4px;
         background-color: $orangeColor;
     }
     
-    header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar2 {
+    header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar1 {
         float: right;
         width: 23px;
         height: 4px;
         background-color: $orangeColor;
     }
     
-    header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar3 {
+    header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar2 {
         float: right;
         width: 20px;
         height: 4px;
         background-color: $orangeColor;
+    }
+    
+    .hamburger-cross {
+        // this class is used for X button animation to close side nav
+        span {
+            @include transition(all 300ms linear);
+        }
+        span:first-child {
+            position: relative;
+            top: 7px;
+            @include transform(rotate(45deg));
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        span:last-child {
+            position: relative;
+            bottom: 7px;
+            @include transform(rotate(-45deg));
+        }
     }
     
     // for clickmania logo adjustment which includes boot strap's class navbar-brand
@@ -541,98 +561,99 @@
     
     //end display photographer's image(user image)
     // This section contains main background image with hamberger menu
-    .swiper-container {
+    .sliding_bg {
         position: relative;
-        background: -ms-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        background: -moz-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        background: -webkit-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        .swiper-button-next {
-            background-image: url(/../frontend/img/rt_arrow.png);
-            top: 59%;
-        }
-        .swiper-button-prev {
-            background-image: url(/../frontend/img/lt_arrow.png);
-            top: 59%;
-        }
-        .bg_main {
+        .sidebar {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 99;
-            .jumbotron {
-                border: none;
-                border-radius: 0;
-                background-color: transparent;
-                color: $whiteColor;
-                h2 {
-                    font-family: 'hs-semiBold';
-                    white-space: nowrap;
-                    font-size: 80px;
-                    line-height: 55px;
-                    height: 135px;
-                }
-                .input-group {
-                    .form-control {
-                        height: 45px;
+            top: 0;
+            left: -29%;
+            width: 29%;
+            height: 100%;
+            background-color: $whiteColor;
+            z-index: 103;
+            transition: 300ms left;
+        }
+        .show {
+            left: 0;
+        }
+        .swiper-container {
+            position: relative;
+            background: -ms-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            background: -moz-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            background: -webkit-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            .swiper-button-next {
+                background-image: url(/../frontend/img/rt_arrow.png);
+                top: 59%;
+            }
+            .swiper-button-prev {
+                background-image: url(/../frontend/img/lt_arrow.png);
+                top: 59%;
+            }
+            .bg_main {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 99;
+                .jumbotron {
+                    border: none;
+                    border-radius: 0;
+                    background-color: transparent;
+                    color: $whiteColor;
+                    h2 {
+                        font-family: 'hs-semiBold';
+                        white-space: nowrap;
+                        font-size: 80px;
+                        line-height: 55px;
+                        height: 135px;
                     }
-                    .input-group-btn {
-                        button {
-                            background-color: $orangeColor;
-                            border-color: $orangeColor;
+                    .input-group {
+                        .form-control {
                             height: 45px;
-                            .fa-search:before {
-                                font-size: 20px;
-                                color: $whiteColor;
+                        }
+                        .input-group-btn {
+                            button {
+                                background-color: $orangeColor;
+                                border-color: $orangeColor;
+                                height: 45px;
+                                .fa-search:before {
+                                    font-size: 20px;
+                                    color: $whiteColor;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-        // .scroll_img {
-        //     // Used to position scroll down image
-        //     width: 100%;
-        //     display: inline-block;
-        //     position: relative;
-        //     top: -68px;
-        //     z-index: 99;
-        //     p {
-        //         font-family: 'alegreya-light';
-        //         text-transform: capitalize;
-        //         color: $whiteColor;
-        //         cursor: pointer;
-        //     }
-        // }
-    }
-    
-    .scroll_down {
-        // Used to position scroll down automatically to next div
-        position: relative;
-        top: -63px;
-        z-index: 99;
-        cursor: pointer;
-        p {
-            font-family: 'alegreya-light';
-            font-weight: 900;
-            text-transform: capitalize;
-            color: $whiteColor;
-        }
-        hr {
-            margin-top: 0;
-            margin-bottom: 0;
-            border: none;
-        }
-        hr:after {
-            content: '';
-            background-size: cover;
-            background-position: center center;
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background-image: url(/../frontend/img/scroll.png);
-            background-repeat: no-repeat;
+        .scroll_down {
+            // Used to position scroll down automatically to next div
+            position: relative;
+            top: -63px;
+            z-index: 99;
             cursor: pointer;
+            p {
+                font-family: 'alegreya-light';
+                font-weight: 900;
+                text-transform: capitalize;
+                color: $whiteColor;
+            }
+            hr {
+                margin-top: 0;
+                margin-bottom: 0;
+                border: none;
+            }
+            hr:after {
+                content: '';
+                background-size: cover;
+                background-position: center center;
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                background-image: url(/../frontend/img/scroll.png);
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
         }
     }
     
