@@ -82,15 +82,40 @@ firstapp.directive('img', function ($compile, $parse) {
     };
 });
 
-firstapp.directive('fancybox', function ($document) {
+// firstapp.directive('fancybox', function ($document) {
+//     return {
+//         restrict: 'EA',
+//         replace: false,
+//         link: function (scope, element, attr) {
+//             var $element = $(element);
+//             var target;
+//             if (attr.rel) {
+//                 target = $("[rel='" + attr.rel + "']");
+//             } else {
+//                 target = element;
+//             }
+//
+//             target.fancybox({
+//                 openEffect: 'fade',
+//                 closeEffect: 'fade',
+//                 closeBtn: true,
+//                 padding: 0,
+//                 helpers: {
+//                     media: {}
+//                 }
+//             });
+//         }
+//     };
+// });
+firstapp.directive('fancyboxBox', function($document) {
     return {
         restrict: 'EA',
         replace: false,
-        link: function (scope, element, attr) {
+        link: function(scope, element, attr) {
             var $element = $(element);
             var target;
             if (attr.rel) {
-                target = $("[rel='" + attr.rel + "']");
+               target = $("[rel='" + attr.rel + "']");
             } else {
                 target = element;
             }
@@ -99,7 +124,8 @@ firstapp.directive('fancybox', function ($document) {
                 openEffect: 'fade',
                 closeEffect: 'fade',
                 closeBtn: true,
-                padding: 0,
+
+        galleryNavigation: 'keys',
                 helpers: {
                     media: {}
                 }
@@ -174,7 +200,7 @@ firstapp.service('anchorSmoothScroll', function () {
             if (document.documentElement && document.documentElement.scrollTop)
                 return document.documentElement.scrollTop;
 
-            // for ie 6, 7, 8 
+            // for ie 6, 7, 8
             if (document.body.scrollTop) return document.body.scrollTop;
             return 0;
         }

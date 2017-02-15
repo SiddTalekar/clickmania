@@ -88,6 +88,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.chooseSilverhis=function(){
           $scope.hideHistory=true;
           $scope.packageStatus=false;
+          $scope.silverStatus=false;
+          $scope.goldStatus=true;
+        }
+        $scope.chooseGoldhis=function(){
+          $scope.hideHistory=true;
+          $scope.packageStatus=false;
+          $scope.goldStatus=false;
+          $scope.silverStatus=true;
         }
         $scope.chooseSilver=function() {
             $scope.freeMember=true;
