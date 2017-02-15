@@ -12,11 +12,11 @@
                 </button>
                         <!--<a class="navbar-brand" ui-sref="home"><img src="frontend/img/logo.png" alt="logo" width="20"> </a>-->
                         <a class="navbar-brand" ui-sref="home">
-                            <div class="navbar-toggle" onclick="openNav()">
+                            <div class="navbar-toggle" ng-click='toggleState()'>
                                 <div class="icon_float">
+                                    <span class="icon-bar icon_bar0"></span>
                                     <span class="icon-bar icon_bar1"></span>
                                     <span class="icon-bar icon_bar2"></span>
-                                    <span class="icon-bar icon_bar3"></span>
                                 </div>
                             </div>
                             <img src="frontend/img/cmlogo.png" class="cmlogo img-responsive" alt="ClickMania_Logo">
@@ -28,14 +28,6 @@
             </div>-->
                 <div class="col-md-4">
                     <!--search bar-->
-                    <!--<form>
-                        <div class="form-group">
-                            <div class="input-group nav-search">
-                                <input type="text" class="form-control nav-search-input" placeholder="Search For Photographers" aria-describedby="basic-addon1">
-                                <span class="input-group-addon nav-search-icon" id="basic-addon1">@</span>
-                            </div>
-                        </div>
-                    </form>-->
                     <div class="Search_bar">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search for photographer">
