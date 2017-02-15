@@ -627,7 +627,60 @@ hr.border-hr:after {
     }
 }
 
+.black-btn {
+    margin: 0 15px;
+    width: 100px;
+    border-radius: 4px;
+    background-color: #252525;
+    color: #fff !important;
+    font-size: 18px;
+    padding: 6px 11px;
+    font-family: dosis-Light;
+    outline: none;
+}
+
+.black-btn:focus,
+.black-btn:hover {
+    color: #fff;
+    outline: none;
+}
+
+.tans-btn {
+  padding: 8px 16px;
+    font-family: dosis-Light;
+    color: black;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    cursor: text;
+    outline: none;
+}
+.btn:focus,
+.btn:hover {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.sec-span {
+    padding: 0 5px;
+    outline: none;
+    font-family: dosis-Light;
+    color: black;
+    font-weight: 600;
+}
+
+.btn-marg {
+    margin: 60px 18px 21px;
+}
+
+.location {
+    height: 258px;
+    overflow: auto;
+}
+
 .list {
+    min-height: 373px;
     background-image: url("/../frontend/img/clickm/11.png");
     background-repeat: no-repeat;
     background-position: 100% 46%;
