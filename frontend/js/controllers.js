@@ -63,7 +63,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             anchorSmoothScroll.scrollTo(eID);
         };
 
-        // used for left-sidebar navigation 
+        // used for left-sidebar navigation
         $scope.state = false;
         $scope.toggleState = function ($event) {
             $scope.state = !$scope.state;
@@ -71,84 +71,89 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('PhotographerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
+    .controller('PhotographerCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
         $scope.template = TemplateService.changecontent("photographer"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Photographer"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.tab = 1;
-        $scope.showForm = true;
-        $scope.noEdit = true;
-        $scope.hideAboutDesc = false;
-        $scope.profileSelect = false;
-        $scope.freeMember = false;
-        $scope.silverSub = true;
-        $scope.hideHistory = false;
-        $scope.packageStatus = true;
-        $scope.chooseSilverhis = function () {
-            $scope.hideHistory = true;
-            $scope.packageStatus = false;
+        $scope.showForm=true;
+        $scope.noEdit=true;
+        $scope.hideAboutDesc=false;
+        $scope.profileSelect=false;
+        $scope.freeMember=false;
+        $scope.silverSub=true;
+        $scope.hideHistory=false;
+            $scope.packageStatus=true;
+        $scope.chooseSilverhis=function(){
+          $scope.hideHistory=true;
+          $scope.packageStatus=false;
         }
-        $scope.chooseSilver = function () {
-            $scope.freeMember = true;
-            $scope.silverSub = false;
+        $scope.chooseSilver=function() {
+            $scope.freeMember=true;
+              $scope.silverSub=false;
         }
-        $scope.goldSub = true;
-        $scope.chooseGold = function () {
-            $scope.freeMember = true;
-            $scope.goldSub = false;
+            $scope.goldSub=true;
+        $scope.chooseGold=function() {
+            $scope.freeMember=true;
+              $scope.goldSub=false;
         }
-        $scope.showForm = function () {
-            $scope.noEdit = false;
-            $scope.showForm = false;
-            $scope.hideAboutDesc = true;
-            $scope.profileSelect = true;
+        $scope.showForm=function() {
+            $scope.noEdit=false;
+          $scope.showForm=false;
+          $scope.hideAboutDesc=true;
+          $scope.profileSelect=true;
         }
-        $scope.showMembership = false;
-        $scope.goldenMember = true;
-        $scope.silverMember = true;
-        $scope.silverMember = function () {
-            $scope.profileSelect = true;
-            $scope.noEdit = false;
-            $scope.showMembership = true;
-            $scope.silverMember = false;
-            $scope.goldenMember = true;
-            $scope.showForm = false;
-            $scope.hideAboutDesc = true;
+        $scope.showMembership=false;
+        $scope.goldenMember=true;
+        $scope.silverMember=true;
+        $scope.silverMember=function() {
+              $scope.profileSelect=true;
+              $scope.noEdit=false;
+          $scope.showMembership=true;
+          $scope.silverMember=false;
+            $scope.goldenMember=true;
+            $scope.showForm=false;
+            $scope.hideAboutDesc=true;
         }
-        $scope.goldMember = function () {
-            $scope.noEdit = false;
-            $scope.profileSelect = false;
-            $scope.showMembership = true;
-            $scope.goldenMember = false;
-            $scope.silverMember = true;
-            $scope.showForm = false;
-            $scope.hideAboutDesc = true;
+        $scope.goldMember=function() {
+          $scope.noEdit=false;
+              $scope.profileSelect=false;
+          $scope.showMembership=true;
+          $scope.goldenMember=false;
+          $scope.silverMember=true;
+          $scope.showForm=false;
+          $scope.hideAboutDesc=true;
         }
-        $scope.uploadImg = function () {
+        $scope.uploadImg = function() {
             $uibModal.open({
                 animation: true,
                 templateUrl: "frontend/views/modal/upload-photo.html",
                 scope: $scope,
-                windowClass: 'upload-pic',
-                backdropClass: 'black-drop',
-                size: 'lg'
+    windowClass: 'upload-pic',
+    backdropClass: 'black-drop',
+    size: 'lg'
             });
         };
 
-        $scope.uploadList = [
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg',
-            'frontend/img/photographer/img.jpg'
-        ];
-        $scope.subclick = {
-            "background": "frontend/img/user-back.png",
-            "titleOne": "Upgrade to",
-            "titleTwo": "Gold"
-        };
+            $scope.uploadList = [
+                'frontend/img/photographer/img.jpg',
+                'frontend/img/photographer/img.jpg',
+                'frontend/img/photographer/img.jpg',
+                'frontend/img/photographer/img.jpg',
+                'frontend/img/photographer/img.jpg',
+                'frontend/img/photographer/img.jpg'
+                       ];
+                       $scope.profileList = [
+                          'frontend/img/photographer/profile.png'
+                          //  ,'frontend/img/photographer/profile.jpg'
+
+                    ];
+                       $scope.subclick = {
+                           "background": "frontend/img/user-back.png",
+                           "titleOne": "Upgrade to",
+                           "titleTwo": "Gold"
+                       };
 
     })
 

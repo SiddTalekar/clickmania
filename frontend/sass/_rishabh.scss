@@ -35,6 +35,7 @@ $brand-holder: #ccc !default;
     color: #fff;
     font-size: 18px;
     font-family: 'Dosis-Regular';
+    cursor: pointer;
 }
 
 .sm-logo {
@@ -80,6 +81,7 @@ $brand-holder: #ccc !default;
 }
 
 .upload-trans {
+  cursor: pointer;
     position: absolute;
     bottom: -32px;
     left: 50%;
@@ -485,6 +487,7 @@ fieldset[disabled] .form-control {
     font-size: 14px;
     margin-left: 5px;
     vertical-align: text-bottom;
+    cursor: pointer;
 }
 
 .border-line {
@@ -766,6 +769,7 @@ fieldset[disabled] .form-control {
     border-radius: 50%;
     color: #fff;
     line-height: 1.2;
+    cursor: pointer;
 }
 //
 .uploaded-images {
