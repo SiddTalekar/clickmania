@@ -32,7 +32,7 @@
     </li>
 </flex-slider>-->
 <section class="sliding_bg">
-    <div class="sidebar" sidebar-directive="state">
+    <div class="sidebar text-center" sidebar-directive="state">
         <ul class="list-group navigation">
             <li class="list-group-item navigation-items"><a href="#">First item</a></li>
             <li class="list-group-item navigation-items"><a href="#">Second item</a></li>
@@ -41,6 +41,7 @@
     </div>
     <div class="mg_lft">
         <!--mg_lft is used to push the swiper to right side when side nav is activated-->
+        <div id="sidenav-overlay" style="opacity: 1; display: none;"></div>
         <swiper autoplay="5000" effect="slide" loop="true">
             <slides>
                 <slide ng-repeat="s in mySlides track by $index">

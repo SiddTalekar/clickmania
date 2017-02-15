@@ -107,15 +107,15 @@ firstapp.directive('img', function ($compile, $parse) {
 //         }
 //     };
 // });
-firstapp.directive('fancyboxBox', function($document) {
+firstapp.directive('fancyboxBox', function ($document) {
     return {
         restrict: 'EA',
         replace: false,
-        link: function(scope, element, attr) {
+        link: function (scope, element, attr) {
             var $element = $(element);
             var target;
             if (attr.rel) {
-               target = $("[rel='" + attr.rel + "']");
+                target = $("[rel='" + attr.rel + "']");
             } else {
                 target = element;
             }
@@ -125,7 +125,7 @@ firstapp.directive('fancyboxBox', function($document) {
                 closeEffect: 'fade',
                 closeBtn: true,
 
-        galleryNavigation: 'keys',
+                galleryNavigation: 'keys',
                 helpers: {
                     media: {}
                 }
@@ -146,8 +146,8 @@ firstapp.directive('autoHeight', function ($compile, $parse) {
     };
 });
 
-firstapp.filter('startFrom', function() {
-    return function(input, start) {
+firstapp.filter('startFrom', function () {
+    return function (input, start) {
         start = +start; //parse to int
         return input.slice(start);
     }
@@ -200,7 +200,7 @@ firstapp.service('anchorSmoothScroll', function () {
             if (document.documentElement && document.documentElement.scrollTop)
                 return document.documentElement.scrollTop;
 
-            // for ie 6, 7, 8
+            // for ie 6, 7, 8 
             if (document.body.scrollTop) return document.body.scrollTop;
             return 0;
         }
@@ -246,6 +246,13 @@ firstapp.directive('sidebarDirective', function () {
                         'width': '36px'
                     });
                     $('section .mg_lft').css('margin-left', '29%');
+                    $('#sidenav-overlay').show();
+                    $('body').on({
+                        'mousewheel': function (e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }
+                    });
                     element.addClass('show');
                     return;
                 } else {
@@ -254,6 +261,9 @@ firstapp.directive('sidebarDirective', function () {
                             $('div.icon_float').removeClass('hamburger-cross');
                             $('div.icon_float > span.icon-bar').removeAttr('style');
                             $('section .mg_lft').css('margin-left', '0');
+                            $('#sidenav-overlay').css('display', 'none');
+                            $('body').unbind('mousewheel'); // we can use .off() insted
+                            // $('#sidenav-overlay').hide(300);
                             return 'icon_bar' + n;
 
                         });

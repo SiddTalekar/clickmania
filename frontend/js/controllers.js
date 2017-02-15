@@ -18,7 +18,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         ];
 
         $scope.fpUser = [{ // Featured Photographer
-            profile: "frontend/img/pic1.png", 
+            profile: "frontend/img/pic1.png",
             background: "frontend/img/fp_bg1.png",
             title: "Zaroon Jaffrani | Pune",
             speciality: "wild life"
@@ -71,97 +71,97 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('PhotographerCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
+    .controller('PhotographerCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $http) {
         $scope.template = TemplateService.changecontent("photographer"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Photographer"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
         $scope.tab = 1;
-        $scope.showForm=true;
-        $scope.noEdit=true;
-        $scope.hideAboutDesc=false;
-        $scope.profileSelect=false;
-        $scope.freeMember=false;
-        $scope.silverSub=true;
-        $scope.hideHistory=false;
-            $scope.packageStatus=true;
-        $scope.chooseSilverhis=function(){
-          $scope.hideHistory=true;
-          $scope.packageStatus=false;
-          $scope.silverStatus=false;
-          $scope.goldStatus=true;
+        $scope.showForm = true;
+        $scope.noEdit = true;
+        $scope.hideAboutDesc = false;
+        $scope.profileSelect = false;
+        $scope.freeMember = false;
+        $scope.silverSub = true;
+        $scope.hideHistory = false;
+        $scope.packageStatus = true;
+        $scope.chooseSilverhis = function () {
+            $scope.hideHistory = true;
+            $scope.packageStatus = false;
+            $scope.silverStatus = false;
+            $scope.goldStatus = true;
         }
-        $scope.chooseGoldhis=function(){
-          $scope.hideHistory=true;
-          $scope.packageStatus=false;
-          $scope.goldStatus=false;
-          $scope.silverStatus=true;
+        $scope.chooseGoldhis = function () {
+            $scope.hideHistory = true;
+            $scope.packageStatus = false;
+            $scope.goldStatus = false;
+            $scope.silverStatus = true;
         }
-        $scope.chooseSilver=function() {
-            $scope.freeMember=true;
-              $scope.silverSub=false;
+        $scope.chooseSilver = function () {
+            $scope.freeMember = true;
+            $scope.silverSub = false;
         }
-            $scope.goldSub=true;
-        $scope.chooseGold=function() {
-            $scope.freeMember=true;
-              $scope.goldSub=false;
+        $scope.goldSub = true;
+        $scope.chooseGold = function () {
+            $scope.freeMember = true;
+            $scope.goldSub = false;
         }
-        $scope.showForm=function() {
-            $scope.noEdit=false;
-          $scope.showForm=false;
-          $scope.hideAboutDesc=true;
-          $scope.profileSelect=true;
+        $scope.showForm = function () {
+            $scope.noEdit = false;
+            $scope.showForm = false;
+            $scope.hideAboutDesc = true;
+            $scope.profileSelect = true;
         }
-        $scope.showMembership=false;
-        $scope.goldenMember=true;
-        $scope.silverMember=true;
-        $scope.silverMember=function() {
-              $scope.profileSelect=true;
-              $scope.noEdit=false;
-          $scope.showMembership=true;
-          $scope.silverMember=false;
-            $scope.goldenMember=true;
-            $scope.showForm=false;
-            $scope.hideAboutDesc=true;
+        $scope.showMembership = false;
+        $scope.goldenMember = true;
+        $scope.silverMember = true;
+        $scope.silverMember = function () {
+            $scope.profileSelect = true;
+            $scope.noEdit = false;
+            $scope.showMembership = true;
+            $scope.silverMember = false;
+            $scope.goldenMember = true;
+            $scope.showForm = false;
+            $scope.hideAboutDesc = true;
         }
-        $scope.goldMember=function() {
-          $scope.noEdit=false;
-              $scope.profileSelect=false;
-          $scope.showMembership=true;
-          $scope.goldenMember=false;
-          $scope.silverMember=true;
-          $scope.showForm=false;
-          $scope.hideAboutDesc=true;
+        $scope.goldMember = function () {
+            $scope.noEdit = false;
+            $scope.profileSelect = false;
+            $scope.showMembership = true;
+            $scope.goldenMember = false;
+            $scope.silverMember = true;
+            $scope.showForm = false;
+            $scope.hideAboutDesc = true;
         }
-        $scope.uploadImg = function() {
+        $scope.uploadImg = function () {
             $uibModal.open({
                 animation: true,
                 templateUrl: "frontend/views/modal/upload-photo.html",
                 scope: $scope,
-    windowClass: 'upload-pic',
-    backdropClass: 'black-drop',
-    size: 'lg'
+                windowClass: 'upload-pic',
+                backdropClass: 'black-drop',
+                size: 'lg'
             });
         };
 
-            $scope.uploadList = [
-                'frontend/img/photographer/img.jpg',
-                'frontend/img/photographer/img.jpg',
-                'frontend/img/photographer/img.jpg',
-                'frontend/img/photographer/img.jpg',
-                'frontend/img/photographer/img.jpg',
-                'frontend/img/photographer/img.jpg'
-                       ];
-                       $scope.profileList = [
-                          'frontend/img/photographer/profile.png'
-                          //  ,'frontend/img/photographer/profile.jpg'
+        $scope.uploadList = [
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg',
+            'frontend/img/photographer/img.jpg'
+        ];
+        $scope.profileList = [
+            'frontend/img/photographer/profile.png'
+            //  ,'frontend/img/photographer/profile.jpg'
 
-                    ];
-                       $scope.subclick = {
-                           "background": "frontend/img/user-back.png",
-                           "titleOne": "Upgrade to",
-                           "titleTwo": "Gold"
-                       };
+        ];
+        $scope.subclick = {
+            "background": "frontend/img/user-back.png",
+            "titleOne": "Upgrade to",
+            "titleTwo": "Gold"
+        };
 
     })
 
@@ -263,13 +263,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
     })
-    .controller('CategoriesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-     $scope.template = TemplateService.changecontent("categories"); //Use same name of .html file
-     $scope.menutitle = NavigationService.makeactive("Categories"); //This is the Title of the Website
-     TemplateService.title = $scope.menutitle;
-     $scope.navigation = NavigationService.getnav();
+    .controller('CategoriesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("categories"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Categories"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
- })
+    })
     .controller('UserProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("user-profile"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("User Profile"); //This is the Title of the Website
@@ -352,41 +352,52 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
 
     })
-    .controller('WildPhotoCtrl', function ($scope, TemplateService, NavigationService, $timeout,$filter) {
+    .controller('WildPhotoCtrl', function ($scope, TemplateService, NavigationService, $timeout, $filter) {
         $scope.template = TemplateService.changecontent("wild-photographer"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Wild Photographer"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
-        
-$scope.checkboxData = [
-    {label: 'mumbai',value: true},
-    {label: 'banglor',value: false},
-    {label: 'pune',value: false},
-    {label: 'chennai',value: false},
-    {label: 'karnataka',value: false},
-    {label: 'barcelona',value: false}  
-    ];
-  $scope.checkall = false;
-  $scope.toggleAll = function() {
-    $scope.checkall = !$scope.checkall;
-    for(var key in $scope.checkboxData) {
-      $scope.checkboxData[key].value = $scope.checkall;
-    }
-  };
-         $scope.currentPage = 0;
-    $scope.pageSize = 9;
-    $scope.data = [];
-    $scope.q = '';
-    
-    $scope.getData = function () {     
-      return $filter('filter')($scope.data, $scope.q)
-    
-    }
-    
-    $scope.numberOfPages=function(){
-        return Math.ceil($scope.getData().length/$scope.pageSize);                
-    }
- $scope.data = [{
+
+        $scope.checkboxData = [{
+            label: 'mumbai',
+            value: true
+        }, {
+            label: 'banglor',
+            value: false
+        }, {
+            label: 'pune',
+            value: false
+        }, {
+            label: 'chennai',
+            value: false
+        }, {
+            label: 'karnataka',
+            value: false
+        }, {
+            label: 'barcelona',
+            value: false
+        }];
+        $scope.checkall = false;
+        $scope.toggleAll = function () {
+            $scope.checkall = !$scope.checkall;
+            for (var key in $scope.checkboxData) {
+                $scope.checkboxData[key].value = $scope.checkall;
+            }
+        };
+        $scope.currentPage = 0;
+        $scope.pageSize = 9;
+        $scope.data = [];
+        $scope.q = '';
+
+        $scope.getData = function () {
+            return $filter('filter')($scope.data, $scope.q)
+
+        }
+
+        $scope.numberOfPages = function () {
+            return Math.ceil($scope.getData().length / $scope.pageSize);
+        }
+        $scope.data = [{
             "profile": "frontend/img/pic/pic1.jpg",
             "background": "frontend/img/clickm/9.jpg",
             "name": "sagar",
@@ -458,9 +469,9 @@ $scope.checkboxData = [
             "place": "new mumbai",
             "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
         }];
-        
-    
- 
+
+
+
         $scope.fpUser = [{
             "profile": "frontend/img/pic/pic1.jpg",
             "background": "frontend/img/fp_bg1.png",
