@@ -237,8 +237,7 @@
                                                 <div class="display-inline pkg-info">
                                                     <span class="display-block package-name">SILVER PACKAGE</span>
                                                     <span class="display-block package-price">
-                                                      <span class="rupee">`</span>
-                                                       2300 plus taxes</span>
+                                                      <span class="rupee">`</span> 2300 plus taxes</span>
                                                 </div>
                                             </div>
 
@@ -427,10 +426,10 @@
                     <div class="terms">
                         <span class="text-center">Terms and conditions</span>
                         <ul class="package-specs text-left">
-                          <li>100 photos</li>
-                          <li>3mb per photo</li>
-                          <li>Photos can be edited by you</li>
-                          <li>Valid for 1 year</li>
+                            <li>100 photos</li>
+                            <li>3mb per photo</li>
+                            <li>Photos can be edited by you</li>
+                            <li>Valid for 1 year</li>
                         </ul>
                     </div>
                 </div>
@@ -468,14 +467,16 @@
                         <div class="col-md-4" ng-repeat="item in uploadList track by $index">
                             <div class="img-holder">
 
-                                <img src="{{item}}" alt="" class="img-responsive">
+                                <img ng-src="{{item}}" alt="" class="img-responsive">
                                 <div class="edit-image">
                                     <div class="edit-uploaded">
-                                        <button type="button" class="btn btn-default">  <i class="fa fa-eye" aria-hidden="true"></i>View</button>
+                                        <a  fancybox-box ng-href="{{item}}">
+                                        <button type="button" class="btn btn-default">  <i class="fa fa-eye" aria-hidden="true"></i>View</button>    </a>
                                         <button type="button" class="btn btn-default">  <i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button>
 
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
@@ -544,7 +545,8 @@
                                 <img src="{{item}}" alt="" class="img-responsive">
                                 <div class="edit-image">
                                     <div class="edit-uploaded">
-                                        <button type="button" class="btn btn-default">  <i class="fa fa-eye" aria-hidden="true"></i>View</button>
+                                      <a  fancybox-box ng-href="{{item}}">
+                                      <button type="button" class="btn btn-default">  <i class="fa fa-eye" aria-hidden="true"></i>View</button>    </a>
                                         <button type="button" class="btn btn-default">  <i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button>
 
                                     </div>
@@ -617,7 +619,7 @@
                                             <li>Photos can be edited by you</li>
                                             <li>Valid for 1 year</li>
                                         </ul>
-                                        <button type="button" class="btn btn-default btn-full" ng-click="goldMember()">UPGRADE NOW</button>
+                                        <button type="button" class="btn btn-default btn-full" ng-click="chooseGoldhis()">UPGRADE NOW</button>
                                     </div>
 
                                 </div>
@@ -632,7 +634,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1">
-                            <div class="historypackage-card1">
+                            <div class="historypackage-card1" ng-hide="silverStatus">
 
                                 <div class="display-inline pkg-info">
                                     <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
@@ -656,7 +658,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1">
-                            <div class="historypackage-card2">
+                            <div class="historypackage-card2" ng-hide="goldStatus">
 
                                 <div class="display-inline pkg-info">
                                     <img src="frontend/img/photographer/award-symbolcopy2.png" alt="" class="img-responsive display-inline">
@@ -683,23 +685,23 @@
                             <!-- <div class="sub-main">
                                 <img src="{{subclick.background}}" alt="..." class="img-full img-min-h">
                 </div> -->
-                <div class="sub-main">
-                    <img src="{{subclick.background}}" alt="..." class="img-full img-min-h">
-                    <div class="sub-title">
-                        <div class="upgrd-gold text-center">
-                            <h1 class="damionr font70 white-color">{{subclick.titleOne}}</h1>
-                            <h1 class="damionr font70  white-color">{{subclick.titleTwo}}</h1>
-                            <p class="text-center btn-fix"><a class="btn orange-btn btn-fix" type="button">Click here</a></p>
-                        </div>
-                    </div>
-                    <ul class="upgrade-inner">
-                        <li>100 photos</li>
-                        <li>3mb per photo</li>
-                        <li>Photos can be edited by you</li>
-                        <li>Valid for 1 year</li>
-                    </ul>
+                            <div class="sub-main">
+                                <img src="{{subclick.background}}" alt="..." class="img-full img-min-h">
+                                <div class="sub-title">
+                                    <div class="upgrd-gold text-center">
+                                        <h1 class="damionr font70 white-color">{{subclick.titleOne}}</h1>
+                                        <h1 class="damionr font70  white-color">{{subclick.titleTwo}}</h1>
+                                        <p class="text-center btn-fix"><a class="btn orange-btn btn-fix" type="button">Click here</a></p>
+                                    </div>
+                                </div>
+                                <ul class="upgrade-inner">
+                                    <li>100 photos</li>
+                                    <li>3mb per photo</li>
+                                    <li>Photos can be edited by you</li>
+                                    <li>Valid for 1 year</li>
+                                </ul>
 
-                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="subs-info pdb-25">
