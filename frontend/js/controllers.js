@@ -68,16 +68,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.toggleState = function ($event) {
             $scope.state = !$scope.state;
 
-            $('div.icon_float').children().removeClass(function (index, className) {
-                return (className.match(/\bicon_\S+/g) || []).join(' ');
-            });
-
-            $('div.icon_float').addClass('hamburger-cross');
-            $('div.icon_float > span.icon-bar').css({
-                'height': '3px',
-                'background-color': '#f4511e',
-                'width': '36px'
-            });
         };
 
     })

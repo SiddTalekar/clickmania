@@ -201,6 +201,18 @@ firstapp.directive('sidebarDirective', function () {
             scope.$watch(attr.sidebarDirective, function (newVal) {
 
                 if (newVal) {
+
+                    $('div.icon_float').children().removeClass(function (index, className) {
+                        return (className.match(/\bicon_\S+/g) || []).join(' ');
+                    });
+
+                    $('div.icon_float').addClass('hamburger-cross');
+                    $('div.icon_float > span.icon-bar').css({
+                        'height': '3px',
+                        'background-color': '#f4511e',
+                        'width': '36px'
+                    });
+                    $('section .mg_lft').css('margin-left', '29%');
                     element.addClass('show');
                     return;
                 } else {
@@ -208,8 +220,9 @@ firstapp.directive('sidebarDirective', function () {
                         $('div.icon_float').children().addClass(function (n) {
                             $('div.icon_float').removeClass('hamburger-cross');
                             $('div.icon_float > span.icon-bar').removeAttr('style');
-
+                            $('section .mg_lft').css('margin-left', '0');
                             return 'icon_bar' + n;
+
                         });
                     }
                     element.removeClass('show');

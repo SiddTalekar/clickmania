@@ -39,42 +39,45 @@
             <li class="list-group-item navigation-items"><a href="#">Third item</a></li>
         </ul>
     </div>
-    <swiper autoplay="5000" effect="slide" loop="true">
-        <slides>
-            <slide ng-repeat="s in mySlides track by $index">
-                <img ng-src="{{s}}" class="img-full" noloading="true">
-            </slide>
-        </slides>
-        <prev></prev>
-        <next></next>
-        <!--<pagination></pagination>-->
-        <div class="bg_main">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-push-2 jumbotron_middle">
-                        <div class="jumbotron">
-                            <h2 class="text-center">They froze time to let pictures<br>
-                                <div class="text-right" style="padding-right: 50px;">Give away stories</div>
-                            </h2>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for photographer">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">
+    <div class="mg_lft">
+        <!--mg_lft is used to push the swiper to right side when side nav is activated-->
+        <swiper autoplay="5000" effect="slide" loop="true">
+            <slides>
+                <slide ng-repeat="s in mySlides track by $index">
+                    <img ng-src="{{s}}" class="img-full" noloading="true">
+                </slide>
+            </slides>
+            <prev></prev>
+            <next></next>
+            <!--<pagination></pagination>-->
+            <div class="bg_main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-push-2 jumbotron_middle">
+                            <div class="jumbotron">
+                                <h2 class="text-center">They froze time to let pictures<br>
+                                    <div class="text-right" style="padding-right: 50px;">Give away stories</div>
+                                </h2>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search for photographer">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--main-->
-        <div id="scrollArea" class="scroll_down text-center" ng-click="goToElemment('middle')">
-            <p>Scroll Down</p>
-            <hr class="text-center">
-        </div>
-    </swiper>
+            <!--main-->
+            <div id="scrollArea" class="scroll_down text-center" ng-click="goToElemment('middle')">
+                <p>Scroll Down</p>
+                <hr class="text-center">
+            </div>
+        </swiper>
+    </div>
 </section>
 <!--flex slider for featured photographer-->
 <section class="featu_photo_caraso">

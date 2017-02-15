@@ -469,6 +469,7 @@
         width: 26px;
         height: 4px;
         background-color: $orangeColor;
+        @include transition(all 300ms linear);
     }
     
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar1 {
@@ -476,6 +477,7 @@
         width: 23px;
         height: 4px;
         background-color: $orangeColor;
+        @include transition(all 300ms linear);
     }
     
     header>nav a.navbar-brand>div.navbar-toggle>div.icon_float>span.icon_bar2 {
@@ -483,7 +485,10 @@
         width: 20px;
         height: 4px;
         background-color: $orangeColor;
+        @include transition(all 300ms linear);
     }
+    
+    
     
     .hamburger-cross {
         // this class is used for X button animation to close side nav
@@ -576,6 +581,9 @@
         .show {
             left: 0;
         }
+        .mg_lft {// mg_lft is used to push the swiper to right side
+        transition: margin-left .5s;
+    }
         .swiper-container {
             position: relative;
             background: -ms-linearGradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
