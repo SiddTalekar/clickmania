@@ -120,6 +120,13 @@ firstapp.directive('autoHeight', function ($compile, $parse) {
     };
 });
 
+firstapp.filter('startFrom', function() {
+    return function(input, start) {
+        start = +start; //parse to int
+        return input.slice(start);
+    }
+});
+
 firstapp.config(function ($translateProvider) {
     $translateProvider.translations('en', LanguageEnglish);
     $translateProvider.translations('hi', LanguageHindi);

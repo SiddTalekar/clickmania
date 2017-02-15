@@ -45,7 +45,7 @@
                     <input value="" type="checkbox" id="d" ng-model="checkall" ng-click="toggleAll()">
                     <label for="d"><span></span> all</label>
                     <div ng-repeat="dataPoint in checkboxData">
-                        <input value="" type="checkbox" id="{{dataPoint.label}}" ng-model="dataPoint.value">
+                        <input value="" type="checkbox" id="{{dataPoint.label}}" ng-model="dataPoint.label">
                         <label for="{{dataPoint.label}}"><span></span> {{dataPoint.label}}</label>
                     </div>
                 </div>

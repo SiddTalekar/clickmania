@@ -18,7 +18,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         ];
 
         $scope.fpUser = [{ // Featured Photographer
-            profile: "frontend/img/pic1.png",
+            profile: "frontend/img/pic1.png", 
             background: "frontend/img/fp_bg1.png",
             title: "Zaroon Jaffrani | Pune",
             speciality: "wild life"
@@ -344,12 +344,115 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
 
     })
-    .controller('WildPhotoCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('WildPhotoCtrl', function ($scope, TemplateService, NavigationService, $timeout,$filter) {
         $scope.template = TemplateService.changecontent("wild-photographer"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Wild Photographer"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+        
+$scope.checkboxData = [
+    {label: 'mumbai',value: true},
+    {label: 'banglor',value: false},
+    {label: 'pune',value: false},
+    {label: 'chennai',value: false},
+    {label: 'karnataka',value: false},
+    {label: 'barcelona',value: false}  
+    ];
+  $scope.checkall = false;
+  $scope.toggleAll = function() {
+    $scope.checkall = !$scope.checkall;
+    for(var key in $scope.checkboxData) {
+      $scope.checkboxData[key].value = $scope.checkall;
+    }
+  };
+         $scope.currentPage = 0;
+    $scope.pageSize = 9;
+    $scope.data = [];
+    $scope.q = '';
+    
+    $scope.getData = function () {     
+      return $filter('filter')($scope.data, $scope.q)
+    
+    }
+    
+    $scope.numberOfPages=function(){
+        return Math.ceil($scope.getData().length/$scope.pageSize);                
+    }
+ $scope.data = [{
+            "profile": "frontend/img/pic/pic1.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "sagar",
+            "surName": "roy",
+            "place": "pune",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic3.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "zaroon",
+            "surName": "jaffrani",
+            "place": "pune",
+            "content": " You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
 
+        }, {
+            "profile": "frontend/img/pic/pic2.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "rayeesh",
+            "surName": "khan",
+            "place": "pune",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? "
+        }, {
+            "profile": "frontend/img/pic/pic5.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "sagar",
+            "surName": "roy",
+            "place": "pune",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic6.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "dipesh",
+            "surName": "yask",
+            "place": "pune",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }, {
+            "profile": "frontend/img/pic/pic4.jpg",
+            "background": "frontend/img/clickm/9.jpg",
+            "name": "prachi",
+            "surName": "ronsk",
+            "place": "new mumbai",
+            "content": "Would you like to insert and display separate images for intro text and full article in your blog? ... You can also specify placement for images, take a look at Intro Image Float and Full Text Image Float settings."
+        }];
+        
+    
+ 
         $scope.fpUser = [{
             "profile": "frontend/img/pic/pic1.jpg",
             "background": "frontend/img/fp_bg1.png",
@@ -381,20 +484,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }];
 
         //uib controller
-        $scope.totalItems = 64;
-        $scope.currentPage = 1;
+        // $scope.totalItems = 64;
+        // $scope.currentPage = 1;
 
-        $scope.setPage = function (pageNo) {
-            $scope.currentPage = pageNo;
-        };
+        // $scope.setPage = function (pageNo) {
+        //     $scope.currentPage = pageNo;
+        // };
 
-        $scope.pageChanged = function () {
-            $log.log('Page changed to: ' + $scope.currentPage);
-        };
+        // $scope.pageChanged = function () {
+        //     $log.log('Page changed to: ' + $scope.currentPage);
+        // };
 
-        $scope.maxSize = 1;
-        $scope.bigTotalItems = 175;
-        $scope.bigCurrentPage = 1;
+        // $scope.maxSize = 1;
+        // $scope.bigTotalItems = 175;
+        // $scope.bigCurrentPage = 1;
         $scope.usersList = [{
             "profile": "frontend/img/pic/pic1.jpg",
             "background": "frontend/img/clickm/9.jpg",
