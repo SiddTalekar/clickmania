@@ -1,0 +1,79 @@
+.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location, anchorSmoothScroll) {
+        $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("ClickMania"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+        $scope.mySlides = [
+            // 'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+            // 'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+            // 'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+            // 'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
+            "frontend/img/bg1.jpg",
+            "frontend/img/bg1.jpg",
+            "frontend/img/bg1.jpg"
+
+        ];
+
+        $scope.fpUser = [{ // Featured Photographer
+            profile: "frontend/img/pic1.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Zaroon Jaffrani | Pune",
+            speciality: "wild life"
+        }, {
+            profile: "frontend/img/pic2.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Asmara Khan | Banglore",
+            speciality: "wedding"
+        }, {
+            profile: "frontend/img/pic3.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Fatema | Delhi",
+            speciality: "wild life"
+        }, {
+            profile: "frontend/img/clickm/pic1.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Zaroon Jaffrani | Pune",
+            speciality: "wild life"
+        }, {
+            profile: "frontend/img/clickm/pic2.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Asmara Khan | Banglore",
+            speciality: "Wedding"
+        }, {
+            profile: "frontend/img/pic3.png",
+            background: "frontend/img/fp_bg1.png",
+            title: "Fatema | Delhi",
+            speciality: "wild life"
+        }];
+
+        $scope.testimonial = [{ // used for testimonials
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 0the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambledLorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been",
+            ceo: "manan vora, CEO & founder Ting"
+        }, {
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 0the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambledLorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been",
+            ceo: "vora manan , CEO & founder Ting"
+        }];
+
+        // To scroll down to a particular div
+        $scope.goToElemment = function (eID) { // para will take an elementId
+            $location.hash('bottom');
+            anchorSmoothScroll.scrollTo(eID);
+        };
+
+        // used for left-sidebar navigation
+        $scope.state = false;
+        $scope.toggleState = function ($event) {
+            $scope.state = !$scope.state;
+
+        };
+
+    })
+
+     .controller('CategoriesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+     $scope.template = TemplateService.changecontent("categories"); //Use same name of .html file
+     $scope.menutitle = NavigationService.makeactive("Categories"); //This is the Title of the Website
+     TemplateService.title = $scope.menutitle;
+     $scope.navigation = NavigationService.getnav();
+
+ })

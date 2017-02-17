@@ -274,3 +274,17 @@ firstapp.directive('sidebarDirective', function () {
         }
     };
 });
+
+// firstapp.directive('scrolly', function () {
+
+//     return {
+//         restrict: 'A',
+//         link: function (scope, element, attrs) {
+//             alert('1st call');
+//             var raw = elem[0]; // will get the element on which we have applied scrolly attr
+//             console.log(raw);
+
+//         }
+//     }
+
+// });

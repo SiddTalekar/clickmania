@@ -54,12 +54,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             ceo: "manan vora, CEO & founder Ting"
         }, {
             text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 0the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambledLorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been",
-            ceo: "vora manan , CEO & founder Ting"
+            ceo: " manan vora, CEO & founder Ting"
         }];
 
         // To scroll down to a particular div
         $scope.goToElemment = function (eID) { // para will take an elementId
-            $location.hash('bottom');
+            //  $location.hash('bottom');
             anchorSmoothScroll.scrollTo(eID);
         };
 

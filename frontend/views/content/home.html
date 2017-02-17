@@ -39,7 +39,8 @@
             <li class="list-group-item navigation-items"><a href="#">Third item</a></li>
         </ul>
     </div>
-    <div class="mg_lft">
+    <div class="mg_lft" scrolly>
+        <!--scrolly is an angular directive for scrolling fn-->
         <!--mg_lft is used to push the swiper to right side when side nav is activated-->
         <div id="sidenav-overlay" style="opacity: 1; display: none;"></div>
         <swiper autoplay="5000" effect="slide" loop="true">
@@ -86,7 +87,7 @@
         <div class="col-md-12">
             <div class="fp_padd_rl">
                 <!--<h2>Featured</h2>-->
-                <h2 class="head-f">Featured <br> &nbsp; Photographer</h2>
+                <h2 class="head-f">Featured <br> &nbsp; Photographers</h2>
                 <!--padding right & left-->
                 <flex-slider slide="user in fpUser track by $index" animation="slide" prev-text="" next-text="" item-margin="10" max-items="3"
                     item-width="250">
@@ -100,7 +101,7 @@
                                     <img ng-src="{{user.profile}}" class="img-responsive" alt="">
                                 </div>
                                 <h3>{{user.title}}</h3>
-                                <p>{{user.speciality}}</p>
+                                <p>Speciality: {{user.speciality}}</p>
                             </div>
                         </div>
                         <div class="col-md-8 col-md-push-2">
@@ -131,7 +132,7 @@
                 <div class="jumbotron">
                     <div class="ht100">
                         <h2> &nbsp Join the<br>
-                            <h2>Photo contest</h2>
+                            <h2>Photo contest.</h2>
                         </h2>
                     </div>
                     <p>Get clicking in style and if your picture have got the oomph factor you could win a lakh of rupees </p>
@@ -175,7 +176,7 @@
                     <a href="#"> <img src="frontend/img/cat5.jpg" class="img-responsive" alt=""></a>
                 </div>
                 <div class="col-md-2 col-md-push-5 ">
-                    <a href="#"> <button class="btn btn-block" ui-sref="categories">View All</button></a>
+                    <button class="btn btn-block" ui-sref="categories">View All</button>
                 </div>
             </div>
         </div>
@@ -213,7 +214,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <h2 class="head-f">Artist <br> &nbsp the month</h2>
+                <h2 class="head-f">Artist of <br> &nbsp the month</h2>
                 <div class="bg_img">
                     <img src="frontend/img/atm0.jpg" class="img-responsive" alt="">
                     <div class="user-ab">
