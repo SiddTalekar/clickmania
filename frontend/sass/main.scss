@@ -1340,6 +1340,7 @@
     background-color: #fff;
     margin: 35px 150px;
     border-radius: 5px;
+   // height: 140px;
 
     .control-label {
         text-align: left;
@@ -1357,7 +1358,7 @@ fieldset[disabled] .form-control {
     margin-bottom: 10px;
     label[for=name]{
             float: left;
-    width: 10%;
+   // width: 10%;
    
     }
      .w77{
@@ -1675,8 +1676,8 @@ fieldset[disabled] .form-control {
 .free-member {
     text-align: center;
     // padding: 60px 10px 40px;
-        padding: 35px 10px 40px;
-    width: 35%;
+           padding: 95px 10px 65px;
+    width: 60%;
     margin: 0 auto;
 
     span {
@@ -1685,19 +1686,22 @@ fieldset[disabled] .form-control {
     }
 
     .small-font {
-        font-size: 32px;
+        font-size: 46px;
         line-height: 0;
-        padding-top: 5px;
+        margin-left: 7%;
+       // padding-top: 5px;
     }
 
     .big-font {
         line-height: 1;
-        font-size: 70px;
+        font-size: 100px;
     }
 
     .left-font {
+        // position: relative;
+        // top: 8px;
         text-align: left;
-        margin-left: 20%;
+        margin-left: 25%;
         margin-bottom: -5px;
     }
 }
@@ -1707,7 +1711,7 @@ fieldset[disabled] .form-control {
 
     p {
         font-family: 'Dosis-Medium';
-        font-size: 18px;
+        font-size: 19px;
         letter-spacing: 0.5px;
     }
 }
@@ -1788,7 +1792,7 @@ fieldset[disabled] .form-control {
 
     .left-font {
         text-align: left;
-        margin-left: 20%;
+        margin-left: 31%;
         margin-bottom: -8px;
         font-size: 40px;
     }
@@ -2017,9 +2021,9 @@ margin-bottom: 0;
         content: '';
         position: absolute;
         left: 3px;
-        top: 0.14em;
-        width: 23px;
-        height: 23px;
+        top: 6px;
+        width: 18px;
+        height: 18px;
         border: 1px solid #fff;
         /* background: transparent; */
         border-radius: 50%;
@@ -2029,9 +2033,9 @@ margin-bottom: 0;
     [type="checkbox"]:not(:checked) + label:after {
         content: '•';
         position: absolute;
-        top: -26px;
+        top: -17px;
         left: -0.8px;
-        font-size: 4.5em;
+        font-size: 72px;
         line-height: 0.76;
         color: #fff;
         transition: all 0.2s;
@@ -2082,22 +2086,31 @@ margin-bottom: 0;
     }
 
     .small-font {
-        font-size: 35px;
-        line-height: 0;
-        padding-top: 6px;
-        margin-left: 40px;
+        // font-size: 35px;
+        // line-height: 0;
+        // padding-top: 6px;
+        // margin-left: 40px;
+            text-align: left;
+    font-size: 46px;
+    line-height: 0;
+    margin-left: 39%;
+    
+    
     }
 
     .big-font {
-        font-size: 80px;
-        margin-left: -122px;
-        margin-top: -5px;
+        // font-size: 80px;
+        // margin-left: -122px;
+        // margin-top: -5px;
+        font-size: 90px;
+        line-height: 1;
     }
 
     .left-font {
-        text-align: left;
-        margin-left: 21%;
-        margin-bottom: 1px;
+     text-align: left;
+     margin-left: 40%;
+     margin-bottom: -8px;
+     font-size: 40px;
     }
 }
 
@@ -2144,7 +2157,7 @@ margin-bottom: 0;
 
 .history-sec {
     font-size: 19px;
-    padding: 10px 30px 1px;
+    padding: 35px 30px 1px;
     text-align: left;
 }
 
@@ -2168,6 +2181,9 @@ margin-bottom: 0;
     p {
         font-size: 24px;
     }
+}
+.valdidity{
+ margin-left: 12px;
 }
 
 .historypackage-card1,
