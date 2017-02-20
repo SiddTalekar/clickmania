@@ -247,12 +247,15 @@ firstapp.directive('sidebarDirective', function () {
                     });
                     $('section .mg_lft').css('margin-left', '29%');
                     $('#sidenav-overlay').show();
-                    $('body').on({
-                        'mousewheel': function (e) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                        }
-                    });
+                    // $('body').on({
+                    //     'mousewheel': function (e) {
+                    //         e.preventDefault();
+                    //         e.stopPropagation();
+                    //     }
+                    // });
+
+                    $('body').css('overflow-y', 'hidden');
+
                     element.addClass('show');
                     return;
                 } else {
@@ -262,7 +265,8 @@ firstapp.directive('sidebarDirective', function () {
                             $('div.icon_float > span.icon-bar').removeAttr('style');
                             $('section .mg_lft').css('margin-left', '0');
                             $('#sidenav-overlay').css('display', 'none');
-                            $('body').unbind('mousewheel'); // we can use .off() insted
+                            $('body').css('overflow-y', 'scroll');
+                            //  $('body').unbind('mousewheel'); // we can use .off() insted
                             // $('#sidenav-overlay').hide(300);
                             return 'icon_bar' + n;
 

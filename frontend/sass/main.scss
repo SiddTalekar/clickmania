@@ -180,6 +180,7 @@
         font-size: 16px; // default size is 16px
         @include transition(background-color .5s);
         overflow-x: hidden!important; // It is must to keep it as an imp
+        
     }
     
     // used for scroll Bar design
@@ -238,6 +239,9 @@
         // margin top and bottom
         margin-top: 53px;
         margin-bottom: 53px;
+    }
+    .mg_t75{// this class is given kz the navbar is at fixed position.
+        margin-top: 75px;
     }
 
     .dosis-medium {
@@ -511,7 +515,7 @@
     .navbar-default {
         background-color: $whiteColor;
         border: none;
-        position: relative;
+       // position: relative;
     }
     
     header>nav a.navbar-brand>div.navbar-toggle {
@@ -642,6 +646,7 @@
     // This section contains main background image with side nav menu
     .sliding_bg {
         position: relative;
+        @extend .mg_t75;
         height: 100%;
         .sidebar {
             position: absolute;
@@ -649,6 +654,8 @@
             left: -29%;
             width: 29%;
             height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
             font-size: 23px;
             background-color: $whiteColor;
             z-index: 120; // set higher than  #sidenav-overlay
@@ -738,8 +745,14 @@
         }
         .scroll_down {
             // Used to position scroll down automatically to next div
-            position: relative;
-            top: -128px;
+            // position: relative;
+            // top: -128px;
+            // z-index: 99;
+            // cursor: pointer;
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            right: 0;
             z-index: 99;
             cursor: pointer;
             p {
@@ -2846,7 +2859,7 @@ header {
                 position: absolute;
                 left: 50%;
                 transform: translate(-42%, -43%);
-                z-index: 999999;
+                z-index: 100;
             }
         }
     }
@@ -2872,6 +2885,7 @@ hr.border-hr:after {
 
 .head-name {
     text-align: center;
+     @extend .mg_t75;
 
     .ht30 {
         display: inline-block;
