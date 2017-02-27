@@ -123,35 +123,87 @@
                 </div>
             </div>
             <div class="" ng-if="activeTab == 2">
-                <div class="main-cont damionr sec-tab">
+                <div class="main-cont damionr sec-tab" ng-hide="showMe">
                     <h1 class="orange-color sech  ft100 text-capitalize ng-binding">asmara</h1>
                     <p>has not uploaded any photos</p>
                     <div class="text-center">
-                        <a href="#" class="btn orange-btn" role="button">Ask her</a>
+                        <a href="#" class="btn orange-btn" role="button" ng-click="showMe=true">Ask her</a>
                     </div>
                 </div>
-            </div>
-            <div class="other-section">
-                <h2 class="head-f">View other <br> &nbsp;&nbsp;Photographers</h2>
-                <div class="row pad-up100">
-                    <div class="col-sm-6 col-md-4 pad5" ng-repeat="user in fpUser">
-                        <div class="thumbnail shadow">
-                            <img ng-src="{{user.background}}" alt="...">
-                            <div class="user-ab">
-                                <div class="border-half">
-                                    <img ng-src="{{user.profile}}" alt="" class="img-responsive profile-f-img doneLoading">
+                <div class="col-md-12" ng-show="showMe" style="position: relative;">
+                    <div class="radioBtn_cat">
+                        <!--used for categories radio buttons-->
+                        <div class="inline-block">
+                            <h2>Zohn Photos</h2>
+                        </div>
+                        <div class="radioBtn_wdt inline-block">
+                            <form>
+                                <div ng-init="content = wildlife">
+                                    <input type="radio" name="wildlife" id="radio_01" ng-model="content" value="wildlife">
+                                    <label class="radio-inline" for="radio_01"><span></span> Wildlife
+                            </label>
+                                    <input type="radio" name="wildlife" id="radio_02" ng-model="content" value="wedding">
+                                    <label class="radio-inline" for="radio_02"><span></span> Wedding
+                            </label>
+                                    <input type="radio" name="wildlife" id="radio_03" ng-model="content" value="travel">
+                                    <label class="radio-inline" for="radio_03"><span></span>
+                                Travel
+                            </label>
                                 </div>
-                                <div class="intro-profile">
-                                    <p class="name-loc text-capitalize">{{user.name}} {{user.surName}} | {{user.place}} </p>
-                                    <p class="spec text-capitalize">Speciality: {{user.speciality}}</p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div ng-show="content == 'wildlife'"> wildlife</div>
+                        <div ng-show="content == 'wedding'">wedding</div>
+                        <div ng-show="content == 'travel'">travel</div>
+                    </div>
+                </div>
+                <div class="other-section" ng-hide="showMe">
+                    <h2 class="head-f">View other <br> &nbsp;&nbsp;Photographers</h2>
+                    <div class="row pad-up100">
+                        <div class="col-sm-6 col-md-4 pad5" ng-repeat="user in fpUser">
+                            <div class="thumbnail shadow">
+                                <img ng-src="{{user.background}}" alt="...">
+                                <div class="user-ab">
+                                    <div class="border-half">
+                                        <img ng-src="{{user.profile}}" alt="" class="img-responsive profile-f-img doneLoading">
+                                    </div>
+                                    <div class="intro-profile">
+                                        <p class="name-loc text-capitalize">{{user.name}} {{user.surName}} | {{user.place}} </p>
+                                        <p class="spec text-capitalize">Speciality: {{user.speciality}}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class="btn orange-btn" role="button">View Profile</a>
+                            <div class="text-center">
+                                <a href="#" class="btn orange-btn" role="button">View Profile</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--<div class="other-section" ng-show="showMe">
+                   
+                    <h2 class="head-f">View other <br> &nbsp;&nbsp;Photographers</h2>
+                    <div class="row pad-up100">
+                        <div class="col-sm-6 col-md-4 pad5" ng-repeat="user in fpUser">
+                            <div class="thumbnail shadow">
+                                <img ng-src="{{user.background}}" alt="...">
+                                <div class="user-ab">
+                                    <div class="border-half">
+                                        <img ng-src="{{user.profile}}" alt="" class="img-responsive profile-f-img doneLoading">
+                                    </div>
+                                    <div class="intro-profile">
+                                        <p class="name-loc text-capitalize">{{user.name}} {{user.surName}} | {{user.place}} </p>
+                                        <p class="spec text-capitalize">Speciality: {{user.speciality}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a href="#" class="btn orange-btn" role="button">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
             </div>
         </div>
     </div>

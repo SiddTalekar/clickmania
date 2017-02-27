@@ -2632,7 +2632,8 @@ header {
 }
 
 .min-h {
-    min-height: 416px;
+  //  min-height: 416px;
+  min-height: 466px;
 }
 
 .pad100 {
@@ -2735,6 +2736,8 @@ header {
     margin: 0;
 }
 
+
+
 .user-ab {
     position: absolute;
     top: 50%;
@@ -2780,6 +2783,56 @@ header {
         font-weight: 700;
         text-transform: capitalize;
     }
+}
+
+.radioBtn_cat{
+    position: relative;
+    margin-top: 53px;
+    background-color: #5d5d5d;
+    color: $whiteColor;
+    .inline-block{
+        width: 30%;
+        vertical-align: middle;
+        padding: 10px 35px;
+        h2{
+            margin: 10px 0;
+        }  
+    }
+    .radioBtn_wdt{
+        @extend .inline-block;
+        vertical-align: middle;
+        width: 60%;
+        position: relative;
+        
+       input[type="radio"]{
+           display: none;
+       }
+       input[type="radio"] + label span {
+           display:inline-block;
+           width:19px;
+           height:19px;
+          margin:-1px 4px 0 0;
+         
+         cursor:pointer;    
+         border-radius:  50%;
+     }
+       input[type="radio"] + label span {
+         background-color: $lightBlackColor;
+      }
+      input[type="radio"]:checked + label span{
+         background-color:$whiteColor;
+     }
+     input[type="radio"] + label span, input[type="radio"]:checked + label span {
+       
+        @include transition(background-color 0.4s linear);
+        
+   }
+           
+         .radio-inline{
+            font-size: 30px;
+           
+        }
+    }  
 }
 
 .so-nam {
