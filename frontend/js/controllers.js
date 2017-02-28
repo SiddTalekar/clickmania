@@ -262,6 +262,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             "titleTwo": "featured photographer"
         };
 
+
     })
     .controller('CategoriesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("categories"); //Use same name of .html file
@@ -350,6 +351,39 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             "place": "new mumbai",
             "speciality": "wild life"
         }];
+
+        $scope.wildlife = ['frontend/img/photographer/wildlife1.jpg',
+            'frontend/img/photographer/wildlife2.jpg',
+            'frontend/img/photographer/wildlife3.jpg',
+            'frontend/img/photographer/wildlife1.jpg',
+            'frontend/img/photographer/wildlife2.jpg',
+            'frontend/img/photographer/wildlife3.jpg',
+            'frontend/img/photographer/wildlife1.jpg',
+            'frontend/img/photographer/wildlife2.jpg',
+            'frontend/img/photographer/wildlife3.jpg',
+            'frontend/img/photographer/wildlife1.jpg',
+            'frontend/img/photographer/wildlife2.jpg',
+            'frontend/img/photographer/wildlife3.jpg'
+        ];
+
+        $scope.wedding = ['frontend/img/photographer/wedding1.jpg',
+            'frontend/img/photographer/wedding2.jpg',
+            'frontend/img/photographer/wedding3.jpg',
+            'frontend/img/photographer/wedding1.jpg',
+            'frontend/img/photographer/wedding2.jpg',
+            'frontend/img/photographer/wedding3.jpg',
+            'frontend/img/photographer/wedding1.jpg',
+            'frontend/img/photographer/wedding2.jpg',
+            'frontend/img/photographer/wedding3.jpg'
+        ];
+
+        $scope.travel = ['frontend/img/photographer/travel.jpg',
+            'frontend/img/photographer/travel.jpg',
+            'frontend/img/photographer/travel.jpg',
+            'frontend/img/photographer/travel.jpg',
+            'frontend/img/photographer/travel.jpg',
+            'frontend/img/photographer/travel.jpg'
+        ];
 
     })
     .controller('WildPhotoCtrl', function ($scope, TemplateService, NavigationService, $timeout, $filter) {

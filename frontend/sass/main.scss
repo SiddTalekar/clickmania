@@ -781,6 +781,17 @@
     }
     
     // It contains feature photographer flex-slider
+    .fp_innerPadd {// kept this class outside for user-profile.html
+                    position: relative;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    margin-bottom: 5px;
+                    -moz-box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.26);
+                    -ms-box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.26);
+                    -webkit-box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.26);
+                    box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.26);
+                    }
+
     .featu_photo_caraso {
         @extend .mg;
         position: relative;
@@ -2511,6 +2522,10 @@ header {
     padding: 25px 0;
 }
 
+.padd15{
+    padding: 15px 0;
+}
+
 .pad-up100 {
     padding-top: 83px;
 }
@@ -2833,6 +2848,15 @@ header {
            
         }
     }  
+}
+
+.all_cat{ // to display images categorie wise
+ .fp_innerPadd{ 
+     img{
+      width:100%;
+      height: 226px;
+    }
+  }
 }
 
 .so-nam {
