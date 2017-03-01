@@ -225,7 +225,7 @@ firstapp.service('anchorSmoothScroll', function () {
 
 
 });
-
+// This function is used to show left sibar navigation when a user clicks on the X button. This direction is created in home.html file
 firstapp.directive('sidebarDirective', function () {
 
     return {
@@ -279,16 +279,23 @@ firstapp.directive('sidebarDirective', function () {
     };
 });
 
-// firstapp.directive('scrolly', function () {
+// This function is used to show sibar menu for send enquiry 
+firstapp.directive('enquiryDirective', function(){
 
-//     return {
-//         restrict: 'A',
-//         link: function (scope, element, attrs) {
-//             alert('1st call');
-//             var raw = elem[0]; // will get the element on which we have applied scrolly attr
-//             console.log(raw);
+    return{
+        link: function(scope, element, attr){
+             scope.$watch(attr.enquiryDirective, function (newVal) {
+                 if(newVal){
+                     //console.log('new value', newVal);
+                   element.addClass('showEnquery');
+                   return;
+                 }else{
+                   element.removeClass('showEnquery');
+                 }
 
-//         }
-//     }
+             });
+        }
+    
+    }
+});
 
-// });

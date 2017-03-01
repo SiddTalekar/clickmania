@@ -170,12 +170,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- for send enquiry popup-->
-                <div class="send_enquiry">
-                    <p>
-                        <a class="btn orange-btn " type="button" href="#"> Send an enquiry</a>
-                    </p>
-                </div>
+
+
                 <div class="other-section" ng-hide="showMe">
                     <h2 class="head-f">View other <br> &nbsp;&nbsp;Photographers</h2>
                     <div class="row pad-up100">
@@ -221,6 +217,45 @@
                         </div>
                     </div>
                 </div>-->
+            </div>
+            <!-- for send enquiry popup-->
+            
+                
+            <div class="send_enquirySlidebar" enquiry-directive="slide">
+                <div class="send_enquiry">
+                    <p>
+                        <a class="btn orange-btn " type="button" href="#"  ng-click="sendEnquiry()"> Send an enquiry</a>
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                    <div class="col-md-6">
+                       <div class="form-group">
+                         <input type="email" class="form-control" id="email" placeholder="Full Name">
+                       </div>
+                    </div>
+
+                    
+                    <div class="col-md-6">
+                       <div class="form-group">
+                         <input type="email" class="form-control" id="email" placeholder="Email Address">
+                       </div>
+                    </div>
+                    </div>
+
+                     <div class="row">
+                         <div class="col-md-6">
+                       <div class="form-group">
+                         <input type="email" class="form-control" id="email" placeholder="Full Name">
+                       </div>
+                    </div>
+                    <div class="col-md-6">
+                       <div class="form-group">
+                         <input type="email" class="form-control" id="email" placeholder="Email Address">
+                       </div>
+                    </div>
+                     </div>
+                </div>
             </div>
         </div>
     </div>

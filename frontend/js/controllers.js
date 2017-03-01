@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ui.swiper'])
 
-.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location, anchorSmoothScroll) {
+    .controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location, anchorSmoothScroll) {
         $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("ClickMania"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -165,7 +165,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
-.controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -384,6 +384,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             'frontend/img/photographer/travel.jpg',
             'frontend/img/photographer/travel.jpg'
         ];
+
+        // this function is used to show Send Enquiry navigation
+        $scope.sendEnquiry = function ($event) {
+            $scope.slide = !$scope.slide;
+        };
 
     })
     .controller('WildPhotoCtrl', function ($scope, TemplateService, NavigationService, $timeout, $filter) {
@@ -605,7 +610,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             "background": "frontend/img/cat4.jpg"
         }];
 
-
     })
     .controller('headerctrl', function ($scope, TemplateService, $uibModal) {
         $scope.template = TemplateService;
@@ -646,27 +650,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         //     };
     })
 
-.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
+    .controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
-    $scope.changeLanguage = function () {
-        console.log("Language CLicked");
+        $scope.changeLanguage = function () {
+            console.log("Language CLicked");
 
-        if (!$.jStorage.get("language")) {
-            $translate.use("hi");
-            $.jStorage.set("language", "hi");
-        } else {
-            if ($.jStorage.get("language") == "en") {
+            if (!$.jStorage.get("language")) {
                 $translate.use("hi");
                 $.jStorage.set("language", "hi");
             } else {
-                $translate.use("en");
-                $.jStorage.set("language", "en");
+                if ($.jStorage.get("language") == "en") {
+                    $translate.use("hi");
+                    $.jStorage.set("language", "hi");
+                } else {
+                    $translate.use("en");
+                    $.jStorage.set("language", "en");
+                }
             }
-        }
-        //  $rootScope.$apply();
-    };
+            //  $rootScope.$apply();
+        };
 
 
-})
+    })
 
 ;
