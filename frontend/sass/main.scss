@@ -2468,6 +2468,7 @@ header {
 
 .grey-back {
     background-color: #f1f1f1;
+    position: relative;
 }
 
 .orange-color {
@@ -2851,6 +2852,7 @@ header {
 }
 
 .all_cat{ // to display images categorie wise
+ position: relative;
  .fp_innerPadd{ 
      img{
       width:100%;
