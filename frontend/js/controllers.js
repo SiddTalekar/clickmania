@@ -271,7 +271,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
 
     })
-    .controller('UserProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('UserProfileCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
         $scope.template = TemplateService.changecontent("user-profile"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("User Profile"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -388,6 +388,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         // this function is used to show Send Enquiry navigation
         $scope.sendEnquiry = function ($event) {
             $scope.slide = !$scope.slide;
+        };
+
+        $scope.enquiryData = {};
+        $scope.dataSubmit = function (data) {
+            console.log(data);
+        };
+
+        $scope.openModal = function (size) {
+            $scope.openEnquiryModal = $uibModal.open({
+                animation: true,
+                templateUrl: 'frontend/views/modal/sendEnquiry.html',
+                size: 'sm',
+                scope: $scope,
+                //windowClass: "loginbox"
+            });
+        };
+        $scope.showSocial = false;
+        $scope.showData = function () {
+            $scope.showSocial = true;
         };
 
     })

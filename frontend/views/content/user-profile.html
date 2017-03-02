@@ -130,34 +130,39 @@
                         <a href="#" class="btn orange-btn" role="button" ng-click="showMe=true">Ask her</a>
                     </div>
                 </div>
-                <div class="col-md-12" ng-show="showMe" style="position: relative;" ng-init="content=wildlife">
-                    <div class="radioBtn_cat">
-                        <!--used for categories radio buttons-->
-                        <div class="inline-block">
-                            <h2>Zohn Photos</h2>
-                        </div>
-                        <div class="radioBtn_wdt inline-block">
-                            <form>
-                                <input type="radio" name="wildlife" id="radio_01" ng-model="content" value="wildlife">
-                                <label class="radio-inline" for="radio_01"><span></span> Wildlife
+                <div class="row">
+                    <div class="col-md-12" ng-show="showMe" style="position: relative;" ng-init="content=wildlife">
+                        <div class="radioBtn_cat">
+                            <!--used for categories radio buttons-->
+                            <div class="inline-block">
+                                <h2>Zohn Photos</h2>
+                            </div>
+                            <div class="radioBtn_wdt inline-block">
+                                <form>
+                                    <input type="radio" name="wildlife" id="radio_01" ng-model="content" value="wildlife" ng-click="showData();">
+                                    <label class="radio-inline" for="radio_01"><span></span> Wildlife
                             </label>
-                                <input type="radio" name="wildlife" id="radio_02" ng-model="content" value="wedding">
-                                <label class="radio-inline" for="radio_02"><span></span> Wedding
+                                    <input type="radio" name="wildlife" id="radio_02" ng-model="content" value="wedding">
+                                    <label class="radio-inline" for="radio_02"><span></span> Wedding
                             </label>
-                                <input type="radio" name="wildlife" id="radio_03" ng-model="content" value="travel">
-                                <label class="radio-inline" for="radio_03"><span></span>
+                                    <input type="radio" name="wildlife" id="radio_03" ng-model="content" value="travel">
+                                    <label class="radio-inline" for="radio_03"><span></span>
                                 Travel
                             </label>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="inline-block  pad25 all_cat">
                     <!--used for categories-->
-                    <div class="col-md-4 padd15" ng-show="content == 'wildlife'" ng-repeat="imgs in wildlife track by $index">
-                        <div class="fp_innerPadd ">
-                            <img ng-src="{{imgs}}" class="img-responsive">
+                    <div ng-show="content == 'wildlife'">
+                        <div class="col-md-4 padd15" ng-repeat="imgs in wildlife track by $index">
+                            <div class="fp_innerPadd ">
+                                <img ng-src="{{imgs}}" class="img-responsive">
+                            </div>
                         </div>
+
                     </div>
                     <div class="col-md-4 padd15" ng-show="content == 'wedding'" ng-repeat="imgs in wedding track by $index">
                         <div class="fp_innerPadd ">
@@ -169,10 +174,41 @@
                             <img ng-src="{{imgs}}" class="img-responsive">
                         </div>
                     </div>
+                    <div ng-show="showSocial">
+                        <div class="col-md-12">
+                            <div class="row share_profile">
+                                <div class="col-md-8">
+                                    <ul class=" list-unstyled list-inline">
+                                        <li>Share this profile on</li>
+                                        <li>
+                                            <a href=""><img src="frontend/img/social/4.png" alt="" class="img-responsive"></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><img src="frontend/img/social/3.png" alt="" class="img-responsive"></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><img src="frontend/img/social/2.png" alt="" class="img-responsive"></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><img src="frontend/img/social/1.png" alt="" class="img-responsive"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 pull-right">
+                                    <div class="load_more_btn">
+                                        <p class="text-right"><a class="btn orange-btn" type="button">Load More</a></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- for shar profile link-->
 
-                <div class="other-section" ng-hide="showMe">
+                <div class="other-section">
+                    <!--ng-hide="showMe"-->
                     <h2 class="head-f">View other <br> &nbsp;&nbsp;Photographers</h2>
                     <div class="row pad-up100">
                         <div class="col-sm-6 col-md-4 pad5" ng-repeat="user in fpUser">
@@ -219,44 +255,69 @@
                 </div>-->
             </div>
             <!-- for send enquiry popup-->
-            
-                
+
+
             <div class="send_enquirySlidebar" enquiry-directive="slide">
                 <div class="send_enquiry">
                     <p>
-                        <a class="btn orange-btn " type="button" href="#"  ng-click="sendEnquiry()"> Send an enquiry</a>
+                        <a class="btn orange-btn " type="button" href="#" ng-click="sendEnquiry()"> Send an enquiry</a>
                     </p>
                 </div>
-                <div class="col-md-12">
-                    <div class="row">
-                    <div class="col-md-6">
-                       <div class="form-group">
-                         <input type="email" class="form-control" id="email" placeholder="Full Name">
-                       </div>
-                    </div>
 
-                    
-                    <div class="col-md-6">
-                       <div class="form-group">
-                         <input type="email" class="form-control" id="email" placeholder="Email Address">
-                       </div>
-                    </div>
-                    </div>
+                <div class="col-md-12 padd35">
+                    <form name="formEnquiry" ng-submit="dataSubmit(enquiryData)">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="userName" placeholder="Full Name" name="userName" ng-model="enquiryData.name"
+                                        required>
+                                    <div ng-show="formEnquiry.userName.$error.required && formEnquiry.userName.$touched">Please Enter Your Name</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Email Address" name="email" required ng-model="enquiryData.email">
+                                </div>
+                                <!--<p>Please Enter Your Email</p>-->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" id="mobNo" placeholder="Mobile No" name="mobNo" required ng-model="enquiryData.mobNo">
+                                </div>
+                                <!--<p>Please Enter Your Mobile No</p>-->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle btn-block" type="button" data-toggle="dropdown">Needed on <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Needed on</a></li>
+                                            <li><a href="#">Needed on</a></li>
+                                            <li><a href="#">Needed on</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" cols="30" rows="5" name="comment" id="comment" required ng-model="enquiryData.comment"></textarea>
+                                </div>
+                                <!--<p>Please Enter Some Comments</p>-->
+                            </div>
+                        </div>
 
-                     <div class="row">
-                         <div class="col-md-6">
-                       <div class="form-group">
-                         <input type="email" class="form-control" id="email" placeholder="Full Name">
-                       </div>
-                    </div>
-                    <div class="col-md-6">
-                       <div class="form-group">
-                         <input type="email" class="form-control" id="email" placeholder="Email Address">
-                       </div>
-                    </div>
-                     </div>
+                        <div class="row">
+                            <p class="text-center" ng-click="openModal();"><a class="btn orange-btn" type="button">Send</a></p>
+                        </div>
+                    </form>
                 </div>
+
             </div>
+            <!-- end of send enquiry popup-->
         </div>
     </div>
 </div>

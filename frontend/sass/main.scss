@@ -958,9 +958,9 @@
         background-size: cover;
         height: auto;
         background-repeat: no-repeat;
-        .mt_53 {
+        .mt_103 {
             // used for categories.html page
-            margin-top: 53px;
+            margin-top: 103px;
         }
         .ht30 {
             display: inline-block;
@@ -2468,7 +2468,8 @@
     }
     
     .pad5 {
-        padding: 0 5px 60px;
+        //  padding: 0 5px 60px;
+        padding: 0 13px 60px;
     }
     
     .img-left {
@@ -2479,7 +2480,7 @@
     }
     
     .other-section {
-        margin: 60px 150px 0;
+        //  margin: 60px 150px 0;
         position: relative;
     }
     
@@ -2705,22 +2706,24 @@
         }
     }
     
+    // this class is used for send enquiry right side navigation
     .send_enquirySlidebar {
-            position: fixed;
-            top: 30%;
-            right: -29%;
-            width: 29%;
-            height: 315px;
-            background-color: #ffffff;
-            z-index: 120;
-            transition: 300ms right;
+        position: fixed;
+        top: 30%;
+        right: -29%;
+        width: 29%;
+        min-height: 315px;
+        background-color: #ffffff;
+        z-index: 120;
+        // transition: 300ms right;
+        @include transition(300ms right ease);
         .send_enquiry {
             // used for static position
             transform: rotate(-90deg);
             z-index: 1031;
             position: relative;
             left: -19px;
-            top: 192px;
+            top: 180px;
             width: 0;
             .orange-btn {
                 padding: 9px 12px; // rt & lt padding changed 
@@ -2729,10 +2732,67 @@
                 border: 1px solid $orangeColor;
             }
         }
-    }
-    .showEnquery {// this class is used to show an enquiry box from -29% to 0px
-            right: 0;
+        .padd35 {
+            // this class is used to give padding for col-md
+            padding: 0 35px;
+            padding-bottom: 35px;
         }
+        input:focus {
+            border-color: $orangeColor;
+        }
+        textarea {
+            resize: none;
+        }
+        textarea:focus {
+            border-color: $orangeColor;
+        }
+        .dropdown {
+            // this class is used for dropdown design
+            color: #999;
+            button {
+                text-align: left;
+                background-color: $whiteColor;
+                border: 1px solid #ccc;
+                .fa-caret-down {
+                    position: absolute;
+                    top: 7px;
+                    right: 5px;
+                    font-size: 20px;
+                    color: $orangeColor;
+                }
+            }
+            .dropdown-menu {
+                min-width: 100%;
+            }
+        }
+    }
+    
+    .showEnquery {
+        // this class is used to show an enquiry box from -29% to 0px
+        right: 0;
+    }
+    
+    // .sendEenquiry modal design
+    .modal-demo {
+        position: relative;
+        .modal-body {
+            .well {
+                background-color: $whiteColor;
+                border: none;
+                box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.05);
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+            .modal_logo {
+                display: inline-block;
+                position: absolute;
+                top: -28px;
+                left: 120px;
+                // transform: rotate(125deg);
+                @include transform(rotate(125deg));
+            }
+        }
+    }
     
     .radioBtn_cat {
         position: relative;
@@ -2786,6 +2846,27 @@
             img {
                 width: 100%;
                 height: 226px;
+            }
+        }
+    }
+    
+    // used for share your profile on social sites
+    .share_profile {
+        margin-top: 15px;
+        margin-bottom: 54px;
+        .list-inline>li {
+            vertical-align: middle;
+            img {
+                width: 40px;
+            }
+        }
+        li:first-child {
+            font-size: 30px;
+            color: $orangeColor;
+        }
+        .load_more_btn {
+            .orange-btn {
+                padding: 10px 70px;
             }
         }
     }
