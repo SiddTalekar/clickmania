@@ -390,16 +390,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.slide = !$scope.slide;
         };
 
+        // this function is used for data submmiting
         $scope.enquiryData = {};
         $scope.dataSubmit = function (data) {
             console.log(data);
         };
 
+        // tis function is used to open an UIB modal
         $scope.openModal = function (size) {
             $scope.openEnquiryModal = $uibModal.open({
                 animation: true,
                 templateUrl: 'frontend/views/modal/sendEnquiry.html',
-                size: 'sm',
+                size: size,
                 scope: $scope,
                 //windowClass: "loginbox"
             });
