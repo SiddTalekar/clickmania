@@ -121,6 +121,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="other-section">
+
+                    <h2 class="head-f">View other <br> &nbsp;&nbsp;Photographers</h2>
+                    <div class="row pad-up100">
+                        <div class="col-sm-6 col-md-4 pad5" ng-repeat="user in fpUser">
+                            <div class="thumbnail shadow">
+                                <img ng-src="{{user.background}}" alt="...">
+                                <div class="user-ab">
+                                    <div class="border-half">
+                                        <img ng-src="{{user.profile}}" alt="" class="img-responsive profile-f-img doneLoading">
+                                    </div>
+                                    <div class="intro-profile">
+                                        <p class="name-loc text-capitalize">{{user.name}} {{user.surName}} | {{user.place}} </p>
+                                        <p class="spec text-capitalize">Speciality: {{user.speciality}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a href="#" class="btn orange-btn" role="button">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="" ng-if="activeTab == 2">
                 <div class="main-cont damionr sec-tab" ng-hide="showMe">
@@ -174,7 +197,7 @@
                             <img ng-src="{{imgs}}" class="img-responsive">
                         </div>
                     </div>
-                    <div ng-show="showSocial">
+                    <div ng-show="showSocial" class="row">
                         <div class="col-md-12">
                             <div class="row share_profile">
                                 <div class="col-md-8">

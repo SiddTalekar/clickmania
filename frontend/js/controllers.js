@@ -63,6 +63,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             anchorSmoothScroll.scrollTo(eID);
         };
 
+        // this function is used to move <div class="scroll_down"> bottom to the img when user scrolls down 
+        var container = angular.element(document);
+        container.on('scroll', function () {
+
+            if (container.scrollTop() > 220) {
+                $('.sliding_bg .scroll_down').css({
+
+                    WebkitTransition: 'opacity 1s ease-in-out',
+                    MozTransition: 'opacity 1s ease-in-out',
+                    MsTransition: 'opacity 1s ease-in-out',
+                    'transition': 'all 300ms linear',
+                    'position': 'absolute',
+                    'bottom': '60px'
+                });
+            } else {
+                $('.sliding_bg .scroll_down').css({
+
+                    WebkitTransition: 'opacity 1s ease-in-out',
+                    MozTransition: 'opacity 1s ease-in-out',
+                    MsTransition: 'opacity 1s ease-in-out',
+                    'transition': 'all 300ms linear',
+                    'position': 'absolute',
+                    'bottom': '135px'
+                });
+            }
+        });
+
         // used for left-sidebar navigation
         $scope.state = false;
         $scope.toggleState = function ($event) {
@@ -279,6 +306,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.activeTab = 1;
         $scope.toggleTab = function (val) {
             $scope.activeTab = val;
+            $scope.showSocial = false; // here showSocial will be display: none; 
         };
         $scope.userHead = {
             profile: "frontend/img/pic/pic1.jpg",
@@ -406,9 +434,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 //windowClass: "loginbox"
             });
         };
-        $scope.showSocial = false;
+        $scope.showSocial = false; //here showSocial will be display: none; to display <div class="showSocial">
+        // when a user selects 1 radio button the function showData will be execuited
         $scope.showData = function () {
-            $scope.showSocial = true;
+            $scope.showSocial = true; //here showSocial will be display: block; to display <div class="showSocial">
         };
 
     })
